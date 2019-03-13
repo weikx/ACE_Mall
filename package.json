@@ -1,0 +1,23 @@
+{
+  "name": "ace_mall",
+  "version": "1.0.0",
+  "description": "ACE_Mall 前端项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weikx/ACE_Mall.git"
+  },
+  "author": "weikexin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weikx/ACE_Mall/issues"
+  },
+  "homepage": "https://github.com/weikx/ACE_Mall#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
