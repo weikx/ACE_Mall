@@ -1,11 +1,58 @@
-const path = require('path')
+var path = require('path')
+var webpack = require('webpack')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
+function getHtmlConfig (name) {
+	return {
+		template: './src/view/'+ name +'.html',
+		filename: 'view/'+ name +'.html',
+		inject: true,
+		hash: true,
+		chunks: ['common', name]
+	}
+}
 
 module.exports = {
-    entry: {
-        'index': ['./src/page/index/index.js'],
-    },
-    output: {
-        filename: 'app.js',
-        path: path.resolve(__dirname, 'dist')
-    }
+	entry: {
+		'common': ['./src/page/common/index.js'],
+		'index': ['./src/page/index/index.js'],
+		'login': ['./src/page/login/index.js']
+	},
+	output: {
+		filename: 'js/[name].js',
+		path: path.resolve(__dirname, 'dist')
+	},
+	externals: {
+		'jquery': 'window.jQuery'
+	},
+	module: {
+		loaders: [
+			{
+				test: /\.css$/,
+				loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+			},
+			{
+				test: /\.(html)$/,
+				use: {
+					loader: 'html-loader',
+					options: {
+						attrs: [':data-src']
+					}
+				}
+			}
+		]
+	},
+	plugins: [
+		// 独立通用模块到 js/base.js
+		new webpack.optimize.CommonsChunkPlugin({
+			name: 'common',
+			filename: 'js/base.js'
+		}),
+		// 把 css 单独打包到文件
+		new ExtractTextPlugin('css/[name].css'),
+		// html 模版的处理
+		new HtmlWebpackPlugin(getHtmlConfig('index')),
+		new HtmlWebpackPlugin(getHtmlConfig('login'))
+	]
 }
