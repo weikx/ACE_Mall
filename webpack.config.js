@@ -2,9 +2,9 @@ var path = require('path')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
-
 function getHtmlConfig (name) {
 	return {
+		title: 'shit',
 		template: './src/view/'+ name +'.html',
 		filename: 'view/'+ name +'.html',
 		inject: true,
@@ -34,12 +34,10 @@ module.exports = {
 			},
 			{
 				test: /\.(html)$/,
-				use: {
-					loader: 'html-loader',
-					options: {
-						attrs: [':data-src']
-					}
-				}
+				include: [
+					path.resolve(__dirname, './src/view/layout')
+				],
+				loader: 'html-loader'
 			}
 		]
 	},
