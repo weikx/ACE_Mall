@@ -4,7 +4,9 @@
   "description": "ACE_Mall 前端项目",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "WEBPACK_ENV=dev webpack-dev-server --inline --port 8088",
+    "build": "WEBPACK_ENV=online webpack -p"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,10 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
+    "file-loader": "^3.0.1",
     "html-loader": "^0.5.5",
-    "webpack": "1.15.0"
+    "url-loader": "^1.1.2",
+    "webpack": "1.15.0",
+    "webpack-dev-server": "^1.16.5"
   }
 }
