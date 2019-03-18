@@ -48,6 +48,14 @@ var config = {
 			}
 		]
 	},
+	resolve: {
+		alias: {
+			util: path.resolve(__dirname, './src/util'),
+			page: path.resolve(__dirname, './src/page'),
+			service: path.resolve(__dirname, './src/service'),
+			image: path.resolve(__dirname, './src/image')
+		}
+	},
 	plugins: [
 		// 独立通用模块到 js/base.js
 		new webpack.optimize.CommonsChunkPlugin({
@@ -59,7 +67,10 @@ var config = {
 		// html 模版的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index')),
 		new HtmlWebpackPlugin(getHtmlConfig('login'))
-	]
+	],
+	devServer: {
+		disableHostCheck: true
+	}
 }
 
 module.exports = config

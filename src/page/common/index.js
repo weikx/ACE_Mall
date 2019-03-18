@@ -1,1 +1,1 @@
-console.log('i am gobal')
+require('./layout.css')
