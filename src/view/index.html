@@ -5,9 +5,21 @@
   <title>ACE_Mall</title>
 </head>
 <body>
-  hello zhangqingqing > kris wu
-  <a href="" class="link">test</a>
-  <a href="" class="link-text">test</a>
+  <%= require('./layout/nav-simple.html') %>
+  <div>
+    <a href="" class="link">hello zhangqingqing > </a>
+    <a href="" class="link-text">kris wu</a>
+  </div>
+  <div>
+    <a href="" class="btn">test</a>
+    <a href="" class="btn btn-mini">test</a>
+  </div>
+  <div>
+    <div class="loading"></div>
+  </div>
+  <div>
+    <i class="iconfont iconai-search"></i>
+  </div>
   <%= require('./layout/footer.html') %>
 </body>
 </html>

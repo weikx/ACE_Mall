@@ -1,0 +1,31 @@
+.nav-simple {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #ddd;
+  background: #414141;
+}
+
+.nav-simple .logo {
+  float: left;
+  font-weight: bold;
+  color: #d8d8d8;
+}
+
+.nav-simple .nav-list {
+  float: right;
+}
+
+.nav-simple .nav-item {
+  float: left;
+  margin-left: 10px;
+}
+
+.nav-simple .user.no-login {
+  display: inline-block;
+  float: right;
+}
+
+.nav-simple .user.login {
+  float: right;
+  display: none;
+}

@@ -42,11 +42,11 @@ q:before, q:after {
   content: '';
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 
 body {
   background: #f6f6f6;
@@ -59,7 +59,7 @@ label, input[type='checkbox'] {
 
 /* 定宽布局 */
 .width {
-  width: 1080px;
+  width: 1090px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -80,10 +80,39 @@ label, input[type='checkbox'] {
 }
 
 .link:hover {
-  color: #e80012;
+  color: #fff;
 }
 
 .link-text {
   color: #999;
   text-decoration: none;
+}
+
+/* 按钮 */
+.btn {
+  display: inline-block;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  border: none;
+  background: #b4a078;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-mini {
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+/* loading */
+.loading {
+  display: block;
 }
