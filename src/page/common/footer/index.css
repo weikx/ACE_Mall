@@ -8,6 +8,7 @@
   height: 100px;
   line-height: 100px;
   border-bottom: 1px solid #4f4f4f;
+  margin-bottom: 20px;
 }
 
 .footer .ensure ul li {
@@ -22,24 +23,15 @@
 .site-info {
   height: 36px;
   line-height: 36px;
-  margin-top: 20px;
+}
+
+.site-info ul {
+  display: flex;
 }
 
 .site-info ul li {
   float: left;
   text-align: center;
+  flex: 1;
 }
-
-.site-info ul.ul1 li {
-  width: calc(100% / 9);
-}
-
-.site-info ul.ul2 li {
-  width: calc(100% / 6);
-}
-
-.site-info ul.ul3 li {
-  width: calc(100% / 1);
-}
-
 
