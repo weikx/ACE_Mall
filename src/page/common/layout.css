@@ -91,18 +91,19 @@ label, input[type='checkbox'] {
 /* 按钮 */
 .btn {
   display: inline-block;
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
+  padding: 0 132px;
+  height: 48px;
+  line-height: 48px;
   vertical-align: middle;
   border: none;
   background: #b4a078;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   outline: none;
   cursor: pointer;
   text-decoration: none;
+  border-radius: 2px;
 }
 
 .btn-mini {
