@@ -51,7 +51,7 @@ var _ace = {
 	validate: function (value, type) {
 		// 字段验证，支持非空，手机，邮箱的判断
 		var value = $.trim(value)
-		switch (value) {
+		switch (type) {
 			case 'require':
 				return !!value
 			break
