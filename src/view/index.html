@@ -2,23 +2,13 @@
 <html lang="en">
 <head>
   <%= require('./layout/head-common.html') %>
-  <title>ACE_Mall</title>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
 <body>
   <%= require('./layout/nav-simple.html') %>
   <div>
     <a href="" class="link">hello zhangqingqing > </a>
-    <a href="" class="link-text">kris wu</a>
-  </div>
-  <div>
-    <a href="" class="btn">test</a>
-    <a href="" class="btn btn-mini">test</a>
-  </div>
-  <div>
-    <div class="loading"></div>
-  </div>
-  <div>
-    <i class="iconfont iconai-search"></i>
+    <span class="link-text">kris wu</span>
   </div>
   <%= require('./layout/footer.html') %>
 </body>
