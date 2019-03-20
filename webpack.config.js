@@ -4,9 +4,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
-function getHtmlConfig (name) {
+function getHtmlConfig (name, title) {
 	return {
-		title: 'shit',
+		title: title,
 		template: './src/view/'+ name +'.html',
 		filename: 'view/'+ name +'.html',
 		inject: true,
@@ -19,7 +19,8 @@ var config = {
 	entry: {
 		'common': ['./src/page/common/index.js'],
 		'index': ['./src/page/index/index.js'],
-		'login': ['./src/page/login/index.js']
+		'login': ['./src/page/login/index.js'],
+		'register': ['./src/page/register/index.js']
 	},
 	output: {
 		path: './dist',
@@ -65,8 +66,9 @@ var config = {
 		// 把 css 单独打包到文件
 		new ExtractTextPlugin('css/[name].css'),
 		// html 模版的处理
-		new HtmlWebpackPlugin(getHtmlConfig('index')),
-		new HtmlWebpackPlugin(getHtmlConfig('login'))
+		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
+		new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
+		new HtmlWebpackPlugin(getHtmlConfig('register', '注册'))
 	],
 	devServer: {
 		disableHostCheck: true
