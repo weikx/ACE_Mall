@@ -35,6 +35,19 @@
   flex: 1;
 }
 
+.site-info ul.ul2 li:after {
+  content: '';
+  width: 1px;
+  height: 10px;
+  background: #ccc;
+  display: block;
+  margin-top: -22px;
+}
+
+.site-info ul.ul2 li:first-child:after {
+  width: 0;
+}
+
 .shield {
   width: 23px;
   height: 25px;
