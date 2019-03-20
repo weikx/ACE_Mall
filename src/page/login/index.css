@@ -1,0 +1,68 @@
+.page-wrap {
+}
+
+.user-con {
+  overflow: hidden;
+  padding: 0 30px 10px 30px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #ebebeb;
+  border-radius: 2px;
+}
+
+.user-con .user-title {
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 错误提示框 */
+.user-con .err-box {
+  display: none;
+  margin-top: 10px;
+  padding: 2px 5px;
+  border: 1px solid #b4a078;
+  color: #b4a078;
+}
+
+.user-con .user-box {
+}
+
+.user-box label {
+  flex: 0 0 30px;
+  text-align: center;
+  border-right: 1px solid #ebebeb;
+}
+
+.user-box .user-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  margin-top: 15px;
+  height: 40px;
+}
+
+.user-item input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.btn.btn-login {
+  margin-top: 25px;
+}
+
+.link-item {
+  margin-top: 20px;
+  float: right;
+}
+
+.footer-wrap {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

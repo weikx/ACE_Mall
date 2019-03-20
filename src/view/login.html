@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+  <%= require('./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
 <body>
-<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<%= require('./layout/nav-simple.html') %>
+<div class="page-wrap">
+  <div class="width">
+    <div class="user-con">
+      <div class="user-title">
+        用户登录
+      </div>
+      <div class="err-box">
+        <i class="ace-icon ace-tishi"></i>
+        <span class="err-msg">用户名或密码错误</span>
+      </div>
+      <div class="user-box">
+        <div class="user-item">
+          <label for="username">
+            <i class="ace-icon ace-zhanghao"></i>
+          </label>
+          <input type="text" class="user-content" id="username" placeholder="请输入用户名">
+        </div>
+        <div class="user-item">
+          <label for="password">
+            <i class="ace-icon ace-mima"></i>
+          </label>
+          <input type="text" class="user-content" id="password" placeholder="请输入密码">
+        </div>
+        <buttom class="btn btn-login" id="submit">登录</buttom>
+        <div class="link-item">
+          <a class="link" href="" target="_blank">忘记密码</a>
+          <a class="link" href="./register.html">免费注册</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer-wrap">
+  <%= require('./layout/footer.html') %>
+</div>
 </body>
 </html>
