@@ -9,7 +9,7 @@ var navSide = {
 			{
 				name: 'my-ace',
 				desc: '个人中心',
-				href: './myace.html'
+				href: './my-ace.html'
 			},
 			{
 				name: 'order-list',
@@ -19,6 +19,21 @@ var navSide = {
 			{
 				name: 'about',
 				desc: '关于ACE_Mall',
+				href: './about.html'
+			},
+			{
+				name: 'about',
+				desc: '关于Kris wu',
+				href: './about.html'
+			},
+			{
+				name: 'about',
+				desc: '关于Galaxy-qing',
+				href: './about.html'
+			},
+			{
+				name: 'about',
+				desc: '关于Mei GeNi',
 				href: './about.html'
 			}
 		]

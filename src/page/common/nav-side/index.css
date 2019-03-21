@@ -1,13 +1,16 @@
 /* 导航主体 */
 .nav-side {
-  margin-top: 100px;
+  margin-top: 10px;
   float: left;
-  width: 130px;
+  width: 178px;
   min-height: 100px;
+  border: 1px solid #eaeaea;
+  padding: 50px 40px;
+  box-sizing: border-box;
 }
 
 .nav-side .nav-item {
-  line-height: 25px;
+  line-height: 35px;
   font-size: 13px;
 }
 
@@ -22,5 +25,5 @@
 /* 右侧内容区 */
 .content.with-nav {
   float: left;
-  width: 960px;
+  width: 910px;
 }
