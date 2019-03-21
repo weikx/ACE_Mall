@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+</head>
+<body>
+  <%= require('./layout/nav-simple.html') %>
+  <div class="width">
+     <div class="crumb">
+       <div class="crumb-con">
+         <a href="./index.html" class="link">首页</a>
+         <span class="link-text">></span>
+         <span class="link-text">我的ACE_Mall</span>
+       </div>
+     </div>
+  </div>
+  <div class="page-wrap width">
+    <%= require('./layout/nav-side.html') %>
+    <div class="content with-nav">
+      我的ACE_Mall
+    </div>
+  </div>
+  <%= require('./layout/footer.html') %>
+</body>
+</html>
