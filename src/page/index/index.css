@@ -1,3 +1,7 @@
-body {
-  background: #fff;
+.text {
+  height: 500px;
+  link: 200px;
+  font-size: 18px;
+  text-align: center;
+  padding: 100px;
 }
