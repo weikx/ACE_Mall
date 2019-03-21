@@ -41,7 +41,7 @@ var page = {
 		if (validateResult.status) {
 			// 注册
 			fromError.hide()
-			console.log('注册')
+			window.location.href = './result.html?type=register'
 		} else {
 			fromError.show(validateResult.msg)
 		}
