@@ -21,7 +21,8 @@ var config = {
 		'index': ['./src/page/index/index.js'],
 		'login': ['./src/page/login/index.js'],
 		'register': ['./src/page/register/index.js'],
-		'result': ['./src/page/result/index.js']
+		'result': ['./src/page/result/index.js'],
+		'my-ace': ['./src/page/my-ace/index.js']
 	},
 	output: {
 		path: './dist',
@@ -74,7 +75,8 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
 		new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
 		new HtmlWebpackPlugin(getHtmlConfig('register', '注册')),
-		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
+		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
+		new HtmlWebpackPlugin(getHtmlConfig('my-ace', '个人中心'))
 	],
 	devServer: {
 		disableHostCheck: true
