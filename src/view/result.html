@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+</head>
+<body>
+<%= require('./layout/nav-simple.html') %>
+<div class="page-wrap width">
+  <div class="result-con register-success">
+    <h1 class="result-title">恭喜您，注册成功！</h1>
+    <div class="result-content">
+      <a href="./index.html" class="link">
+        回到首页
+      </a>
+    </div>
+  </div>
+  <div class="result-con default-success">
+    <h1 class="result-title">操作成功 ！</h1>
+    <div class="result-content">
+      <a href="./index.html" class="link">
+        回到首页
+      </a>
+    </div>
+  </div>
+</div>
+<div class="footer-wrap">
+  <%= require('./layout/footer.html') %>
+</div>
+</body>
+</html>

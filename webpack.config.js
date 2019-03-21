@@ -20,7 +20,8 @@ var config = {
 		'common': ['./src/page/common/index.js'],
 		'index': ['./src/page/index/index.js'],
 		'login': ['./src/page/login/index.js'],
-		'register': ['./src/page/register/index.js']
+		'register': ['./src/page/register/index.js'],
+		'result': ['./src/page/result/index.js']
 	},
 	output: {
 		path: './dist',
@@ -39,6 +40,10 @@ var config = {
 			{
 				test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,
 				loader: 'url-loader'
+			},
+			{
+				test: /\.string$/,
+				loader: 'html-loader'
 			},
 			{
 				test: /\.(html)$/,
@@ -68,7 +73,8 @@ var config = {
 		// html 模版的处理
 		new HtmlWebpackPlugin(getHtmlConfig('index', '首页')),
 		new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
-		new HtmlWebpackPlugin(getHtmlConfig('register', '注册'))
+		new HtmlWebpackPlugin(getHtmlConfig('register', '注册')),
+		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果'))
 	],
 	devServer: {
 		disableHostCheck: true
