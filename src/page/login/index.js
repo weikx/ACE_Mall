@@ -17,6 +17,7 @@ var page = {
 	init: function () {
 		this.bindEvent()
 	},
+
 	bindEvent: function () {
 		var _this = this
 		$('#submit').click(function () {

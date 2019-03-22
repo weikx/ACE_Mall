@@ -20,34 +20,41 @@ var _ace = {
 					param.error && param.error(res)
 				}
 			},
+
 			error: function (err) {
 				param.error && param.error(err)
 			}
 		})
 	},
+
 	toLogin: function () {
 		// 登录处理
 		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href)
 	},
+
 	getUrlPatam: function (name) {
 		var reg = new RegExp('(^|&)'+ name + '=([^&]*)(&|$)')
 		var result = window.location.search.substr(1).match(reg)
 		return result ? decodeURIComponent(result[2]) : null
 	},
+
 	renderHtml: function (htmlTemplate, data) {
 		// 渲染html模板
 		var template = Hogan.compile(htmlTemplate),
 			result = template.render(data)
 		return result
 	},
+
 	successTips: function (msg) {
 		// 成功提示
 		alert(msg || '操作成功')
 	},
+
 	errorTips: function (msg) {
 		// 错误提示
 		alert(msg || '错了一些问题～')
 	},
+
 	validate: function (value, type) {
 		// 字段验证，支持非空，手机，邮箱的判断
 		var value = $.trim(value)
@@ -63,6 +70,7 @@ var _ace = {
 			break
 		}
 	},
+
 	goHome: function () {
 		// 返回首页
 		window.location.href = './index.html'

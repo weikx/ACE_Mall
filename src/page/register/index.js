@@ -8,6 +8,7 @@ var fromError = {
 	show: function (msg) {
 		$('.err-box').show().find('.err-msg').text(msg)
 	},
+
 	hide: function () {
 		$('.err-box').hide().find('.err-msg').text('')
 	}
@@ -17,6 +18,7 @@ var page = {
 	init: function () {
 		this.bindEvent()
 	},
+
 	bindEvent: function () {
 		var _this = this
 		$('#submit').click(function () {
