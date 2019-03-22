@@ -22,16 +22,21 @@ var config = {
 		'login': ['./src/page/login/index.js'],
 		'register': ['./src/page/register/index.js'],
 		'result': ['./src/page/result/index.js'],
-		'my-ace': ['./src/page/my-ace/index.js']
+		'my-ace': ['./src/page/my-ace/index.js'],
+		'goods-detail': ['./src/page/goods-detail/index.js'],
+		'goods-list': ['./src/page/goods-list/index.js']
 	},
+
 	output: {
 		path: './dist',
 		publicPath: '/dist',
 		filename: 'js/[name].js'
 	},
+
 	externals: {
 		'jquery': 'window.jQuery'
 	},
+
 	module: {
 		loaders: [
 			{
@@ -43,7 +48,7 @@ var config = {
 				loader: 'url-loader'
 			},
 			{
-				test: /\.string$/,
+				test: /\.ace$/,
 				loader: 'html-loader'
 			},
 			{
@@ -55,6 +60,7 @@ var config = {
 			}
 		]
 	},
+
 	resolve: {
 		alias: {
 			util: path.resolve(__dirname, './src/util'),
@@ -63,6 +69,7 @@ var config = {
 			image: path.resolve(__dirname, './src/image')
 		}
 	},
+
 	plugins: [
 		// 独立通用模块到 js/base.js
 		new webpack.optimize.CommonsChunkPlugin({
@@ -76,8 +83,11 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('login', '登录')),
 		new HtmlWebpackPlugin(getHtmlConfig('register', '注册')),
 		new HtmlWebpackPlugin(getHtmlConfig('result', '操作结果')),
-		new HtmlWebpackPlugin(getHtmlConfig('my-ace', '个人中心'))
+		new HtmlWebpackPlugin(getHtmlConfig('my-ace', '个人中心')),
+		new HtmlWebpackPlugin(getHtmlConfig('goods-detail', '商品详情')),
+		new HtmlWebpackPlugin(getHtmlConfig('goods-list', '商品列表'))
 	],
+
 	devServer: {
 		disableHostCheck: true
 	}
