@@ -1,0 +1,18 @@
+<div class="dividing-line"></div>
+<div class="goods-wrap">
+  <p class="goods-title">{{data.title}}</p>
+  <ul class="goods-list">
+    {{#data.goodsList}}
+    <li class="goods-item">
+      <a href="./goods-detail?id={{id}}">
+        <img src="{{img}}" width="100%" alt="" class="goods-img">
+        <a href="./goods-detail?id={{id}}" class="goods-name link">{{name}}</a>
+        <p class="goods-price">
+          <span class="present-price">¥{{presentPrice}}</span>
+          <span class="original-price">¥{{originalPrice}}</span>
+        </p>
+      </a>
+    </li>
+    {{/data.goodsList}}
+  </ul>
+</div>
