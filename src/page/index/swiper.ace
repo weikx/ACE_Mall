@@ -1,6 +1,6 @@
 {{#swiperImgs}}
 <div class="swiper-slide">
-  <a href="{{href}}">
+  <a href="{{href}}?id={{id}}&name={{name}}">
     <img src="{{src}}" width="100%" height="100%">
   </a>
 </div>
