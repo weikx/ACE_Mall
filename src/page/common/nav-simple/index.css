@@ -1,8 +1,17 @@
+.nav-simole-wrap {
+  height: 40px;
+  position: relative;
+}
+/* 加定位是为了设置 z-index，从而更好的显示阴影 */
+
 .nav-simple {
-  height: 60px;
-  line-height: 60px;
+  height: 40px;
+  line-height: 40px;
   border-bottom: 1px solid #ddd;
   background: #414141;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
 }
 
 .nav-simple .logo {
@@ -10,6 +19,7 @@
   font-weight: bold;
   color: #d8d8d8;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .nav-simple .nav-list {
