@@ -3,21 +3,22 @@
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+  <!-- swiper 轮播插件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 </head>
 <body>
   <%= require('./layout/nav-simple.html') %>
-  <div class="page-wrap width">
-    <%= require('./layout/nav-side.html') %>
-    <div class="content with-nav">
-      <div class="text">
-        hello
-        <br>
-        kris wu
-        <br>
-        galaxy-qing
-      </div>
+  <%= require('./layout/nav.html') %>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
     </div>
   </div>
+  <!-- 分割线 -->
+  <div class="page-wrap width">
+  </div>
+  <img src="https://gdp.alicdn.com/imgextra/i3/2200607101491/O1CN01H8kQXG1Msv1ZBaMjD_!!2200607101491.jpg" alt="">
   <%= require('./layout/footer.html') %>
+  <!-- swiper 轮播插件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 </body>
 </html>
