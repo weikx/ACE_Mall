@@ -1,6 +1,6 @@
 require('./index.css')
 var _ace = require('util/ace.js')
-var templateIndex = require('./index.string')
+var templateIndex = require('./index.ace')
 // 导航
 var navSide = {
 	option: {
@@ -38,6 +38,7 @@ var navSide = {
 			}
 		]
 	},
+
 	init: function (option) {
 		// 合并选项
 		$.extend(this.option, option)
