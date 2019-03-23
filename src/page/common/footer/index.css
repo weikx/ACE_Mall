@@ -1,6 +1,6 @@
 .footer {
   height: 250px;
-  background: #414141;
+  background-image: linear-gradient(90deg,#222325,#3b3c3f,#222325);
 }
 
 .footer .ensure {

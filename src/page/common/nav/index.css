@@ -1,17 +1,18 @@
 .nav-postion {
-  height: 100px;
+  height: 85px;
   position: relative;
 }
 /* 加定位是为了设置 z-index，从而更好的显示阴影 */
 .nav-wrap {
   width: 100%;
+  height: 100%;
   box-shadow: 0 1px 20px 1px #dadada;
   position: absolute;
   z-index: 99;
 }
 
 .nav {
-  height: 100px;
+  height: 100%;
   display: flex;
   align-items: center;
 }
