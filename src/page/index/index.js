@@ -15,16 +15,22 @@ var page = {
 	data: {
 		swiperImgs: [
 			{
-				src: 'https://s2.ax1x.com/2019/03/22/A8pgmj.png',
+				src: 'https://s2.ax1x.com/2019/03/23/AGw0kF.png',
 				href: './goods-detail.html',
 				id: 666,
 				name: '龙吟🐲'
 			},
 			{
-				src: 'https://s2.ax1x.com/2019/03/22/A8p20s.png',
+				src: 'https://s2.ax1x.com/2019/03/23/AGwWTO.png',
 				href: './goods-detail.html',
 				id: 888,
 				name: '虎啸🐯'
+			},
+			{
+				src: 'https://s2.ax1x.com/2019/03/23/AG0p1s.png',
+				href: './goods-detail.html',
+				id: 520,
+				name: '太极☯️'
 			},
 			{
 				src: 'https://gdp.alicdn.com/imgextra/i3/2200607101491/O1CN01H8kQXG1Msv1ZBaMjD_!!2200607101491.jpg',
@@ -38,6 +44,13 @@ var page = {
 			title: '热卖商品',
 			goodsList: [
 				{
+					name: 'A.C.E. 925银 合成宝石 TENNIS项链',
+					img: 'https://img.alicdn.com/bao/uploaded/i2/2200607101491/O1CN01ZnW5dJ1Msv1eMy7gj_!!2200607101491.jpg_180x180.jpg',
+					presentPrice: 3800,
+					originalPrice: 0,
+					id: 3
+				},
+				{
 					name: 'A.C.E. 925银 合成宝石 TENNIS手链手环',
 					img: 'https://img.alicdn.com/imgextra/i1/2200607101491/O1CN01v3AET51Msv1hj3uzO_!!0-item_pic.jpg_180x180.jpg',
 					presentPrice: 1500,
@@ -50,13 +63,6 @@ var page = {
 					presentPrice: 580,
 					originalPrice: 0,
 					id: 2
-				},
-				{
-					name: 'A.C.E. 925银 合成宝石 TENNIS项链',
-					img: 'https://img.alicdn.com/bao/uploaded/i2/2200607101491/O1CN01ZnW5dJ1Msv1eMy7gj_!!2200607101491.jpg_180x180.jpg',
-					presentPrice: 3800,
-					originalPrice: 0,
-					id: 3
 				},
 				{
 					name: 'A.C.E. CUBAN系列 925银镶合成宝石 戒指指环',
