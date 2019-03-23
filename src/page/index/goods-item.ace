@@ -5,7 +5,9 @@
     {{#data.goodsList}}
     <li class="goods-item">
       <a href="./goods-detail.html?id={{id}}&name={{name}}">
-        <img src="{{img}}" width="100%" alt="" class="goods-img">
+        <div class="img-wrap">
+          <img src="{{img}}" width="100%" alt="" class="goods-img">
+        </div>
         <a href="./goods-detail.html?id={{id}}&name={{name}}" class="goods-name link">{{name}}</a>
         <p class="goods-price">
           <span class="present-price">¥{{presentPrice}}</span>
