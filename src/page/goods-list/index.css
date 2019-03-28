@@ -1,2 +1,46 @@
 .page-wrap {
 }
+
+/* 面包屑导航 */
+.crumb {
+  height: 40px;
+  line-height: 40px;
+}
+
+
+/* 排序 */
+.goods-sort {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  align-items: center;
+}
+
+.goods-sort h2 {
+
+}
+
+.goods-sort ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.goods-sort ul li {
+  padding: 0 0 0 20px;
+  position: relative;
+}
+
+.goods-sort ul li .ace-shangjiantou{
+  position: absolute;
+  top: -3px;
+  right: -15px;
+  font-size: 12px;
+}
+
+.goods-sort ul li .ace-xiajiantou{
+  position: absolute;
+  right: -15px;
+  top: 5px;
+  font-size: 12px;
+}

@@ -8,13 +8,23 @@
 <%= require('./layout/nav-simple.html') %>
 <%= require('./layout/nav.html') %>
 <div class="page-wrap width">
+  <div class="crumb">
+    <div class="crumb-con">
+      <a href="./index.html" class="link">首页</a>
+      <span class="link-text">></span>
+      <span class="link-text">所有产品</span>
+    </div>
+  </div>
   <div class="goods-sort">
+    <h2>排序:</h2>
     <ul>
-      <li>综合排序</li>
+      <li>默认</li>
       <li>
-        价格
-        <i class="ace-icon ace-shang"></i>
-        <i class="ace-icon ace-xia"></i>
+        <a href="" class="link">
+          价格
+          <i class="ace-icon ace-shangjiantou"></i>
+          <i class="ace-icon ace-xiajiantou"></i>
+        </a>
       </li>
     </ul>
   </div>
