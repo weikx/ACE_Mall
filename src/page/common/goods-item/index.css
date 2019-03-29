@@ -1,0 +1,69 @@
+
+
+/* 商品列表 */
+.goods-wrap {
+}
+.goods-wrap .goods-list {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.goods-wrap .goods-title {
+  line-height: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+
+.goods-wrap .goods-list .goods-item {
+  width: 205px;
+  height: 300px;
+  float: left;
+  margin-left: 9px;
+  margin-top: 9px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 2px 2px 10px 2px #eaeaea;
+}
+
+.goods-wrap .goods-list .goods-item:hover {
+  box-shadow: 2px 2px 10px 2px rgba(180, 160, 120, 0.52);
+}
+
+.goods-wrap .goods-list .goods-item .img-wrap {
+  width: 185px;
+  height: 185px;
+  background-image: url("https://s2.ax1x.com/2019/03/23/AG2bGV.jpg");
+  background-position: -18px -8px;
+}
+
+.goods-wrap .goods-list .goods-item .goods-img {
+  border-radius: 5px;
+}
+
+.goods-list .goods-item .goods-name {
+  display: inline-block;
+  margin-top: 10px;
+  height: 40px;
+  color: #333;
+}
+
+.goods-list .goods-item .goods-name:hover {
+  color: #b4a078;
+}
+
+.goods-list .goods-item .goods-price {
+  margin-top: 10px;
+  line-height: 20px;
+  color: #b4a078;
+  text-align: center;
+  font-size: 15px;
+}
+
+.goods-list .goods-item .goods-price .original-price {
+  color: #ccc;
+  text-decoration: line-through;
+  font-size: 12px;
+}
