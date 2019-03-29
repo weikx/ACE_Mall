@@ -43,6 +43,13 @@ q:before, q:after {
   content: none;
 }
 
+input::-webkit-outer-spin-button,
+
+input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+input[type="number"]{ -moz-appearance: textfield; }
+
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -116,4 +123,19 @@ label, input[type='checkbox'] {
 /* loading */
 .loading {
   display: block;
+}
+
+/* 面包屑导航 */
+.crumb {
+  height: 40px;
+  line-height: 40px;
+}
+
+/* 无数据icon */
+.ace-zanwushangpin {
+  display: block;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 100px;
+  color: #cccccc;
 }
