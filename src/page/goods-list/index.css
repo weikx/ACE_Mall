@@ -1,23 +1,17 @@
 .page-wrap {
+  padding-bottom: 100px;
 }
-
-/* 面包屑导航 */
-.crumb {
-  height: 40px;
-  line-height: 40px;
-}
-
 
 /* 排序 */
 .goods-sort {
   display: flex;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px dashed #ccc;
   height: 50px;
   align-items: center;
 }
 
 .goods-sort h2 {
-
+  color: #333;
 }
 
 .goods-sort ul {
@@ -26,21 +20,25 @@
   align-items: center;
 }
 
-.goods-sort ul li {
+.goods-sort .sort-list .sort-item {
   padding: 0 0 0 20px;
   position: relative;
 }
 
-.goods-sort ul li .ace-shangjiantou{
+.goods-sort .sort-item .ace-shangjiantou {
   position: absolute;
   top: -3px;
   right: -15px;
   font-size: 12px;
 }
 
-.goods-sort ul li .ace-xiajiantou{
+.goods-sort .sort-item .ace-xiajiantou {
   position: absolute;
   right: -15px;
   top: 5px;
   font-size: 12px;
+}
+
+.sort-list .sort-item.active a {
+  color: #b4a078;
 }
