@@ -49,7 +49,6 @@ var navSide = {
 		// 计算 active 数据
 		var _this = this
 		this.option.navList.forEach(function (item, index) {
-			console.log(item)
 			if (item.name === _this.option.name) {
 				item.isActive = true
 			}
