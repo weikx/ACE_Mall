@@ -3,15 +3,100 @@
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+  <!-- swiper 轮播插件 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 </head>
 <body>
 <%= require('./layout/nav-simple.html') %>
 <%= require('./layout/nav.html') %>
 <div class="page-wrap width">
-  商品详情
-  <br>
-  ID:
+  <!-- 面包屑导航 -->
+  <div class="crumb">
+    <div class="crumb-con">
+      <a href="./index.html" class="link crumb-home">首页</a>
+      <span class="link-text">></span>
+      <a href="./goods-list.html?type=all" class="link">所有产品</a>
+      <span class="link-text">></span>
+      <span class="link-text crumb-this"></span>
+    </div>
+  </div>
+  <div class="intro-wrap">
+    <div class="img-con">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://img.alicdn.com/imgextra/i1/2200607101491/O1CN01v3AET51Msv1hj3uzO_!!0-item_pic.jpg_180x180.jpg" width="100%" height="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://img.alicdn.com/bao/uploaded/i2/2200607101491/O1CN01ZnW5dJ1Msv1eMy7gj_!!2200607101491.jpg_180x180.jpg" width="100%" height="100%">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://img.alicdn.com/bao/uploaded/i3/2200607101491/O1CN01DCNWwz1Msv1dff0oy_!!0-item_pic.jpg_180x180.jpg" width="100%" height="100%">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <span class="swiper-button-next">
+        <i class="ace-icon ace-xiayige"></i>
+      </span>
+      <span class="swiper-button-prev">
+        <i class="ace-icon ace-shangyige"></i>
+      </span>
+    </div>
+    <div class="info-con">
+      <h1 class="goods-name">Kris Wu</h1>
+      <p class="subtitle">wuyifan</p>
+      <div class="info-item">
+        <span class="label">价格</span>
+        <span class="info-item price">
+          <i class="price-icon">¥</i>
+          <span>1909</span>
+        </span>
+      </div>
+      <div class="info-item">
+        <span class="label">销量</span>
+        <span class="info-item">188</span>
+      </div>
+      <div class="info-item">
+        <span class="label">库存</span>
+        <span class="info-item">66</span>
+      </div>
+      <div class="info-item">
+        <span class="label">评价</span>
+        <span class="info-item">9976</span>
+      </div>
+      <div class="info-item">
+        <span class="label">数量</span>
+        <span class="goods-count-btn plus">+</span>
+        <input type="number" class="goods-count" value="1">
+        <span class="goods-count-btn minus">-</span>
+      </div>
+      <div class="info-item">
+        <a href="" class="btn">加入购物车</a>
+      </div>
+    </div>
+  </div>
+  <div class="detail-wrap">
+    <div class="detail-tab-con">
+      <ul class="tab-list">
+        <li class="tab-item">
+          商品详情
+        </li>
+        <li class="tab-item">
+          评价（1234）
+        </li>
+        <li class="tab-item">
+          常见问题
+        </li>
+      </ul>
+    </div>
+    <div class="detail-con">
+      <img src="https://img.alicdn.com/imgextra/i3/2200607101491/O1CN01LK0VA61Msv1xf28wp_!!2200607101491.jpg">
+    </div>
+  </div>
 </div>
 <%= require('./layout/footer.html') %>
+<!-- swiper 轮播插件 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 </body>
 </html>
