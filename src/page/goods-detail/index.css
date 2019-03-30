@@ -39,13 +39,14 @@
   text-align: center;
   color: #ccc;
   top: 50%;
+  transition: all .3s;
 }
 .swiper-button-next i, .swiper-button-prev i {
   font-size: 30px;
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
-  background: #ccc;
+  background: #e0e0e0;
   color: #fff;
 }
 
@@ -126,6 +127,11 @@
   cursor: pointer;
 }
 
+.intro-wrap .info-con .info-item .goods-count-btn:hover {
+  background: #e0e0e0;
+  transition: all .3s;
+}
+
 .intro-wrap .info-con .info-item .goods-count-btn.minus{
   margin-left: -1px;
 }
@@ -143,9 +149,27 @@
   height: 44px;
   align-items: center;
   text-align: center;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .detail-tab-con .tab-list .tab-item {
   flex: 0 0 124px;
   border-right: 1px solid #ccc;
+}
+
+.detail-con {
+  overflow: hidden;
+}
+
+.detail-con .detail-img-wrap {
+  width: 790px;
+  height: auto;
+  float: left;
+}
+
+.detail-con .detail-img-wrap img {
+  width: 100%;
 }
