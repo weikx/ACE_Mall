@@ -1,0 +1,144 @@
+.cart-goods-list {
+
+}
+
+.cart-goods-list .list-head {
+}
+.cart-goods-list .list-head .list-item {
+  border: none;
+}
+
+.list-item-wrap {
+  display: flex;
+  height: 70px;
+  line-height: 70px;
+}
+
+.list-body .list-item-wrap {
+  height: 117px;
+  line-height: 117px;
+}
+
+.list-item-wrap .list-item {
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+  color: #424242;
+  font-size: 14px;
+}
+
+.list-item-wrap .item-check {
+  flex: 0 0 80px;
+  text-align: left;
+}
+
+.list-item-wrap .item-img {
+  flex: 0 0 110px;
+}
+
+.list-item-wrap .item-img img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  margin-top: 15px;
+  float: left;
+}
+
+.list-item-wrap .item-name {
+  flex: 0 0 300px;
+  text-align: left;
+  text-overflow : ellipsis;
+  overflow: hidden;
+  white-space:nowrap;
+}
+
+
+.list-item-wrap .item-price {
+  flex: 0 0 160px;
+}
+
+.list-item-wrap .item-num {
+  flex: 0 0 150px;
+}
+
+.list-item-wrap .item-total {
+  flex: 0 0 200px;
+}
+
+.list-item-wrap .item-action {
+  flex: 0 0 80px;
+  text-align: center;
+}
+
+.list-body .list-item-wrap .item-name {
+  font-size: 18px;
+}
+
+.list-body .list-item-wrap .item-total {
+  color: #b4a078;
+  font-size: 16px;
+}
+
+.list-body .list-item-wrap .item-num {
+  display: flex;
+  align-items: center;
+}
+
+/* 数量加减 */
+
+.goods-count {
+  width: 60px;
+  height: 30px;
+  outline: none;
+  padding: 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-left: -1px;
+}
+
+.goods-count-btn {
+  display: inline-block;
+  width: 36px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.goods-count-btn:hover {
+  background: #e0e0e0;
+  transition: all .3s;
+}
+
+.goods-count-btn.minus{
+  margin-left: -1px;
+}
+
+/* 下方结算 */
+.cart-bar {
+  margin: 20px 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.cart-bar .bar-item {
+  display: flex;
+  align-items: center;
+}
+
+.cart-bar .cart-total-num, .cart-select-num {
+  color: #b4a078;
+}
+
+.cart-bar .all-price {
+  color: #b4a078;
+  padding-right: 20px;
+}
+
+.cart-bar .cart-total-price {
+  font-size: 26px;
+}
