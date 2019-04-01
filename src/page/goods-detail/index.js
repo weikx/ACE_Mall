@@ -4,9 +4,10 @@ require('page/common/nav-simple/index.js')
 require('page/common/nav/index.js')
 var _ace = require('util/ace.js')
 var navList = require('page/common/nav/index.js')
+var _goods = require('service/goods-service.js')
 
 navList.init({
-	name: ''
+	categoryId: ''
 })
 var page = {
 	data: {
@@ -23,6 +24,7 @@ var page = {
 		}
 		this.getGoodsData()
 		this.initSwiper()
+		this.getGoodsDetail()
 	},
 
 	bindEvent: function () {},
@@ -34,10 +36,10 @@ var page = {
 	},
 
 	initSwiper: function () {
+		// Doc: https://www.swiper.com.cn/
 		var mySwiper = new Swiper ('.img-con .swiper-container', {
-			loop: true, // 循环模式选项
+			loop: true,
 			effect: 'fade',
-			// 如果需要前进后退按钮
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -45,6 +47,16 @@ var page = {
 			pagination: {
 				el: '.swiper-pagination',
 			}
+		})
+	},
+
+	getGoodsDetail: function () {
+		_goods.getGoodsDetail({
+			goodId: 1
+		}, function (res) {
+			res = res[0]
+			res.detailImage = res.detailImage.split(',')
+			res.infoImage = res.infoImage.split(',')
 		})
 	}
 }
