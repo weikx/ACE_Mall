@@ -5,6 +5,6 @@
   {{^isActive}}
 <li class="nav-item">
   {{/isActive}}
-  <a class="link" href="{{href}}?type={{name}}">{{desc}}</a>
+  <a class="link" href="{{href}}?type={{categoryId}}&name={{categoryName}}">{{categoryName}}</a>
 </li>
 {{/navList}}

@@ -6,5 +6,5 @@ var _ace = require('util/ace.js')
 var navList = require('page/common/nav/index.js')
 
 navList.init({
-	name: ''
+	categoryId: ''
 })
