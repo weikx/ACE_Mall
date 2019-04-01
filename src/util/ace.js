@@ -2,6 +2,9 @@ var HTTP_OK = 0 // http ok
 var HTTP_FAIL = 1 // http fail
 var NO_LOGIN = 10 // 未登录
 var Hogan = require('hogan.js')
+var cof = {
+	serverHost: 'http://192.168.0.143:60391/'
+}
 var _ace = {
 	request: function (param) {
 		// 网络请求
@@ -17,12 +20,13 @@ var _ace = {
 				} else if (res.status == NO_LOGIN) {
 					_this.toLogin()
 				} else if (res.status == HTTP_FAIL) {
+					_this.errorTips(res.message)
 					param.error && param.error(res)
 				}
 			},
 
 			error: function (err) {
-				param.error && param.error(err)
+				param.error && param.error(err.statusText)
 			}
 		})
 	},
@@ -74,6 +78,10 @@ var _ace = {
 	goHome: function () {
 		// 返回首页
 		window.location.href = './index.html'
+	},
+
+	getServerUrl: function (path) {
+		return cof.serverHost + path
 	}
 }
 
