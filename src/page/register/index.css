@@ -11,6 +11,10 @@
   border-radius: 2px;
 }
 
+.user-con .ace-icon {
+  color: #666;
+}
+
 .user-con .user-title {
   height: 50px;
   text-align: center;
