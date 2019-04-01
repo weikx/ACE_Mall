@@ -2,6 +2,7 @@ require('./index.css')
 require('page/common/footer/index.js')
 require('page/common/nav-simple/index.js')
 var _ace = require('util/ace.js')
+var _user = require('service/user-service.js')
 
 // 表单错误提示
 var fromError = {
@@ -41,7 +42,14 @@ var page = {
 		if (validateResult.status) {
 			// 登录
 			fromError.hide()
-			console.log('登录')
+			_user.login({
+				account: formData.username,
+				password: formData.password
+			}, function (res) {
+				res = res[0]
+				console.log(res)
+				localStorage.setItem('acct', JSON.stringify(res))
+			})
 		} else {
 			fromError.show(validateResult.msg)
 		}

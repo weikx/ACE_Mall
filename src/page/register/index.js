@@ -2,6 +2,7 @@ require('./index.css')
 require('page/common/footer/index.js')
 require('page/common/nav-simple/index.js')
 var _ace = require('util/ace.js')
+var _user = require('service/user-service.js')
 
 // 表单错误提示
 var fromError = {
@@ -36,14 +37,28 @@ var page = {
 		var formData = {
 			username: $.trim($('#username').val()),
 			password: $.trim($('#password').val()),
-			confirmPassword: $.trim($('#confirm-password').val())
+			confirmPassword: $.trim($('#confirm-password').val()),
+			email: $.trim($('#email').val()),
+			receiveName: $.trim($('#receive-name').val()),
+			receiveAddress: $.trim($('#receive-address').val()),
+			receivePhone: $.trim($('#receive-phone').val())
 		}
 		// 表单验证结果
 		var validateResult = this.formValidate(formData)
 		if (validateResult.status) {
 			// 注册
 			fromError.hide()
-			window.location.href = './result.html?type=register'
+			_user.register({
+				email: formData.email,
+				account: formData.username,
+				password: formData.password,
+				receiveName: formData.receiveName,
+				receiveAddress: formData.receiveAddress,
+				receivePhone: formData.receivePhone
+			}, function (res) {
+				console.log(res)
+				// window.location.href = './result.html?type=register'
+			})
 		} else {
 			fromError.show(validateResult.msg)
 		}
@@ -68,6 +83,22 @@ var page = {
 		}
 		if (formData.password !== formData.confirmPassword) {
 			result.msg = '两次输入密码不一致'
+			return result
+		}
+		if (!_ace.validate(formData.email, 'email')) {
+			result.msg = '请输入正确的邮箱地址'
+			return result
+		}
+		if (!_ace.validate(formData.receiveName, 'require')) {
+			result.msg = '请输入收货人姓名'
+			return result
+		}
+		if (!_ace.validate(formData.receiveAddress, 'require')) {
+			result.msg = '请输入收货地址'
+			return result
+		}
+		if (!_ace.validate(formData.receivePhone, 'phone')) {
+			result.msg = '请输入正确手机号'
 			return result
 		}
 		result.status = true

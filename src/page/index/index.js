@@ -9,7 +9,7 @@ var navList = require('page/common/nav/index.js')
 var goodsTemplate = require('../common/goods-item/index.ace')
 
 navList.init({
-	name: 'home'
+	categoryId: 'home'
 })
 
 var page = {
@@ -191,5 +191,11 @@ var page = {
 }
 
 $(function () {
+	_ace.request({
+		url: _ace.getServerUrl('api/User/GetMyShopCart?userId=1'),
+		success: function (res) {
+			console.log(res)
+		}
+	})
 	page.init()
 })
