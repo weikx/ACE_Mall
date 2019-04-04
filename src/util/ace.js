@@ -1,6 +1,6 @@
 var HTTP_OK = 0 // http ok
 var HTTP_FAIL = 1 // http fail
-var NO_LOGIN = 10 // 未登录
+var NO_LOGIN = 2 // 未登录
 var Hogan = require('hogan.js')
 var cof = {
 	serverHost: 'http://192.168.0.143:60391/'
@@ -19,13 +19,14 @@ var _ace = {
 					param.success && param.success(res.data)
 				} else if (res.status == NO_LOGIN) {
 					_this.toLogin()
-				} else if (res.status == HTTP_FAIL) {
+				} else {
 					_this.errorTips(res.message)
 					param.error && param.error(res)
 				}
 			},
 
 			error: function (err) {
+				_this.errorTips(err.statusText)
 				param.error && param.error(err.statusText)
 			}
 		})
@@ -56,7 +57,7 @@ var _ace = {
 
 	errorTips: function (msg) {
 		// 错误提示
-		alert(msg || '错了一些问题～')
+		alert(msg || '出了一些问题～')
 	},
 
 	validate: function (value, type) {
@@ -82,6 +83,29 @@ var _ace = {
 
 	getServerUrl: function (path) {
 		return cof.serverHost + path
+	},
+
+	setUserInfo: function (userInfo) {
+		localStorage.setItem('userInfo', JSON.stringify(userInfo))
+	},
+
+	logout: function () {
+		localStorage.removeItem('userInfo')
+	},
+
+	getUserInfo: {
+		info: function () {
+			var userInfo = localStorage.getItem('userInfo')
+			return JSON.parse(userInfo)
+		},
+
+		id: function () {
+			return this.info() && this.info().id
+		},
+
+		name: function () {
+			return this.info().receiveName
+		}
 	}
 }
 
