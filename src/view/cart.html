@@ -7,89 +7,91 @@
 <body>
 <%= require('./layout/nav-simple.html') %>
 <%= require('./layout/nav.html') %>
-<div class="page-wrap width">
-  <div class="cart-goods-list">
-    <div class="list-head">
-      <ul>
-        <li class="list-item-wrap">
-          <div class="list-item item-check">
-            <input name="cart" type="checkbox" value="" />
-            <span>全选</span>
-          </div>
-          <div class="list-item item-img"></div>
-          <div class="list-item item-name">商品名称</div>
-          <div class="list-item item-price">单价</div>
-          <div class="list-item item-num">数量</div>
-          <div class="list-item item-total">小计</div>
-          <div class="list-item item-action">操作</div>
-        </li>
-      </ul>
-    </div>
-    <div class="list-body">
-      <ul>
-        <li class="list-item-wrap">
-          <div class="list-item item-check">
-            <input name="cart" type="checkbox" value="" />
-          </div>
-          <div class="list-item item-img">
-            <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
-          </div>
-          <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
-          <div class="list-item item-price">169元</div>
-          <div class="list-item item-num">
-            <span class="goods-count-btn plus">+</span>
-            <input type="number" class="goods-count" value="1">
-            <span class="goods-count-btn minus">-</span>
-          </div>
-          <div class="list-item item-total">845元</div>
-          <div class="list-item item-action">X</div>
-        </li>
-        <li class="list-item-wrap">
-          <div class="list-item item-check">
-            <input name="cart" type="checkbox" value="" />
-          </div>
-          <div class="list-item item-img">
-            <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
-          </div>
-          <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
-          <div class="list-item item-price">169元</div>
-          <div class="list-item item-num">
-            <span class="goods-count-btn plus">+</span>
-            <input type="number" class="goods-count" value="1">
-            <span class="goods-count-btn minus">-</span>
-          </div>
-          <div class="list-item item-total">845元</div>
-          <div class="list-item item-action">X</div>
-        </li>
-        <li class="list-item-wrap">
-          <div class="list-item item-check">
-            <input name="cart" type="checkbox" value="" />
-          </div>
-          <div class="list-item item-img">
-            <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
-          </div>
-          <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
-          <div class="list-item item-price">169元</div>
-          <div class="list-item item-num">
-            <span class="goods-count-btn plus">+</span>
-            <input type="number" class="goods-count" value="1">
-            <span class="goods-count-btn minus">-</span>
-          </div>
-          <div class="list-item item-total">845元</div>
-          <div class="list-item item-action">X</div>
-        </li>
-
-      </ul>
-    </div>
-    <div class="cart-bar">
-      <div class="bar-item">
-        <p>共 <span class="cart-total-num">11</span> 件商品，已选择 <span class="cart-select-num">0</span> 件</p>
+<div class="page-wrap width stick-footer-content">
+  <div class="stick-footer-content-inside">
+    <div class="cart-goods-list">
+      <div class="list-head">
+        <ul>
+          <li class="list-item-wrap">
+            <div class="list-item item-check">
+              <input name="cart" type="checkbox" value="" />
+              <span>全选</span>
+            </div>
+            <div class="list-item item-img"></div>
+            <div class="list-item item-name">商品名称</div>
+            <div class="list-item item-price">单价</div>
+            <div class="list-item item-num">数量</div>
+            <div class="list-item item-total">小计</div>
+            <div class="list-item item-action">操作</div>
+          </li>
+        </ul>
       </div>
-      <div class="bar-item">
-        <p class="all-price">
-          合计:<span class="cart-total-price">0</span>元
-        </p>
-        <div class="btn topay">去结算</div>
+      <div class="list-body">
+        <ul>
+          <li class="list-item-wrap">
+            <div class="list-item item-check">
+              <input name="cart" type="checkbox" value="" />
+            </div>
+            <div class="list-item item-img">
+              <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
+            </div>
+            <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
+            <div class="list-item item-price">169元</div>
+            <div class="list-item item-num">
+              <span class="goods-count-btn plus">+</span>
+              <input type="number" class="goods-count" value="1">
+              <span class="goods-count-btn minus">-</span>
+            </div>
+            <div class="list-item item-total">845元</div>
+            <div class="list-item item-action">X</div>
+          </li>
+          <li class="list-item-wrap">
+            <div class="list-item item-check">
+              <input name="cart" type="checkbox" value="" />
+            </div>
+            <div class="list-item item-img">
+              <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
+            </div>
+            <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
+            <div class="list-item item-price">169元</div>
+            <div class="list-item item-num">
+              <span class="goods-count-btn plus">+</span>
+              <input type="number" class="goods-count" value="1">
+              <span class="goods-count-btn minus">-</span>
+            </div>
+            <div class="list-item item-total">845元</div>
+            <div class="list-item item-action">X</div>
+          </li>
+          <li class="list-item-wrap">
+            <div class="list-item item-check">
+              <input name="cart" type="checkbox" value="" />
+            </div>
+            <div class="list-item item-img">
+              <img src="https://img.alicdn.com/imgextra/i4/2200607101491/O1CN01UzblHa1Msv1iDfsmB_!!0-item_pic.jpg_430x430q90.jpg" alt="">
+            </div>
+            <div class="list-item item-name">A.C.E. LOGO系列 925银镶合成宝石 白色吊坠项链</div>
+            <div class="list-item item-price">169元</div>
+            <div class="list-item item-num">
+              <span class="goods-count-btn plus">+</span>
+              <input type="number" class="goods-count" value="1">
+              <span class="goods-count-btn minus">-</span>
+            </div>
+            <div class="list-item item-total">845元</div>
+            <div class="list-item item-action">X</div>
+          </li>
+
+        </ul>
+      </div>
+      <div class="cart-bar">
+        <div class="bar-item">
+          <p>共 <span class="cart-total-num">11</span> 件商品，已选择 <span class="cart-select-num">0</span> 件</p>
+        </div>
+        <div class="bar-item">
+          <p class="all-price">
+            合计:<span class="cart-total-price">0</span>元
+          </p>
+          <div class="btn topay">去结算</div>
+        </div>
       </div>
     </div>
   </div>
