@@ -19,6 +19,27 @@ var _user = {
 			success: success,
 			error: error
 		})
+	},
+
+	addShopCart: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/AddMyShopCart'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
+	},
+
+	getShopCart: function (success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/GetMyShopCart'),
+			data: {
+				userId: _ace.getUserInfo.id()
+			},
+			success: success,
+			error: error
+		})
 	}
 }
 
