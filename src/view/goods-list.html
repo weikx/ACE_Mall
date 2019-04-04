@@ -7,31 +7,35 @@
 <body>
 <%= require('./layout/nav-simple.html') %>
 <%= require('./layout/nav.html') %>
-<div class="page-wrap width">
-  <!-- 面包屑导航 -->
-  <div class="crumb">
-    <div class="crumb-con">
-      <a href="./index.html" class="link crumb-home">首页</a>
-      <span class="link-text">></span>
-      <span class="link-text crumb-this">所有产品</span>
+<div class="page-wrap width stick-footer-content">
+  <div class="stick-footer-content-inside">
+    <!-- 面包屑导航 -->
+    <div class="crumb">
+      <div class="crumb-con">
+        <a href="./index.html" class="link crumb-home">首页</a>
+        <span class="link-text">></span>
+        <span class="link-text crumb-this">所有产品</span>
+      </div>
     </div>
-  </div>
-  <div class="goods-sort">
-    <h2>排序:</h2>
-    <ul class="sort-list">
-      <li class="sort-item active">
-        <a href="" class="link">
-          默认
-        </a>
-      </li>
-      <li class="sort-item">
-        <a href="" class="link">
-          价格
-          <i class="ace-icon ace-shangjiantou"></i>
-          <i class="ace-icon ace-xiajiantou"></i>
-        </a>
-      </li>
-    </ul>
+    <div class="goods-sort">
+      <h2>排序:</h2>
+      <ul class="sort-list">
+        <li class="sort-item active">
+          <a href="" class="link">
+            默认
+          </a>
+        </li>
+        <li class="sort-item">
+          <a href="" class="link">
+            价格
+            <i class="ace-icon ace-shangjiantou"></i>
+            <i class="ace-icon ace-xiajiantou"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="goods-wrap">
+    </div>
   </div>
 </div>
 <%= require('./layout/footer.html') %>
