@@ -12,7 +12,6 @@
   height: 400px;
   position: relative;
 }
-
 /* 轮播 */
 
 .img-con .swiper-container {
@@ -62,6 +61,10 @@
   float: left;
   width: 570px;
   margin-left: 20px;
+}
+
+.info-item.item-btn {
+  margin-top: 40px;
 }
 
 .intro-wrap .info-con .goods-name {
@@ -134,10 +137,6 @@
 
 .intro-wrap .info-con .info-item .goods-count-btn.minus{
   margin-left: -1px;
-}
-
-.info-item .btn {
-  margin-top: 200px;
 }
 
 .detail-wrap {

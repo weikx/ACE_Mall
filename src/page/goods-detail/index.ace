@@ -1,0 +1,81 @@
+<div class="intro-wrap">
+  <div class="img-con">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        {{#detailImage}}
+        <div class="swiper-slide">
+          <img src="{{.}}" width="100%" height="100%">
+        </div>
+        {{/detailImage}}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <span class="swiper-button-next">
+        <i class="ace-icon ace-xiayige"></i>
+      </span>
+    <span class="swiper-button-prev">
+        <i class="ace-icon ace-shangyige"></i>
+      </span>
+  </div>
+  <div class="info-con">
+    <h1 class="goods-name">{{goodName}}</h1>
+    <p class="subtitle">wuyifan</p>
+    <div class="info-item">
+      <span class="label">价格</span>
+      <span class="info-item price">
+          <i class="price-icon">¥</i>
+          <span>{{presentPrice}}</span>
+        </span>
+    </div>
+    <div class="info-item">
+      <span class="label">销量</span>
+      <span class="info-item">{{saleNumber}}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">库存</span>
+      <span class="info-item">{{stock}}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">评价</span>
+      <span class="info-item">{{evaluationNum}}</span>
+    </div>
+    <div class="info-item">
+      <span class="label">数量</span>
+      <span class="goods-count-btn minus">-</span>
+      <input type="number" class="goods-count" value="1" disabled>
+      <span class="goods-count-btn plus">+</span>
+    </div>
+    <div class="info-item item-btn">
+      <a href="javascript:void(0)" class="btn">加入购物车</a>
+    </div>
+  </div>
+</div>
+<div class="detail-wrap">
+  <div class="detail-tab-con">
+    <ul class="tab-list">
+      <li class="tab-item">
+        商品详情
+      </li>
+      <li class="tab-item">
+        评价（{{evaluationNum}}）
+      </li>
+      <li class="tab-item">
+        常见问题
+      </li>
+    </ul>
+  </div>
+  <div class="detail-con">
+    <div class="detail-img-wrap">
+      <ul>
+        {{#infoImage}}
+          <li>
+            <img src="{{.}}">
+          </li>
+        {{/infoImage}}
+      </ul>
+      {{^infoImage}}
+        暂无简介图片
+      {{/infoImage}}
+    </div>
+  </div>
+</div>
