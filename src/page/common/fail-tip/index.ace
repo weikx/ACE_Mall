@@ -1,0 +1,2 @@
+<img class="icon-svg" src="/src/image/icon/online_shopping.svg">
+<p class="nodata">{{msg}}</p>
