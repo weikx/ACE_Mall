@@ -7,10 +7,12 @@
 <body>
   <%= require('./layout/nav-simple.html') %>
   <%= require('./layout/nav.html') %>
-  <div class="page-wrap width">
-    <%= require('./layout/nav-side.html') %>
-    <div class="content with-nav">
-      我的ACE_Mall
+  <div class="page-wrap width stick-footer-content">
+    <div class="stick-footer-content-inside">
+      <%= require('./layout/nav-side.html') %>
+      <div class="content with-nav">
+        我的ACE_Mall
+      </div>
     </div>
   </div>
   <%= require('./layout/footer.html') %>

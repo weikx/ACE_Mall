@@ -6,8 +6,8 @@
 </head>
 <body>
 <%= require('./layout/nav-simple.html') %>
-<div class="page-wrap">
-  <div class="width">
+<div class="page-wrap width stick-footer-content">
+  <div class="stick-footer-content-inside">
     <div class="user-con">
       <div class="user-title">
         用户登录
@@ -38,8 +38,6 @@
     </div>
   </div>
 </div>
-<div class="footer-wrap">
-  <%= require('./layout/footer.html') %>
-</div>
+<%= require('./layout/footer.html') %>
 </body>
 </html>
