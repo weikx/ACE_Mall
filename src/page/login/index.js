@@ -47,8 +47,8 @@ var page = {
 				password: formData.password
 			}, function (res) {
 				res = res[0]
-				console.log(res)
-				localStorage.setItem('acct', JSON.stringify(res))
+				_ace.setUserInfo(res)
+				window.location.href = _ace.getUrlPatam('redirect') || './index.html'
 			})
 		} else {
 			fromError.show(validateResult.msg)

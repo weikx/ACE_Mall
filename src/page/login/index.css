@@ -61,8 +61,11 @@
   float: right;
 }
 
-.footer-wrap {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+/* stick footer布局 */
+.stick-footer-content {
+  min-height: calc(100% - 40px);
+}
+
+.stick-footer-content-inside {
+  padding-bottom: 250px;
 }
