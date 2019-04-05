@@ -12,23 +12,49 @@ var failTipTemplate = require('page/common/fail-tip/index.ace')
 
 var page = {
 	data: {
-		goodsList: []
+		goodsList: [],
+		categoryId: 0,
+		sortPrice: 0
 	},
 
 	init: function () {
+		this.onLoad()
+	},
+
+	onLoad: function () {
+		this.bindEvent()
 		this.getPageType()
+	},
+
+	bindEvent: function () {
+		var _this = this
+		$('.sort-item').on('click', function () {
+			// 排序
+			// TODO: Waiting for optimization
+			$(this).addClass('active')
+				.siblings().removeClass('active')
+			var sortType = $(this).data('sort')
+			if (!!sortType) {
+				var sortPriceType = page.data.sortPrice %2 == 0 ? 1 : 2
+				_this.getGoodsList(sortPriceType)
+				page.data.sortPrice += 1
+			} else {
+				_this.getGoodsList(0)
+			}
+		})
 	},
 
 	getPageType: function () {
 		// 获取商品类别id
 		var type = _ace.getUrlPatam('type'),
 			name = _ace.getUrlPatam('name')
+		page.data.categoryId = type
 		// 初始化 Nav
 		navList.init({
 			categoryId: type
 		})
 		$('.crumb-this').text(name || '未知商品')
-		this.getGoodsList(type)
+		this.getGoodsList()
 	},
 
 	goodsItemInit: function () {
@@ -43,16 +69,16 @@ var page = {
 			var tipHtml = _ace.renderHtml(failTipTemplate, {
 				msg: '此分类无商品，换个分类看看吧'
 			})
-			$('.goods-wrap').append(tipHtml)
+			$('.goods-wrap').html(tipHtml)
 		}
 	},
 
-	getGoodsList: function (categoryId) {
+	getGoodsList: function (sortNo) {
 		// 获取商品列表
 		var _this = this
 		_goods.getGoodsList({
-			categoryId: categoryId,
-			sortNo: 0
+			categoryId: page.data.categoryId,
+			sortNo: sortNo || 0
 		}, function (res) {
 			page.data.goodsList = res.goodsList
 			_this.goodsItemInit()
@@ -62,6 +88,10 @@ var page = {
 			})
 			$('.goods-wrap').append(tipHtml)
 		})
+	},
+
+	goodsSort: function () {
+
 	}
 }
 
