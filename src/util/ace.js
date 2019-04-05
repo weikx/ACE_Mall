@@ -90,7 +90,7 @@ var _ace = {
 	},
 
 	logout: function () {
-		localStorage.removeItem('userInfo')
+		localStorage.clear()
 	},
 
 	getUserInfo: {
