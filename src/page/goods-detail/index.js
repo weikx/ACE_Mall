@@ -9,6 +9,7 @@ var _goods = require('service/goods-service.js')
 var _user = require('service/user-service.js')
 var goodsDetailTemplate = require('./index.ace')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
+var evaluateTemplate = require('./evaluate.ace')
 
 navList.init({
 	categoryId: ''
@@ -16,7 +17,8 @@ navList.init({
 var page = {
 	data: {
 		goodsId: _ace.getUrlPatam('id') || '',
-		goodsDetail: {}
+		goodsDetail: {},
+		evaluate: []
 	},
 
 	init: function () {
@@ -83,6 +85,7 @@ var page = {
 	bindEvent: function () {
 		var _this = this
 		$(document).on('click', '.goods-count-btn', function () {
+			// 数量加减
 			var type = $(this).hasClass('plus') ? 'plus' : 'minus',
 				$goodsCount = $('.goods-count'),
 				currCount = parseInt($goodsCount.val()),
@@ -96,6 +99,7 @@ var page = {
 		})
 
 		$(document).on('click', '.btn', function () {
+			// 加入购物车
 			_user.addShopCart({
 				userId: _ace.getUserInfo.id(),
 				number: $('.goods-count').val(),
@@ -105,6 +109,34 @@ var page = {
 				_this.setCartCount()
 			})
 		})
+
+		$(document).on('click', '.tab-list .tab-item', function (i) {
+			var tabIndex = $(this).attr('index').split(' ')
+			$(this).addClass('active')
+			$(this).siblings('.active').removeClass('active')
+			var detail = $('.detail-con').children()
+			$(detail[tabIndex]).show().siblings().hide()
+			if (tabIndex == 1) {
+				_this.getEvaluate()
+			}
+		})
+	},
+
+	getEvaluate: function () {
+		// 获取评论
+		if (!page.data.evaluate.length) {
+			_goods.getEvaluate({
+				goodId: page.data.goodsId
+			}, function (res) {
+				if (res.length) {
+					page.data.evaluate = res
+					var evaluateHtml = _ace.renderHtml(evaluateTemplate, page.data)
+					$('.detail-evaluate-wrap').html(evaluateHtml)
+				} else {
+					$('.detail-evaluate-wrap').html('<p>暂无评论</p>')
+				}
+			})
+		}
 	},
 
 	setCartCount: function () {
@@ -117,5 +149,4 @@ var page = {
 
 $(function () {
 	page.init()
-	console.log(_ace.getUserInfo.id())
 })
