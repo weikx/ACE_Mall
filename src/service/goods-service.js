@@ -26,6 +26,15 @@ var _goods = {
 			error: error
 		})
 	},
+
+	getEvaluate: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/Good/ByGoodIDGetGoodEvaluation'),
+			data: params,
+			success: success,
+			error: error
+		})
+	}
 }
 
 module.exports = _goods
