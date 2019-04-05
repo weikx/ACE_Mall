@@ -40,6 +40,16 @@ var _user = {
 			success: success,
 			error: error
 		})
+	},
+
+	updateShopCartNum: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/UpdateShopCartNumber'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
 	}
 }
 
