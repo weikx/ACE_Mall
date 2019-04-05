@@ -4,7 +4,8 @@ var _user = require('service/user-service.js')
 
 var navSimple = {
 	data: {
-		userInfo: _ace.getUserInfo.info()
+		userInfo: _ace.getUserInfo.info(),
+		cartCount: 0
 	},
 
 	init: function () {
@@ -35,9 +36,20 @@ var navSimple = {
 
 	setCartCount: function () {
 		// 设置购物车数量
+		var _this = this
+		$('.cart-count').text(_this.getLocationCount() || 0) // 先从本地读购物车数量，再获取。免得获取慢数量闪一下
 		navSimple.data.userInfo && _user.getShopCart(function (res) {
 			$('.cart-count').text(res.length)
+			_this.setLocationCount(res.length)
 		})
+	},
+
+	setLocationCount: function (num) {
+		localStorage.setItem('cartCount', num)
+	},
+
+	getLocationCount: function () {
+		return localStorage.getItem('cartCount')
 	},
 
 	logout: function () {
