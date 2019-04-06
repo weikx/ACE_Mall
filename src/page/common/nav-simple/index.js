@@ -39,8 +39,8 @@ var navSimple = {
 		var _this = this
 		$('.cart-count').text(_this.getLocationCount() || 0) // 先从本地读购物车数量，再获取。免得获取慢数量闪一下
 		navSimple.data.userInfo && _user.getShopCart(function (res) {
-			$('.cart-count').text(res.length)
-			_this.setLocationCount(res.length)
+			$('.cart-count').text(res.mymodel.length)
+			_this.setLocationCount(res.mymodel.length)
 		})
 	},
 
