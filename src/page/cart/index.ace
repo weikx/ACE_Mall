@@ -1,9 +1,15 @@
 <div>
+  {{#totalNumber}}
   <div class="list-head">
     <ul>
       <li class="list-item-wrap">
         <div class="list-item item-check">
-          <input name="cart" type="checkbox" value="" />
+          {{#isAllChecked}}
+          <input name="cart" type="checkbox" class="select-all" checked />
+          {{/isAllChecked}}
+          {{^isAllChecked}}
+          <input name="cart" type="checkbox" class="select-all" />
+          {{/isAllChecked}}
           <span>全选</span>
         </div>
         <div class="list-item item-img"></div>
@@ -17,36 +23,59 @@
   </div>
   <div class="list-body">
     <ul>
-      {{#goods}}
+      {{#mymodel}}
       <li class="list-item-wrap" data-id="{{goodId}}">
         <div class="list-item item-check">
-          <input name="cart" type="checkbox" value="" />
+          {{#isChecked}}
+          <input name="cart" class="select-goods" type="checkbox" checked value="" />
+          {{/isChecked}}
+          {{^isChecked}}
+          <input name="cart" class="select-goods" type="checkbox" value="" />
+          {{/isChecked}}
         </div>
         <div class="list-item item-img">
-          <img src="{{goodImage}}" alt="">
+          <a href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
+            <img src="{{goodImage}}" alt="">
+          </a>
         </div>
-        <div class="list-item item-name">{{goodName}}</div>
+        <div class="list-item item-name">
+          <a class="link" href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
+            {{goodName}}
+          </a>
+        </div>
         <div class="list-item item-price">{{goodPrice}}元</div>
         <div class="list-item item-num">
-          <span class="goods-count-btn plus">+</span>
-          <input type="number" class="goods-count" value="{{number}}" data-stock="{{goodStock}}" disabled>
           <span class="goods-count-btn minus">-</span>
+          <input type="number" class="goods-count" value="{{number}}" data-stock="{{goodStock}}" disabled>
+          <span class="goods-count-btn plus">+</span>
         </div>
         <div class="list-item item-total">{{subTotal}}元</div>
-        <div class="list-item item-action">X</div>
+        <div class="list-item item-action">
+          <i class="ace-icon ace-cha"></i>
+        </div>
       </li>
-      {{/goods}}
+      {{/mymodel}}
     </ul>
   </div>
   <div class="cart-bar">
     <div class="bar-item">
-      <p>共 <span class="cart-total-num">11</span> 件商品，已选择 <span class="cart-select-num">0</span> 件</p>
+      <p>共 <span class="cart-total-num">{{totalNumber}}</span> 件商品，已选择 <span class="cart-select-num">{{checkNumber}}</span> 件</p>
     </div>
     <div class="bar-item">
       <p class="all-price">
-        合计:<span class="cart-total-price">0</span>元
+        合计:<span class="cart-total-price">{{totalPrice}}</span>元
       </p>
-      <div class="btn topay">去结算</div>
+      <a href="./checkout.html" class="btn topay">去结算</a>
     </div>
   </div>
+  {{/totalNumber}}
+  {{^totalNumber}}
+  <div class="cart-null">
+    <img src="/src/image/icon/checklist.svg" class="icon-svg" alt="">
+    <p class="nodata">
+      购物车中还没有商品！
+      <a class="link" href="./index.html">点这去购买！</a>
+    </p>
+  </div>
+  {{/totalNumber}}
 </div>

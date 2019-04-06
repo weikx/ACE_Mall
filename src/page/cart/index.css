@@ -26,6 +26,14 @@
   font-size: 14px;
 }
 
+.list-item-wrap .list-item .link {
+  color: #424242;
+}
+
+.list-item-wrap .list-item .link:hover {
+  color: #b4a078;
+}
+
 .list-item-wrap .item-check {
   flex: 0 0 80px;
   text-align: left;
@@ -141,4 +149,37 @@
 
 .cart-bar .cart-total-price {
   font-size: 26px;
+}
+
+/* 删除 icon */
+.ace-cha {
+  font-size: 14px;
+  color: #ccc;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.ace-cha:hover {
+  color: #b4a078;
+  background: #dddddd;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+/* 无商品 icon */
+.cart-null .icon-svg {
+  display: block;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.cart-null .nodata {
+  text-align: center;
+  padding: 20px;
+  color: #ccc;
+}
+
+.cart-null .btn-gobuy {
 }

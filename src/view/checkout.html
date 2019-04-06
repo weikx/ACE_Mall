@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+</head>
+<body>
+<%= require('./layout/nav-simple.html') %>
+<!--<%= require('./layout/nav.html') %>-->
+<div class="nav-postion">
+  <div class="nav-wrap">
+    <div class="nav width">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="https://s2.ax1x.com/2019/04/06/Af9VLq.png" alt="ACE_Mall" width="100%">
+        </a>
+      </div>
+      <ul class="nav-list">
+        <h1 class="nav-title">确认订单</h1>
+      </ul>
+      <div class="search">
+        <input type="text">
+        <button class="search-btn">
+          搜索
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-wrap width stick-footer-content">
+  <div class="stick-footer-content-inside">
+    <div class="checkout-wrpa">
+      <div class="checkout-title">
+        订单商品
+      </div>
+      <div class="chekout-goods">
+        <ul class="goods-list">
+          <li class="goods-item">
+            <div class="goods-img">
+              <img src="https://i1.mifile.cn/a1/pms_1513822496.31335198!30x30.jpg" alt="">
+            </div>
+            <p class="goods-name">米家电磁炉</p>
+            <p class="goods-num">299元 x 1</p>
+            <p class="goods-price">299元</p>
+          </li>
+          <li class="goods-item">
+            <div class="goods-img">
+              <img src="https://i1.mifile.cn/a1/pms_1513822496.31335198!30x30.jpg" alt="">
+            </div>
+            <p class="goods-name">米家电磁炉</p>
+            <p class="goods-num">299元 x 1</p>
+            <p class="goods-price">299元</p>
+          </li>
+          <li class="goods-item">
+            <div class="goods-img">
+              <img src="https://i1.mifile.cn/a1/pms_1513822496.31335198!30x30.jpg" alt="">
+            </div>
+            <p class="goods-name">米家电磁炉</p>
+            <p class="goods-num">299元 x 1</p>
+            <p class="goods-price">299元</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<%= require('./layout/footer.html') %>
+</body>
+</html>

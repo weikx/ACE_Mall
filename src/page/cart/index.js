@@ -7,14 +7,10 @@ var navList = require('page/common/nav/index.js')
 var cartTemplate = require('page/cart/index.ace')
 var _user = require('service/user-service.js')
 
-navList.init({
-	categoryId: ''
-})
+navList.init()
 
 var cart = {
-	data: {
-		goods: []
-	},
+	data: {},
 
 	init: function () {
 		this.onLoad()
@@ -26,7 +22,9 @@ var cart = {
 	},
 
 	bindEvent: function () {
+		var _this = this
 		$(document).on('click', '.goods-count-btn', function () {
+			// 商品加减
 			var $this = $(this),
 				goodsId = $this.parents('.list-item-wrap').data('id'),
 				type = $this.hasClass('plus') ? 'plus' : 'minus',
@@ -35,32 +33,113 @@ var cart = {
 				maxCount = $goodsCount.data('stock'),
 				minCount = 1
 			if (type === 'plus') {
-				$goodsCount.val(currCount > maxCount ? maxCount : currCount + 1)
+				$goodsCount.val(currCount < maxCount ? currCount += 1 : alert('库存不足') || maxCount)
 			} else {
-				$goodsCount.val(currCount < minCount ? minCount : currCount - 1)
+				$goodsCount.val(currCount > minCount ? currCount -= 1 : minCount)
 			}
-			_user.updateShopCartNum({
-				userId: _ace.getUserInfo.id(),
-				goodId: goodsId,
-				number: currCount
-			})
+			_this.updateShopCartNum(goodsId, currCount)
+		})
+
+		$(document).on('change', 'input:checkbox.select-goods', function () {
+			// 商品选择☑事件
+			var $this = $(this),
+				goodsId = $this.parents('.list-item-wrap').data('id'),
+				isChecked = $this.is(':checked')
+			_this.setGoodsChecked(goodsId, isChecked)
+		})
+
+		$(document).on('change', 'input:checkbox.select-all', function () {
+			// 商品全选☑事件
+			var $this = $(this),
+				isChecked = $this.is(':checked')
+			_this.setGoodsAllChecked(isChecked)
+		})
+
+		$(document).on('click', '.item-action .ace-cha', function () {
+			// 商品删除事件
+			var $this = $(this),
+				goodsId = $this.parents('.list-item-wrap').data('id')
+			_this.deleteGoods(goodsId)
+		})
+
+		$(document).on('click', '.btn.topay', function () {
+			// 提交订单事件
+			if (cart.data.checkNumber) {
+				_this.submitOrder()
+			} else {
+				alert('请先选择商品')
+			}
 		})
 	},
 
 	getShopCart: function () {
+		// 获取购物车数据
+		var _this = this
 		_user.getShopCart(function (res) {
-			cart.data.goods = res
-			var cartHtml = _ace.renderHtml(cartTemplate, cart.data)
-			$('.cart-goods-list').html(cartHtml)
+			cart.data = res
+			_this.renderCart(cart.data)
 		})
 	},
 
-	updateShopCartNum: function () {
+	renderCart: function (data) {
+		// 渲染购物车
+		var cartHtml = _ace.renderHtml(cartTemplate, data)
+		$('.cart-goods-list').html(cartHtml)
+	},
+
+	updateShopCartNum: function (goodsId, number) {
+		// 更新购物车数量
+		var _this = this
 		_user.updateShopCartNum({
-			userId: 0,
-			goodId: 0,
-			number: 0
+			userId: _ace.getUserInfo.id(),
+			goodId: goodsId,
+			number: number
 		}, function (res) {
+			cart.data = res
+			_this.renderCart(cart.data)
+		})
+	},
+
+	setGoodsChecked: function (goodsId, isChecked) {
+		// 设置商品是否选中
+		var _this = this
+		_user.setGoodsChecked({
+			userId: _ace.getUserInfo.id(),
+			goodId: goodsId,
+			isChecked: isChecked
+		}, function (res) {
+			cart.data = res
+			_this.renderCart(cart.data)
+		})
+	},
+
+	setGoodsAllChecked: function (isChecked) {
+		// 设置商品是否全选
+		var _this = this
+		_user.setGoodsAllChecked({
+			userId: _ace.getUserInfo.id(),
+			isChecked: isChecked
+		}, function (res) {
+			cart.data = res
+			_this.renderCart(cart.data)
+		})
+	},
+
+	deleteGoods: function (goodsId) {
+		// 删除商品
+		var _this = this
+		confirm('是否删除该商品') && _user.deleteGoods({
+			userId: _ace.getUserInfo.id(),
+			goodId: goodsId
+		}, function (res) {
+			cart.data = res
+			_this.renderCart(cart.data)
+		})
+	},
+
+	submitOrder: function () {
+		// 提交订单
+		_user.postOrderShow(function (res) {
 			console.log(res)
 		})
 	}

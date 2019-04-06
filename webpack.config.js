@@ -25,7 +25,8 @@ var config = {
 		'my-ace': ['./src/page/my-ace/index.js'],
 		'goods-detail': ['./src/page/goods-detail/index.js'],
 		'goods-list': ['./src/page/goods-list/index.js'],
-		'cart': ['./src/page/cart/index.js']
+		'cart': ['./src/page/cart/index.js'],
+		'checkout': ['./src/page/checkout/index.js']
 	},
 
 	output: {
@@ -87,7 +88,8 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('my-ace', '个人中心')),
 		new HtmlWebpackPlugin(getHtmlConfig('goods-detail', '商品详情')),
 		new HtmlWebpackPlugin(getHtmlConfig('goods-list', '商品列表')),
-		new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车'))
+		new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
+		new HtmlWebpackPlugin(getHtmlConfig('checkout', '确认订单'))
 	],
 
 	devServer: {

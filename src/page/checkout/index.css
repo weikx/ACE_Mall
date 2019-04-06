@@ -1,0 +1,43 @@
+.checkout-wrpa {
+  padding-top: 20px;
+}
+
+.checkout-wrpa .checkout-title {
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 40px;
+  font-size: 16px;
+}
+/*  商品列表 */
+
+.chekout-goods .goods-list .goods-item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.goods-list .goods-item .goods-img {
+  flex: 0 0 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.goods-item .goods-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-item .goods-name {
+  flex: 0 0 600px;
+}
+
+.goods-item .goods-num {
+  flex: 0 0 150px;
+  text-align: center;
+}
+
+.goods-item .goods-price {
+  flex: 0 0 190px;
+  text-align: center;
+  color: #b4a078;
+}
