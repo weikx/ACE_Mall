@@ -4,6 +4,10 @@ var templateIndex = require('./index.ace')
 var _goods = require('service/goods-service.js')
 // 导航
 var navList = {
+	data: {
+
+	},
+
 	option: {
 		categoryId: '',
 		navList: [
@@ -19,6 +23,7 @@ var navList = {
 		// 合并选项
 		$.extend(this.option, option)
 		this.getGoodsCategory()
+		this.bindEvent()
 	},
 	// 渲染导航菜单
 	renderNav: function () {
@@ -46,6 +51,22 @@ var navList = {
 			})
 			_this.renderNav()
 		})
+	},
+
+	bindEvent: function () {
+		var $document = $(document),
+			_this = this
+		$document.scroll(function () {
+			_this.fixedNav($document.scrollTop())
+		})
+	},
+
+	fixedNav: function (top) {
+		if (top >= 40) {
+			$('.nav-postion').addClass('fixed')
+		} else {
+			$('.nav-postion').removeClass('fixed')
+		}
 	}
 }
 

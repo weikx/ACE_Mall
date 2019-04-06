@@ -1,6 +1,8 @@
 .nav-postion {
-  height: 85px;
   position: relative;
+  width: 100%;
+  height: 85px;
+  background: #fff;
 }
 /* 加定位是为了设置 z-index，从而更好的显示阴影 */
 .nav-wrap {
@@ -9,6 +11,13 @@
   width: 100%;
   height: 100%;
   box-shadow: 0 1px 20px 1px #dadada;
+}
+
+.nav-postion.fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
 }
 
 .nav-wrap .search {
@@ -66,4 +75,10 @@
 
 .nav .nav-list .nav-item.active .link {
   color: #b4a078;
+}
+
+.nav .nav-list .nav-title {
+  font-size: 28px;
+  padding-left: 40px;
+  color: #424242;
 }
