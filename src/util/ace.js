@@ -100,7 +100,7 @@ var _ace = {
 		},
 
 		id: function () {
-			return this.info() && this.info().id
+			return this.info() && this.info().id || 0
 		},
 
 		name: function () {
