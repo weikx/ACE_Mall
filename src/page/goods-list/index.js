@@ -77,7 +77,7 @@ var page = {
 		// 获取商品列表
 		var _this = this
 		_goods.getGoodsList({
-			categoryId: page.data.categoryId,
+			categoryId: page.data.categoryId || 0,
 			sortNo: sortNo || 0
 		}, function (res) {
 			page.data.goodsList = res.goodsList
