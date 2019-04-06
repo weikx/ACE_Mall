@@ -11,9 +11,7 @@ var goodsDetailTemplate = require('./index.ace')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
 var evaluateTemplate = require('./evaluate.ace')
 
-navList.init({
-	categoryId: ''
-})
+navList.init()
 var page = {
 	data: {
 		goodsId: _ace.getUrlPatam('id') || '',
@@ -142,7 +140,7 @@ var page = {
 	setCartCount: function () {
 		// 设置购物车数量
 		_user.getShopCart(function (res) {
-			$('.cart-count').text(res.length)
+			$('.cart-count').text(res.mymodel.length)
 		})
 	}
 }
