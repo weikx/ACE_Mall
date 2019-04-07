@@ -28,6 +28,7 @@
 }
 
 .nav-wrap .search input {
+  width: 132px;
   flex: 0 0 132px;
   height: 20px;
   padding: 2px;
@@ -39,6 +40,7 @@
 
 .nav-wrap .search button {
   display: inline-block;
+  width: 45px;
   flex: 0 0 45px;
   height: 26px;
   border: 1px solid #ccc;

@@ -20,6 +20,7 @@
 }
 
 .goods-list .goods-item .goods-img {
+  width: 30px;
   flex: 0 0 30px;
   height: 30px;
   margin-right: 10px;
@@ -32,14 +33,17 @@
 
 .goods-item .goods-name {
   flex: 0 0 600px;
+  width: 600px;
 }
 
 .goods-item .goods-num {
+  width: 150px;
   flex: 0 0 150px;
   text-align: center;
 }
 
 .goods-item .goods-price {
+  width: 190px;
   flex: 0 0 190px;
   text-align: center;
   color: #b4a078;
@@ -53,6 +57,7 @@
 }
 
 .checkout-shipment .shipment-title {
+  width: 150px;
   flex: 0 0 150px;
   font-size: 16px;
 }

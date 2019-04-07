@@ -156,6 +156,7 @@
 }
 
 .detail-tab-con .tab-list .tab-item {
+  width: 124px;
   flex: 0 0 124px;
   height: 100%;
   border-right: 1px solid #ccc;
@@ -203,6 +204,7 @@
 }
 
 .evaluate-item .evaluate-avatar {
+  width: 40px;
   flex: 0 0 40px;
   height: 40px;
   border-radius: 50%;

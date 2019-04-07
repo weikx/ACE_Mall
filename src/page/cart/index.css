@@ -35,11 +35,13 @@
 }
 
 .list-item-wrap .item-check {
+  width: 80px;
   flex: 0 0 80px;
   text-align: left;
 }
 
 .list-item-wrap .item-img {
+  width: 110px;
   flex: 0 0 110px;
 }
 
@@ -53,6 +55,7 @@
 }
 
 .list-item-wrap .item-name {
+  width: 300px;
   flex: 0 0 300px;
   text-align: left;
   text-overflow : ellipsis;
@@ -62,18 +65,22 @@
 
 
 .list-item-wrap .item-price {
+  width: 160px;
   flex: 0 0 160px;
 }
 
 .list-item-wrap .item-num {
+  width: 150px;
   flex: 0 0 150px;
 }
 
 .list-item-wrap .item-total {
+  width: 200px;
   flex: 0 0 200px;
 }
 
 .list-item-wrap .item-action {
+  width: 80px;
   flex: 0 0 80px;
   text-align: center;
 }
