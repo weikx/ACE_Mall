@@ -82,10 +82,9 @@ var _user = {
 		})
 	},
 
-	postOrderShow: function (params, success, error) {
+	getCartShow: function (success, error) {
 		_ace.request({
-			url: _ace.getServerUrl('api/User/PostShopCartShow'),
-			method: 'POST',
+			url: _ace.getServerUrl('api/User/getShopCartShow'),
 			data: {
 				userId: _ace.getUserInfo.id()
 			},
