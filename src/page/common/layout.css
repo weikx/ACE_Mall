@@ -156,3 +156,8 @@ label, input[type='checkbox'] {
   padding: 100px;
   color: #ccc;
 }
+
+/* 清除浮动 */
+.clear {
+  clear: both;
+}
