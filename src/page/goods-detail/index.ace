@@ -1,4 +1,5 @@
 <div class="intro-wrap">
+  <!-- 轮播图 -->
   <div class="img-con">
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -17,6 +18,7 @@
         <i class="ace-icon ace-shangyige"></i>
       </span>
   </div>
+  <!-- 商品信息 -->
   <div class="info-con">
     <h1 class="goods-name">{{goodName}}</h1>
     <p class="subtitle">wuyifan</p>
@@ -51,6 +53,7 @@
   </div>
 </div>
 <div class="detail-wrap">
+  <!-- 选项卡 -->
   <div class="detail-tab-con">
     <ul class="tab-list">
       <li class="tab-item active" index="0">
@@ -64,6 +67,7 @@
       </li>
     </ul>
   </div>
+  <!-- 商品详情 -->
   <div class="detail-con">
     <div class="detail-img-wrap">
       <ul>

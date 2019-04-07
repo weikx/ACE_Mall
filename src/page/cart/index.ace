@@ -1,5 +1,6 @@
 <div>
   {{#totalNumber}}
+  <!-- 购物车头部 -->
   <div class="list-head">
     <ul>
       <li class="list-item-wrap">
@@ -22,6 +23,7 @@
     </ul>
   </div>
   <div class="list-body">
+    <!-- 商品信息 -->
     <ul>
       {{#mymodel}}
       <li class="list-item-wrap" data-id="{{goodId}}">
@@ -57,6 +59,7 @@
       {{/mymodel}}
     </ul>
   </div>
+  <!-- 下方金额合计 提交 等 -->
   <div class="cart-bar">
     <div class="bar-item">
       <p>共 <span class="cart-total-num">{{totalNumber}}</span> 件商品，已选择 <span class="cart-select-num">{{checkNumber}}</span> 件</p>
