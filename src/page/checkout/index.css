@@ -1,19 +1,22 @@
-.checkout-wrpa {
+.checkout-wrap {
   padding-top: 20px;
 }
 
-.checkout-wrpa .checkout-title {
+.checkout-wrap .checkout-title {
   border-bottom: 1px solid #e0e0e0;
   line-height: 40px;
   font-size: 16px;
 }
 /*  商品列表 */
 
-.chekout-goods .goods-list .goods-item {
+.checkout-goods .goods-list {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.checkout-goods .goods-list .goods-item {
   display: flex;
   align-items: center;
   height: 50px;
-  border-bottom: 1px solid #e0e0e0;
 }
 
 .goods-list .goods-item .goods-img {
@@ -40,4 +43,50 @@
   flex: 0 0 190px;
   text-align: center;
   color: #b4a078;
+}
+
+/* 配送方式 */
+.checkout-shipment {
+  line-height: 90px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+}
+
+.checkout-shipment .shipment-title {
+  flex: 0 0 150px;
+  font-size: 16px;
+}
+
+.checkout-shipment .shipment-text {
+  color: #b4a078;
+}
+
+/* 右下角合计等 */
+.checkout-money-box {
+  width: 165px;
+  height: auto;
+  float: right;
+  font-size: 14px;
+  color: #757575;
+}
+
+.checkout-money-box label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+.checkout-money-box span {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  color: #b4a078;
+}
+
+.checkout-money-box ul li:last-child {
+  margin-top: 20px;
+}
+
+.checkout-money-box ul li:last-child span i {
+  font-size: 30px;
 }

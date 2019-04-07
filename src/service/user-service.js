@@ -84,7 +84,7 @@ var _user = {
 
 	postOrderShow: function (params, success, error) {
 		_ace.request({
-			url: _ace.getServerUrl('api/User/PostOrderShow'),
+			url: _ace.getServerUrl('api/User/PostShopCartShow'),
 			method: 'POST',
 			data: {
 				userId: _ace.getUserInfo.id()
