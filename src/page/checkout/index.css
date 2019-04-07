@@ -36,6 +36,14 @@
   width: 600px;
 }
 
+.goods-item .goods-name.link {
+  color: #333;
+}
+
+.goods-item .goods-name.link:hover {
+  color: #b4a078;
+}
+
 .goods-item .goods-num {
   width: 150px;
   flex: 0 0 150px;
@@ -68,7 +76,8 @@
 
 /* 右下角合计等 */
 .checkout-money-box {
-  width: 165px;
+  margin-top: 30px;
+  min-width: 165px;
   height: auto;
   float: right;
   font-size: 14px;
@@ -83,15 +92,52 @@
 
 .checkout-money-box span {
   display: inline-block;
-  width: 70px;
+  min-width: 70px;
   text-align: right;
   color: #b4a078;
 }
 
 .checkout-money-box ul li:last-child {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .checkout-money-box ul li:last-child span i {
   font-size: 30px;
+}
+
+/* 结算按钮 */
+.checkout-btn-wrap {
+  float: right;
+}
+
+.checkout-btn-wrap .btn {
+  padding: 0 50px;
+}
+
+.checkout-btn-wrap .btn.back-cart {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #757575;
+}
+
+/* 备注 */
+
+.checkout-remarks {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.remarks-title {
+  width: 150px;
+  flex: 0 0 150px;
+  font-size: 16px;
+}
+
+.checkout-remarks input {
+  width: 100%;
+  height: 78px;
+  outline: none;
+  border: none;
 }

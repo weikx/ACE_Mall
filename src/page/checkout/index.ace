@@ -1,0 +1,75 @@
+<div>
+  <!-- title -->
+  {{#totalNumber}}
+  <div class="checkout-title">
+    订单商品
+  </div>
+  <div class="checkout-goods">
+    <ul class="goods-list">
+      {{#mymodel}}
+      <li class="goods-item">
+        <div class="goods-img">
+          <img src="{{goodImage}}">
+        </div>
+        <a class="link goods-name" href="./goods-detail.html?id={{goodId}}&name={{goodName}}">{{goodName}}</a>
+        <p class="goods-num">{{goodPrice}}元 x {{number}}</p>
+        <p class="goods-price">{{subTotal}}元</p>
+      </li>
+      {{/mymodel  }}
+    </ul>
+  </div>
+  <!-- 备注 -->
+  <div class="checkout-remarks">
+    <p class="remarks-title">备注</p>
+    <input type="text" class="note" placeholder="有啥想说的">
+  </div>
+  <!-- 配送方式 -->
+  <div class="checkout-shipment">
+    <div class="shipment-title">
+      配送方式
+    </div>
+    <p class="shipment-text">
+      包邮
+    </p>
+  </div>
+  <!-- 右下角商品合计-->
+  <div class="checkout-money-box">
+    <ul>
+      <li>
+        <label>商品件数：</label>
+        <span>{{totalNumber}} 件</span>
+      </li>
+      <li>
+        <label>商品总价：</label>
+        <span>{{totalPrice}} 元</span>
+      </li>
+      <li>
+        <label>活动优惠：</label>
+        <span>- 0 元</span>
+      </li>
+      <li>
+        <label>优惠券抵扣：</label>
+        <span>- 0 元</span>
+      </li>
+      <li>
+        <label>运费：</label>
+        <span>0 元</span>
+      </li>
+      <li>
+        <label>应付总额：</label>
+        <span><i>{{totalPrice}}</i> 元</span>
+      </li>
+    </ul>
+  </div>
+  <div class="clear"></div>
+  <div class="checkout-btn-wrap">
+    <a href="./cart.html" class="btn back-cart">返回购物车</a>
+    <div class="btn payment">去结算</div>
+  </div>
+  <div class="clear"></div>
+  {{/totalNumber}}
+  {{^totalNumber}}
+  <!-- 未选择商品提示 -->
+  <div class="no-goods"></div>
+  {{/totalNumber}}
+</div>
