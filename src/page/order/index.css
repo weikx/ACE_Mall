@@ -1,0 +1,140 @@
+.order-wrap {
+  width: calc(100% - 178px);
+  float: right;
+}
+
+.order-tab-wrap {
+  height: 56px;
+  line-height: 56px;
+}
+
+.order-tab-wrap .order-tab-list {
+  display: flex;
+}
+
+.order-tab-wrap .order-tab-list .order-tab-item {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.order-tab-wrap .order-tab-list .order-tab-item.active {
+  color: #b4a078;
+}
+
+.order-tab-wrap .order-tab-list .order-tab-item::after {
+  content: ' ';
+  width: 1px;
+  height: 10px;
+  background: #cccccc;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.order-tab-wrap .order-tab-list .order-tab-item:last-child:after {
+  display: none;
+}
+
+/* 订单 */
+.order-tab-main .order-card {
+  width: calc(100% - 2px);
+  min-height: 234px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.order-card .card-header {
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-header .order-summar {
+  font-size: 18px;
+  color: #b4a078;
+}
+
+.card-header .order-money {
+  color: #757575;
+}
+
+.card-header .order-money span {
+  font-size: 28px;
+  color: #333;
+}
+
+.card-header .order-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 商品卡片主要内容 */
+.order-card-wrap .card-body {
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-body .card-body-left {
+  float: left;
+  width: 690px;
+}
+
+.card-goods-list .card-goods-item {
+
+}
+
+.card-goods-item .goods-img {
+  float: left;
+}
+
+.card-goods-item .goods-desc {
+  padding: 18px 18px 18px 100px;
+  line-height: 22px;
+}
+
+.goods-desc .goods-name {
+  color: #333;
+}
+
+.goods-desc .goods-name:hover {
+  color: #b4a078;
+}
+
+.card-body .card-body-right {
+  overflow: hidden;
+  float: right;
+  width: 180px;
+}
+
+/* 按钮 */
+.pay-now {
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  background: #b4a078;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+}
+
+.btn-border {
+  width: 118px;
+  height: 28px;
+  line-height: 30px;
+  color: #757575;
+  font-size: 12px;
+  text-align: center;
+  float: right;
+  border: 1px solid  #b0b0b0;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.card-goods-list .goods-img {
+  width: 80px;
+  height: 80px;
+}
