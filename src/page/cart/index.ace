@@ -68,7 +68,7 @@
       <p class="all-price">
         合计:<span class="cart-total-price">{{totalPrice}}</span>元
       </p>
-      <a href="./checkout.html" class="btn topay">去结算</a>
+      <a href="javascript:void(0)" class="btn topay">去结算</a>
     </div>
   </div>
   {{/totalNumber}}

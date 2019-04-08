@@ -65,7 +65,7 @@ var cart = {
 		$(document).on('click', '.btn.topay', function () {
 			// 提交订单事件
 			if (cart.data.checkNumber) {
-				_this.submitOrder()
+				window.location.href = './checkout.html'
 			} else {
 				alert('请先选择商品')
 			}
@@ -139,9 +139,9 @@ var cart = {
 
 	submitOrder: function () {
 		// 提交订单
-		_user.postOrderShow(function (res) {
-			console.log(res)
-		})
+		// _user.postOrderShow(function (res) {
+		// 	console.log(res)
+		// })
 	}
 }
 
