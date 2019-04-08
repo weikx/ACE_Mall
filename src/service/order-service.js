@@ -9,6 +9,36 @@ var _order = {
       success: success,
       error: error
     })
+  },
+
+  payOrder: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/PayOrder'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
+  },
+
+  getOrderNum: function (success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/GetOrderStatusNumber'),
+      data: {
+        userId: _ace.getUserInfo.id()
+      },
+      success: success,
+      error: error
+    })
+  },
+
+  gerOrderList: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/GetOrderList'),
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
