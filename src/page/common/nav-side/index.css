@@ -4,7 +4,7 @@
   float: left;
   width: 178px;
   min-height: 100px;
-  border: 1px solid #eaeaea;
+  /*border: 1px solid #eaeaea;*/
   padding: 50px 40px;
   box-sizing: border-box;
 }
