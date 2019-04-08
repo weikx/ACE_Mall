@@ -12,9 +12,9 @@ var navSide = {
 				href: './my-ace.html'
 			},
 			{
-				name: 'order-list',
+				name: 'order',
 				desc: '我的订单',
-				href: './order-list.html'
+				href: './order.html'
 			},
 			{
 				name: 'about',
