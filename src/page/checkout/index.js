@@ -34,12 +34,20 @@ var page = {
   },
   
   submitOrder: function (note, payMoney) {
+    var _this = this
     _order.submitOrder({
       userId: _ace.getUserInfo.id(),
       note: note || '',
       payMoney: payMoney
     }, function (res) {
-      console.log(res)
+      var orderNo = res.orderNo.OrderNo
+      _this.payOrder(orderNo)
+    })
+  },
+
+  payOrder: function (orderNo) {
+    _order.payOrder({
+      orderNo: orderNo
     })
   },
 
@@ -60,7 +68,7 @@ var page = {
   renderErrorTip: function () {
     // 无商品错误提示
     var tipHtml = _ace.renderHtml(failTipTemplate, {
-      msg: '请勾选需要结算的商品   '
+      msg: '请勾选需要结算的商品'
     })
     $('.no-goods').html(tipHtml)
   }
