@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= require('./layout/head-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
+</head>
+<body>
+<%= require('./layout/nav-simple.html') %>
+<%= require('./layout/nav.html') %>
+<div class="page-wrap width stick-footer-content">
+  <div class="stick-footer-content-inside">
+    <%= require('./layout/nav-side.html') %>
+    <div class="order-detail">
+      <h1 class="order-detail-title">订单详情</h1>
+    </div>
+  </div>
+</div>
+<%= require('./layout/footer.html') %>
+</body>
+</html>

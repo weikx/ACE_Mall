@@ -1,0 +1,14 @@
+.pay-wrap {
+  padding: 20px;
+  text-align: center;
+}
+
+.pay-wrap .pay-title {
+  font-size: 24px;
+}
+
+.pay-wrap .qr-code {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
