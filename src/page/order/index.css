@@ -67,6 +67,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: #999;
 }
 
 /* 商品卡片主要内容 */
@@ -82,7 +83,7 @@
 }
 
 .card-goods-list .card-goods-item {
-
+  margin-top: 10px;
 }
 
 .card-goods-item .goods-img {
@@ -110,6 +111,7 @@
 
 /* 按钮 */
 .pay-now {
+  display: inline-block;
   width: 120px;
   height: 30px;
   line-height: 30px;
@@ -119,9 +121,11 @@
   text-align: center;
   float: right;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn-border {
+  display: inline-block;
   width: 118px;
   height: 28px;
   line-height: 30px;
@@ -132,6 +136,7 @@
   border: 1px solid  #b0b0b0;
   margin-top: 10px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card-goods-list .goods-img {
