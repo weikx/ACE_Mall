@@ -32,7 +32,7 @@ var _order = {
     })
   },
 
-  gerOrderList: function (params, success, error) {
+  getOrderList: function (params, success, error) {
     _ace.request({
       url: _ace.getServerUrl('api/Order/GetOrderList'),
       data: params,
