@@ -67,7 +67,8 @@ var page = {
 		} else {
 			// 渲染错误提示
 			var tipHtml = _ace.renderHtml(failTipTemplate, {
-				msg: '此分类无商品，换个分类看看吧'
+				msg: '此分类无商品，换个分类看看吧',
+        onlineShopping: true
 			})
 			$('.goods-wrap').html(tipHtml)
 		}
@@ -84,7 +85,8 @@ var page = {
 			_this.goodsItemInit()
 		}, function () {
 			var tipHtml = _ace.renderHtml(failTipTemplate, {
-				msg: '出了一点问题，换个分类看看吧'
+				msg: '出了一点问题，换个分类看看吧',
+				bug: true
 			})
 			$('.goods-wrap').append(tipHtml)
 		})
