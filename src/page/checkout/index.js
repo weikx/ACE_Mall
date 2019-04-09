@@ -41,7 +41,7 @@ var page = {
       payMoney: payMoney
     }, function (res) {
       var orderNo = res.orderNo.OrderNo
-      _this.payOrder(orderNo)
+      _this.toPay(orderNo)
     })
   },
 
@@ -49,6 +49,10 @@ var page = {
     _order.payOrder({
       orderNo: orderNo
     })
+  },
+
+  toPay: function (orderNo) {
+    window.location.href = './pay.html?orderNo=' + orderNo
   },
 
   getCartShow: function () {
@@ -68,7 +72,8 @@ var page = {
   renderErrorTip: function () {
     // 无商品错误提示
     var tipHtml = _ace.renderHtml(failTipTemplate, {
-      msg: '请勾选需要结算的商品'
+      msg: '请勾选需要结算的商品',
+      checklist: true
     })
     $('.no-goods').html(tipHtml)
   }
