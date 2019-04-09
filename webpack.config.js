@@ -27,7 +27,9 @@ var config = {
 		'goods-list': ['./src/page/goods-list/index.js'],
 		'cart': ['./src/page/cart/index.js'],
 		'checkout': ['./src/page/checkout/index.js'],
-		'order': ['./src/page/order/index.js']
+		'order': ['./src/page/order/index.js'],
+		'pay': ['./src/page/pay/index.js'],
+		'order-detail': ['./src/page/order-detail/index.js']
 	},
 
 	output: {
@@ -91,7 +93,9 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('goods-list', '商品列表')),
 		new HtmlWebpackPlugin(getHtmlConfig('cart', '购物车')),
 		new HtmlWebpackPlugin(getHtmlConfig('checkout', '确认订单')),
-		new HtmlWebpackPlugin(getHtmlConfig('order', '我的订单'))
+		new HtmlWebpackPlugin(getHtmlConfig('order', '我的订单')),
+		new HtmlWebpackPlugin(getHtmlConfig('pay', '支付')),
+		new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情'))
 	],
 
 	devServer: {
