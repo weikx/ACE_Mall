@@ -73,7 +73,8 @@ var page = {
 				_this.initSwiper()
 			} else {
 				var tipHtml = _ace.renderHtml(failTipTemplate, {
-					msg: '商品出错，换个商品试试'
+					msg: '商品出错，换个商品试试',
+					bug: true
 				})
 				$pageWrap.html(tipHtml)
 			}
