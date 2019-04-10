@@ -23,7 +23,7 @@
             </div>
             <div class="goods-desc">
               <a class="link goods-name">{{goodName}}</a>
-              <p class="goods-price">{{goodPrice}}元 x {{goodNumber}}</p>
+              <p class="goods-price">{{goodPrice}}元 × {{goodNumber}}</p>
             </div>
           </li>
           {{/goodList}}
