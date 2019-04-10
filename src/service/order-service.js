@@ -39,6 +39,15 @@ var _order = {
       success: success,
       error: error
     })
+  },
+
+  getOrderDetail: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/GetOrderDetail'),
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
