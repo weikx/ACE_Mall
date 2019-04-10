@@ -59,7 +59,7 @@ var page = {
       page.data.orderList = res
       res.forEach(function (item) {
         // 添加字段用于 Hogan.js 模板渲染
-        // （垃圾） Hogan.js 不支持条件渲染 so 多加了一些字段用来判断
+        // （垃圾 Hogan.js） 不支持条件渲染 so 多加了一些字段用来判断
         // ['全部', '待付款', '待发货', '待收货', '待评价', '已完成', '已关闭']
         switch (item.orderState) {
           case 0:
