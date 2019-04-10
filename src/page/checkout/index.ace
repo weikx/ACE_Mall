@@ -12,7 +12,7 @@
           <img src="{{goodImage}}">
         </div>
         <a class="link goods-name" href="./goods-detail.html?id={{goodId}}&name={{goodName}}">{{goodName}}</a>
-        <p class="goods-num">{{goodPrice}}元 x {{number}}</p>
+        <p class="goods-num">{{goodPrice}}元 × {{number}}</p>
         <p class="goods-price">{{subTotal}}元</p>
       </li>
       {{/mymodel  }}
@@ -31,6 +31,12 @@
     <p class="shipment-text">
       包邮
     </p>
+    <div>
+      <p class="shipment-user">wikx</p>
+      <p class="shipment-user">1888888</p>
+      <p class="shipment-user">上海伊拉克</p>
+    </div>
+
   </div>
   <!-- 右下角商品合计-->
   <div class="checkout-money-box">
