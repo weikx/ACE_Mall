@@ -1,0 +1,85 @@
+<div>
+  <h1 class="order-detail-title">订单详情</h1>
+  <div class="order-header">
+    <p class="subtitle">订单号：{{orderNo}} </p>
+    <a class="btn-border">取消订单</a>
+  </div>
+  <div class="order-summary">
+    <div class="order-status">已收货</div>
+    <div class="order-progress">
+      <ul class="progress-list">
+        <li class="progress-item active">下单</li>
+        <li class="progress-item">付款</li>
+        <li class="progress-item">配货</li>
+        <li class="progress-item">交易成功</li>
+      </ul>
+      <ul class="progress-list-time">
+        <li class="progress-item"></li>
+        <li class="progress-item"></li>
+        <li class="progress-item"></li>
+        <li class="progress-item"></li>
+      </ul>
+    </div>
+    {{#courierNo}}
+    <div class="order-delivery">
+      <span>物流公司：{{courierName}}  运单号：{{courierNo}}</span>
+    </div>
+    {{/courierNo}}
+    <div class="goods-wrap">
+      <ul class="goods-list">
+        {{#goodList}}
+        <li class="goods-item">
+          <div class="goods-img">
+            <img width="100%" height="100%" src="{{goodImage}}">
+          </div>
+          <span class="goods-name">{{goodName}}</span>
+          <span class="goods-price">{{goodPrice}}元 × {{goodNumber}}</span>
+        </li>
+        {{/goodList}}
+      </ul>
+    </div>
+    <div class="order-detail-info">
+      <p class="subtitle">收货信息</p>
+      <ul>
+        <li>
+          <label>姓名：</label>
+          <span>{{receiveName}}</span>
+        </li>
+        <li>
+          <label>联系电话：</label>
+          <span>{{receivePhone}}</span>
+        </li>
+        <li>
+          <label>收货地址：</label>
+          <span>{{receiveAddress}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="order-detail-info">
+      <p class="subtitle">支付方式</p>
+      <ul>
+        <li>
+          <label>支付方式：</label>
+          <span>在线支付</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 右下角商品合计-->
+  <div class="checkout-money-box">
+    <ul>
+      <li>
+        <label>商品总价：</label>
+        <span>{{payMoney}} 元</span>
+      </li>
+      <li>
+        <label>运费：</label>
+        <span>0 元</span>
+      </li>
+      <li>
+        <label>应付总额：</label>
+        <span><i>{{payMoney}}</i> 元</span>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -8,13 +8,15 @@ var navList = require('page/common/nav/index.js')
 var navSide = require('page/common/nav-side/index.js')
 var _order = require('service/order-service.js')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
+var orderDetailTemplate = require('./index.ace')
 
 navSide.init()
 navList.init()
 
 var page = {
   data: {
-    order: []
+    order: {},
+    orderNo: _ace.getUrlPatam('orderNo')
   },
 
   init: function () {
@@ -23,9 +25,69 @@ var page = {
 
   onLoad: function () {
     this.bindEvent()
+    this.getOrderDetail()
   },
 
   bindEvent: function () {
+  },
+
+  getOrderDetail: function () {
+    var _this = this
+    _order.getOrderDetail({
+      userId: _ace.getUserInfo.id(),
+      orderNo: page.data.orderNo
+    }, function (res) {
+      res = res[0]
+      page.data.order = res
+      _this.renderOrderDetail()
+    })
+  },
+
+  renderOrderDetail: function () {
+    var orderDetailHtml = _ace.renderHtml(orderDetailTemplate, page.data.order)
+    $('.order-detail').html(orderDetailHtml)
+    this.setOrderStatusText(page.data.order.orderState)
+    this.setOrderStatus()
+  },
+
+  setOrderStatusText: function (status) {
+    // 设置订单状态文字
+    var statusText = ''
+    switch (status) {
+      case 0:
+        statusText = '全部'
+        break
+      case 1:
+        statusText = '待付款'
+        break
+      case 2:
+        statusText = '待发货'
+        break
+      case 3:
+        statusText = '待收货'
+        break
+      case 4:
+        statusText = '待评价'
+        break
+      case 5:
+        statusText = '已完成'
+        break
+      case 6:
+        statusText = '已关闭'
+        break
+    }
+    $('.order-status').text(statusText)
+  },
+
+  setOrderStatus: function () {
+    // 设置订单状态进度条
+    var timeProgress = page.data.order.timeProgress
+    timeProgress.forEach(function (item, index) {
+      if (item) {
+        $('.progress-list .progress-item').eq(index).addClass('active')
+        $('.progress-list-time .progress-item').eq(index).text(item)
+      }
+    })
   }
 }
 
