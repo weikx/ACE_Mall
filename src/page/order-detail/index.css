@@ -1,0 +1,157 @@
+.order-detail {
+  width: calc(100% - 178px);
+  float: right;
+  padding: 30px 0;
+}
+
+.order-detail .order-detail-title {
+  font-size: 30px;
+  color: #757575;
+}
+
+.btn-border {
+  display: inline-block;
+  width: 118px;
+  height: 28px;
+  line-height: 30px;
+  color: #757575;
+  font-size: 12px;
+  text-align: center;
+  float: right;
+  border: 1px solid  #b0b0b0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.order-header {
+  display: flex;
+  margin-top: 10px;
+  height: 58px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+}
+
+.order-summary {
+  padding: 25px 0;
+}
+
+.order-summary .order-status {
+  font-size: 18px;
+  color: #b0b0b0;
+}
+
+/* 订单进度 */
+.order-progress {
+  height: 70px;
+}
+
+.order-progress .progress-list {
+  overflow: hidden;
+  display: flex;
+  border-radius: 20px;
+  text-align: center;
+  background: #e0e0e0;
+}
+
+.progress-list .progress-item {
+  flex: 1;
+  height: 20px;
+}
+
+.progress-list .progress-item.active {
+  background: #b4a078;
+  color: #fff;
+}
+
+.progress-list-time {
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+}
+
+.progress-list-time .progress-item {
+  flex: 1;
+  line-height: 40px;
+  color: #757575;
+}
+
+.order-delivery {
+  display: flex;
+  line-height: 30px;
+  color: #757575;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 商品 */
+.goods-wrap {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.goods-wrap .goods-list .goods-item {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.goods-list .goods-item .goods-img {
+  width: 80px;
+  height: 80px;
+  padding-right: 20px;
+}
+
+.goods-list .goods-item .goods-name {
+  width: 300px;
+  flex: 0 0 300px;
+}
+
+.order-detail-info {
+  min-height: 100px;
+  padding: 20px 0;
+  line-height: 25px;
+  border-bottom: 1px solid #e0e0e0;
+  color: #757575;
+}
+
+.order-detail-info ul {
+  padding-top: 20px;
+}
+
+
+/* 右下角合计等 */
+.checkout-money-box {
+  margin-top: 30px;
+  min-width: 165px;
+  height: auto;
+  float: right;
+  font-size: 14px;
+  color: #757575;
+}
+
+.checkout-money-box label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+.checkout-money-box span {
+  display: inline-block;
+  min-width: 70px;
+  text-align: right;
+  color: #b4a078;
+}
+
+.checkout-money-box ul li:last-child {
+  margin-top: 10px;
+}
+
+.checkout-money-box ul li:last-child span i {
+  font-size: 30px;
+}

@@ -74,6 +74,15 @@
   color: #b4a078;
 }
 
+.checkout-shipment .shipment-user:first-child {
+  margin-left: 120px;
+}
+
+.checkout-shipment .shipment-user {
+  padding-left: 10px;
+  color: #b4a078;
+}
+
 /* 右下角合计等 */
 .checkout-money-box {
   margin-top: 30px;
