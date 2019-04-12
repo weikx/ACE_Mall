@@ -91,7 +91,18 @@ var _user = {
 			success: success,
 			error: error
 		})
-	}
+	},
+
+  getMyData: function (success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/User/GetMyData'),
+      data: {
+        userId: _ace.getUserInfo.id()
+      },
+      success: success,
+      error: error
+    })
+  }
 }
 
 module.exports = _user

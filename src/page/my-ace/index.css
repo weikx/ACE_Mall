@@ -2,3 +2,40 @@
   height: 40px;
   line-height: 40px;
 }
+
+.content {
+  padding: 30px 0;
+}
+
+.content .title {
+  font-size: 30px;
+  color: #757575;
+}
+
+.account-wrap {
+  display: flex;
+  height: 200px;
+}
+
+.account-left {
+  overflow: hidden;
+}
+
+.account-left .avatar {
+  float: left;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.account-left input {
+  height: 30px;
+  display: block;
+  border: 1px solid #ccc;
+}
+
+.account-left .user-info {
+  padding: 20px;
+  padding-left: 120px;
+}
