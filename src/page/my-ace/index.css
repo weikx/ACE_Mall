@@ -14,28 +14,98 @@
 
 .account-wrap {
   display: flex;
-  height: 200px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  background: url("https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/h%3D452/sign=4fca87dc31a85edfe58cff267b5609d8/8694a4c27d1ed21bfd0fc069a86eddc450da3f7c.jpg");
+  background-position: center;
+
 }
 
 .account-left {
+  width: 70%;
+  float: left;
   overflow: hidden;
+}
+
+.account-right {
+  width: 30%;
+  float: right;
 }
 
 .account-left .avatar {
   float: left;
   overflow: hidden;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  margin-top: 10px;
 }
 
 .account-left input {
-  height: 30px;
-  display: block;
-  border: 1px solid #ccc;
+  width: 85px;
+  display: inline-block;
+  min-width: 10px;
+  height: 20px;
+  line-height: 20px;
+  outline: none;
+  border: none;
+  background: #fff;
+  padding: 5px;
+  margin-right: 10px;
 }
 
 .account-left .user-info {
-  padding: 20px;
-  padding-left: 120px;
+  padding-left: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  color: #bababa;
+}
+
+.account-left .user-info .user-name {
+  min-width: 10px;
+  outline: none;
+  min-height: 20px;
+  line-height: 20px;
+  display:  inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.focus {
+  box-shadow: 0 0 2px 2px #b4a078;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.status-wrap {
+  margin-top: 10px;
+}
+
+.status-box {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  color: #333;
+  padding: 0 20px 0 0;
+}
+
+.status-box input {
+  color: #999;
+  padding-left: 5px;
+  border: none;
+  width: 200px;
+  background: #fff;
+}
+
+.status-box .address {
+  width: 500px;
+}
+
+.status-box .link {
+  float: right;
 }
