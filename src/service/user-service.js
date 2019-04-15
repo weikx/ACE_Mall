@@ -102,6 +102,26 @@ var _user = {
       success: success,
       error: error
     })
+  },
+
+  updateMyData: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/User/UpdateMyData'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
+  },
+
+  uploadImg: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/User/UpdateMyPhoto'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
