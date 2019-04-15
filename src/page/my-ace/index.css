@@ -35,25 +35,40 @@
 }
 
 .account-left .avatar {
+  position: relative;
   float: left;
   overflow: hidden;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   margin-top: 10px;
+  cursor: pointer;
 }
 
-.account-left input {
-  width: 85px;
-  display: inline-block;
-  min-width: 10px;
-  height: 20px;
-  line-height: 20px;
-  outline: none;
-  border: none;
-  background: #fff;
-  padding: 5px;
-  margin-right: 10px;
+.account-left .avatar:hover .change-avater {
+  height: 100%;
+}
+
+.account-left .avatar .change-avater:after {
+  position: absolute;
+  content: '修改';
+  display: block;
+  top: 0;
+  left: calc(50% - 12px);
+  pointer-events: none;
+}
+
+.account-left .avatar .change-avater {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(0, 0, 0, .5);
+  transition: all .3s;
+  color: #ccc;
+  line-height: 60px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .account-left .user-info {
@@ -108,4 +123,13 @@
 
 .status-box .link {
   float: right;
+}
+
+input.img-input {
+  display: block;
+  opacity: 0;
+  -ms-filter: 'alpha(opacity=0)';
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
 }
