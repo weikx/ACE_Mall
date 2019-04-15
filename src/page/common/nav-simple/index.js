@@ -2,7 +2,7 @@ require('./index.css')
 var _ace = require('util/ace.js')
 var _user = require('service/user-service.js')
 
-var navSimple = {
+var page = {
 	data: {
 		userInfo: _ace.getUserInfo.info(),
 		cartCount: 0
@@ -29,16 +29,16 @@ var navSimple = {
 	},
 
 	setUserData: function () {
-		navSimple.data.userInfo && $('.no-login').hide()
+		page.data.userInfo && $('.no-login').hide()
 			.siblings('.login').show()
-			.find('.username').text(navSimple.data.userInfo.receiveName)
+			.find('.username').text(page.data.userInfo.account)
 	},
 
 	setCartCount: function () {
 		// 设置购物车数量
 		var _this = this
 		$('.cart-count').text(_this.getLocationCount() || 0) // 先从本地读购物车数量，再获取。免得获取慢数量闪一下
-		navSimple.data.userInfo && _user.getShopCart(function (res) {
+		page.data.userInfo && _user.getShopCart(function (res) {
 			$('.cart-count').text(res.mymodel.length)
 			_this.setLocationCount(res.mymodel.length)
 		})
@@ -62,4 +62,4 @@ var navSimple = {
 	}
 }
 
-navSimple.init()
+page.init()
