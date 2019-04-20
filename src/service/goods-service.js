@@ -34,6 +34,22 @@ var _goods = {
 			success: success,
 			error: error
 		})
+	},
+
+	getHomeGoods: function (success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/Good/GetHomeGoods'),
+			success: success,
+			error: error
+		})
+	},
+
+	getSwiper: function (success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/Good/GetRotationPicture'),
+			success: success,
+			error: error
+		})
 	}
 }
 
