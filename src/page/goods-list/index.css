@@ -4,6 +4,7 @@
   border-bottom: 1px dashed #ccc;
   height: 50px;
   align-items: center;
+  user-select: none;
 }
 
 .goods-sort h2 {

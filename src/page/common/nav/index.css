@@ -67,8 +67,9 @@
 }
 
 .nav .nav-list .nav-item {
-  text-align: center;
   flex: 1;
+  text-align: center;
+  user-select: none;
 }
 
 .nav .nav-list .nav-item .link {
