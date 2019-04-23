@@ -14,6 +14,9 @@ var _ace = {
 			url: param.url || '',
 			dataType: param.type || 'json',
 			data: param.data || '',
+			headers: {
+				Authorization: _ace.getCookie('Ticket')
+			},
 			success: function (res) {
 				if (res.status === HTTP_OK) {
 					param.success && param.success(res.data)
@@ -24,7 +27,6 @@ var _ace = {
 					param.error && param.error(res)
 				}
 			},
-
 			error: function (err) {
 				_this.errorTips(err.statusText)
 				param.error && param.error(err.statusText)
@@ -38,6 +40,7 @@ var _ace = {
 	},
 
 	getUrlPatam: function (name) {
+		// 获取地址栏参数
 		var reg = new RegExp('(^|&)'+ name + '=([^&]*)(&|$)')
 		var result = window.location.search.substr(1).match(reg)
 		return result ? decodeURIComponent(result[2]) : null
@@ -91,6 +94,7 @@ var _ace = {
 
 	logout: function () {
 		localStorage.clear()
+    _ace.delCookie('Ticket')
 	},
 
 	getUserInfo: {
@@ -106,7 +110,35 @@ var _ace = {
 		name: function () {
 			return this.info().receiveName
 		}
-	}
+	},
+  
+  setCookie: function (name, value) {
+    const Days = 1,
+      exp = new Date()
+    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
+    document.cookie = name + '=' + escape (value) + ';expires=' + exp.toGMTString()
+  },
+  
+  getCookie: function (name) {
+    let arr,
+      reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
+    if(arr = document.cookie.match(reg))
+      return 'BasicAuth ' + unescape(arr[2])
+    else
+      return ''
+  },
+  
+  delCookie: function (name) {
+    var exp = new Date()
+    exp.setTime(exp.getTime() - 1)
+    var cval = _ace.getCookie(name)
+    if(cval != null)
+      document.cookie = name + '=' + cval + ';expires=' + exp.toGMTString()
+  },
+
+  showTip: function () {
+    var tipHtml = '<div></div>'
+  }
 }
 
 module.exports = _ace
