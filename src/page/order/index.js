@@ -9,6 +9,7 @@ var navSide = require('page/common/nav-side/index.js')
 var _order = require('service/order-service.js')
 var orderTemplate = require('./index.ace')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
+var evaluateTemplate = require('./evaluate.ace')
 
 navSide.init({
   name: 'order'
@@ -17,7 +18,8 @@ navList.init()
 
 var page = {
   data: {
-    orderList: []
+    orderList: [],
+    evaluate: {}
   },
 
   init: function () {
@@ -37,6 +39,31 @@ var page = {
       $('.order-tab-main').hide().eq(index).show()
       $(this).addClass('active').siblings().removeClass('active')
       _this.getOrderList(index)
+    })
+    // 确认订单
+    $(document).on('click', '.confirm-receipt', function () {
+      var orderNo = $(this).data('order-no')
+      _order.confirmReceipt({
+        orderNo: orderNo
+      }, function () {
+        window.location.reload()
+      })
+    })
+    // 点击评价
+    $(document).on('click', '.to-evaluate', function () {
+      var index = $(this).parents('.order-card').index(),
+        waitEvaluateGoods = page.data.orderList[index]
+      page.data.evaluate = waitEvaluateGoods
+      var evaluataHtml = _ace.renderHtml(evaluateTemplate, waitEvaluateGoods)
+      $('.stick-footer-content-inside').append(evaluataHtml)
+      $('.evaluate-popup').show()
+      $('.evaluate-popup').animate({opacity: 100}, 300)
+    })
+    // 点击关闭弹窗
+    $(document).on('click', '.evaluate-close', function () {
+      $('.evaluate-popup').animate({opacity: 0}, 300, 'swing', function () {
+        $('.evaluate-popup').hide().remove()
+      })
     })
   },
 

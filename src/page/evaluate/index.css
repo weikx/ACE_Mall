@@ -1,0 +1,56 @@
+.list-body .list-item-wrap .item-num {
+  justify-content: center;
+}
+
+.star-wrap {
+
+}
+
+.star-list {
+  overflow: hidden;
+}
+
+.star-item {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.star-item {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-item:hover {
+  color: orange;
+}
+
+.star-item.active {
+  color: orange;
+}
+
+.input {
+  height: 100px;
+  width: 500px;
+  resize:none;
+  outline: none;
+  padding: 10px;
+}
+
+.evaluate-ul .evaluate-li {
+  display: flex;
+  height: 30px;
+}
+
+.evaluate-ul .evaluate-li label {
+  padding: 0 20px;
+}
+
+.btn.publish {
+  margin-top: 200px;
+  float: right;
+}

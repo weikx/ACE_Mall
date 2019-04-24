@@ -38,19 +38,19 @@
       {{#waitDelivery}}
       <div class="card-body-right">
         <a href="./order-detail.html?orderNo={{orderNo}}" class="btn-border">订单详情</a>
-        <div class="btn-border">申请退款</div>
+<!--        <div class="btn-border">申请退款</div>-->
       </div>
       {{/waitDelivery}}
       {{#waitReceive}}
       <div class="card-body-right">
         <a href="./order-detail.html?orderNo={{orderNo}}" class="btn-border">订单详情</a>
-        <div class="btn-border">申请售后</div>
+        <div class="btn-border confirm-receipt" data-order-no="{{orderNo}}">确认收货</div>
       </div>
       {{/waitReceive}}
       {{#waitEvaluate}}
       <div class="card-body-right">
         <a href="./order-detail.html?orderNo={{orderNo}}" class="btn-border">订单详情</a>
-        <div class="btn-border">去评价</div>
+        <a class="btn-border to-evaluate">去评价</a>
       </div>
       {{/waitEvaluate}}
       {{#completed}}

@@ -35,11 +35,19 @@
 }
 
 /* 订单 */
-.order-tab-main .order-card {
+.order-card {
   width: calc(100% - 2px);
   min-height: 234px;
   border: 1px solid #ccc;
   margin-top: 10px;
+}
+
+.evaluate-goods .order-card {
+  min-height: 0px;
+}
+
+.order-card:last-child {
+  margin-bottom: 10px;
 }
 
 .order-card .card-header {
@@ -142,4 +150,96 @@
 .card-goods-list .goods-img {
   width: 80px;
   height: 80px;
+}
+
+/* 评价弹窗 */
+.evaluate-popup {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+}
+
+.evaluate-popup .evaluate-main {
+  position: absolute;
+  top: 50%;
+  margin-top: -350px;
+  left: 50%;
+  margin-left: -545px;
+  width: 1080px;
+  height: 500px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.2);
+}
+
+.evaluate-main .evaluate-head {
+  display: flex;
+  height: 25px;
+  justify-content: space-between;
+}
+
+/* 星星 */
+.star-wrap {
+
+}
+
+.star-list {
+  overflow: hidden;
+}
+
+.star-item {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.star-item {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-item:hover {
+  color: orange;
+}
+
+.star-item.active {
+  color: orange;
+}
+
+.evaluate-text-wrap {
+
+}
+
+.evaluate-text {
+  width: 120px;
+  height: 50px;
+  outline: none;
+  resize: none;
+  border-color: #ccc;
+  margin-top: 5px;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+/* 关闭 icon */
+.ace-cha {
+  font-size: 20px;
+  color: #ccc;
+  transition: all .3s;
+  cursor: pointer;
+}
+
+.ace-cha:hover {
+  color: #b4a078;
 }
