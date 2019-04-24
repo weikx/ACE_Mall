@@ -48,6 +48,26 @@ var _order = {
       success: success,
       error: error
     })
+  },
+
+  cancelOrder: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/CancelOrder'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
+  },
+
+  confirmReceipt: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/ConfirmReceipt'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 

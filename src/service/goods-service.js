@@ -50,7 +50,17 @@ var _goods = {
 			success: success,
 			error: error
 		})
-	}
+	},
+
+  addGoodEvaluation: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/AddGoodEvaluation'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
+  }
 }
 
 module.exports = _goods
