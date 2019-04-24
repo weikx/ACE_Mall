@@ -80,7 +80,6 @@ var page = {
   getOrderList: function (orderStatus) {
     var _this = this
     _order.getOrderList({
-      userId: _ace.getUserInfo.id(),
       orderStatus: orderStatus || 0
     }, function (res) {
       page.data.orderList = res

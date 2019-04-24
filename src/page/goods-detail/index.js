@@ -100,7 +100,6 @@ var page = {
 		$(document).on('click', '.btn', function () {
 			// 加入购物车
 			_user.addShopCart({
-				userId: _ace.getUserInfo.id(),
 				number: $('.goods-count').val(),
 				goodId: page.data.goodsId
 			}, function () {

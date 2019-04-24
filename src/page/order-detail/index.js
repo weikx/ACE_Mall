@@ -38,7 +38,6 @@ var page = {
   getOrderDetail: function () {
     var _this = this
     _order.getOrderDetail({
-      userId: _ace.getUserInfo.id(),
       orderNo: page.data.orderNo
     }, function (res) {
       res = res[0]

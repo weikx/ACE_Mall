@@ -36,7 +36,6 @@ var page = {
   submitOrder: function (note, payMoney) {
     var _this = this
     _order.submitOrder({
-      userId: _ace.getUserInfo.id(),
       note: note || '',
       payMoney: payMoney
     }, function (res) {

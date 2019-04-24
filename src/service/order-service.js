@@ -24,9 +24,6 @@ var _order = {
   getOrderNum: function (success, error) {
     _ace.request({
       url: _ace.getServerUrl('api/Order/GetOrderStatusNumber'),
-      data: {
-        userId: _ace.getUserInfo.id()
-      },
       success: success,
       error: error
     })
