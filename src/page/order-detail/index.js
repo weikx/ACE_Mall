@@ -29,6 +29,10 @@ var page = {
   },
 
   bindEvent: function () {
+    var _this = this
+    $(document).on('click', '.cancel-order', function () {
+      _this.cancelOrder()
+    })
   },
 
   getOrderDetail: function () {
@@ -87,6 +91,14 @@ var page = {
         $('.progress-list .progress-item').eq(index).addClass('active')
         $('.progress-list-time .progress-item').eq(index).text(item)
       }
+    })
+  },
+
+  cancelOrder: function () {
+    _order.cancelOrder({
+      orderNo: page.data.orderNo
+    }, function (res) {
+      window.location.href = './order.html'
     })
   }
 }

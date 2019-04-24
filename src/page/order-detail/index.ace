@@ -2,7 +2,7 @@
   <h1 class="order-detail-title">订单详情</h1>
   <div class="order-header">
     <p class="subtitle">订单号：{{orderNo}} </p>
-    <a class="btn-border">取消订单</a>
+    <a class="btn-border cancel-order">取消订单</a>
   </div>
   <div class="order-summary">
     <div class="order-status">已收货</div>
@@ -22,7 +22,7 @@
     </div>
     {{#courierNo}}
     <div class="order-delivery">
-      <span>物流公司：{{courierName}}  运单号：{{courierNo}}</span>
+      <span data-clipboard-text="{{courierNo}}">物流公司：{{courierName}}  运单号：{{courierNo}}</span>
     </div>
     {{/courierNo}}
     <div class="goods-wrap">
