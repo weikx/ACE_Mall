@@ -1,0 +1,68 @@
+<div class="evaluate-popup">
+    <div class="evaluate-main">
+        <div class="evaluate-head">
+            <span></span>
+            <span class="evaluate-title">商品评价鸭</span>
+            <i class="evaluate-close ace-icon ace-cha"></i>
+        </div>
+        <ul class="evaluate-goods order-card-wrap">
+            <li class="order-card">
+                <div class="card-header">
+                    <div class="order-summar">
+                        <div class="order-status">{{orderStateTexe}}</div>
+                    </div>
+                    <div class="order-info">
+                        <p class="order-caption">{{submitTime}} | {{receiveName}} | 订单号： <a href="./goods-detail.html" class="link">{{orderNo}}</a> | 在线支付</p>
+                        <div class="order-money">
+                            <p>共计：<span>{{totalMoney}}</span> 元</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-body-left">
+                        <ul class="card-goods-list">
+                            {{#goodList}}
+                            <li class="card-goods-item">
+                                <div class="goods-img">
+                                    <img src="{{goodImage}}" width="100%" height="100%">
+                                </div>
+                                <div class="goods-desc">
+                                    <a class="link goods-name">{{goodName}}</a>
+                                    <p class="goods-price">{{goodPrice}}元 × {{goodNumber}}</p>
+                                </div>
+                            </li>
+                            {{/goodList}}
+                        </ul>
+                    </div>
+                    <div class="card-body-right">
+                        {{#goodList}}
+                        <div class="star-wrap">
+                            <ul class="star-list">
+                                <li class="star-item active">
+                                    <i class="ace-icon ace-xingxing"></i>
+                                </li>
+                                <li class="star-item active">
+                                    <i class="ace-icon ace-xingxing"></i>
+                                </li>
+                                <li class="star-item active">
+                                    <i class="ace-icon ace-xingxing"></i>
+                                </li>
+                                <li class="star-item active">
+                                    <i class="ace-icon ace-xingxing"></i>
+                                </li>
+                                <li class="star-item active">
+                                    <i class="ace-icon ace-xingxing"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="evaluate-text-wrap">
+                            <textarea class="evaluate-text"></textarea>
+                        </div>
+                        {{/goodList}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a href="" class="pay-now">发布评价</a>
+    </div>
+</div>
