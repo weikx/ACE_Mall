@@ -13,8 +13,10 @@ var page = {
 	},
 
 	onLoad: function () {
-		this.setUserData()
-		this.setCartCount()
+	  if (_ace.getCookie('Ticket')) {
+      this.setUserData()
+      this.setCartCount()
+    }
 		this.bindEvent()
 	},
 

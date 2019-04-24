@@ -108,7 +108,6 @@ var page = {
   updateMyData () {
 	  var _this = this
     _user.updateMyData({
-      userId: _ace.getUserInfo.id(),
       email: _this.getInputVal('email'),
       image: $('#avater-img').attr('src'),
       password: _this.getInputVal('password'),

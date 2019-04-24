@@ -91,7 +91,6 @@ var cart = {
 		// 更新购物车数量
 		var _this = this
 		_user.updateShopCartNum({
-			userId: _ace.getUserInfo.id(),
 			goodId: goodsId,
 			number: number
 		}, function (res) {
@@ -104,7 +103,6 @@ var cart = {
 		// 设置商品是否选中
 		var _this = this
 		_user.setGoodsChecked({
-			userId: _ace.getUserInfo.id(),
 			goodId: goodsId,
 			isChecked: isChecked
 		}, function (res) {
@@ -117,7 +115,6 @@ var cart = {
 		// 设置商品是否全选
 		var _this = this
 		_user.setGoodsAllChecked({
-			userId: _ace.getUserInfo.id(),
 			isChecked: isChecked
 		}, function (res) {
 			cart.data = res
@@ -129,7 +126,6 @@ var cart = {
 		// 删除商品
 		var _this = this
 		confirm('是否删除该商品') && _user.deleteGoods({
-			userId: _ace.getUserInfo.id(),
 			goodId: goodsId
 		}, function (res) {
 			cart.data = res

@@ -34,9 +34,6 @@ var _user = {
 	getShopCart: function (success, error) {
 		_ace.request({
 			url: _ace.getServerUrl('api/User/GetMyShopCart'),
-			data: {
-				userId: _ace.getUserInfo.id()
-			},
 			success: success,
 			error: error
 		})
@@ -85,9 +82,6 @@ var _user = {
 	getCartShow: function (success, error) {
 		_ace.request({
 			url: _ace.getServerUrl('api/User/getShopCartShow'),
-			data: {
-				userId: _ace.getUserInfo.id()
-			},
 			success: success,
 			error: error
 		})
@@ -96,9 +90,6 @@ var _user = {
   getMyData: function (success, error) {
     _ace.request({
       url: _ace.getServerUrl('api/User/GetMyData'),
-      data: {
-        userId: _ace.getUserInfo.id()
-      },
       success: success,
       error: error
     })

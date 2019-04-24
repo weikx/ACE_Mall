@@ -9,6 +9,7 @@ var fromError = {
 	show: function (msg) {
 		$('.err-box').show().find('.err-msg').text(msg)
 	},
+
 	hide: function () {
 		$('.err-box').hide().find('.err-msg').text('')
 	}
@@ -16,6 +17,10 @@ var fromError = {
 
 var page = {
 	init: function () {
+	  if (_ace.getCookie('Ticket')) {
+	    _ace.goHome()
+      return
+    }
 		this.bindEvent()
 	},
 
@@ -48,6 +53,7 @@ var page = {
 			}, function (res) {
 				res = res[0]
 				_ace.setUserInfo(res)
+        _ace.setCookie('Ticket', res.Ticket)
 				window.location.href = _ace.getUrlPatam('redirect') || './index.html'
 			})
 		} else {
