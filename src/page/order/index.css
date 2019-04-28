@@ -85,6 +85,11 @@
   box-sizing: border-box;
 }
 
+.evaluate-popup .card-body {
+  height: 315px;
+  overflow-y: scroll;
+}
+
 .card-body .card-body-left {
   float: left;
   width: 690px;

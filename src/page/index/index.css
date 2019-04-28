@@ -37,3 +37,12 @@
   background-size: auto 100%;
   background-position: center;
 }
+
+/* loading img*/
+.home-loading {
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 35%;
+  left: 50%;
+}

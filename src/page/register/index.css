@@ -65,12 +65,3 @@
   margin-top: 20px;
   float: right;
 }
-
-/* stick footer布局 */
-.stick-footer-content {
-  min-height: calc(100% - 40px);
-}
-
-.stick-footer-content-inside {
-  padding-bottom: 250px;
-}
