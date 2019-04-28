@@ -7,6 +7,7 @@ var _ace = require('util/ace.js')
 var navList = require('page/common/nav/index.js')
 var navSide = require('page/common/nav-side/index.js')
 var _order = require('service/order-service.js')
+var _goods = require('service/goods-service.js')
 var orderTemplate = require('./index.ace')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
 var evaluateTemplate = require('./evaluate.ace')
@@ -61,8 +62,33 @@ var page = {
     })
     // 点击关闭弹窗
     $(document).on('click', '.evaluate-close', function () {
-      $('.evaluate-popup').animate({opacity: 0}, 300, 'swing', function () {
-        $('.evaluate-popup').hide().remove()
+      _this.closePopup()
+    })
+    // 评星
+    $(document).on('mouseover', '.star-list .star-item', function () {
+      var starNum = $(this).index() + 1,
+        goodsIndex = $(this).parents('.evaluate-wrap').index()
+      page.data.evaluate.goodList[goodsIndex].star = starNum
+      $(this).addClass('active')
+        .prevAll().addClass('active')
+      $(this).nextAll().removeClass('active')
+    })
+    // 输入评价
+    $(document).on('blur', '.evaluate-text', function () {
+      var goodsIndex = $(this).parents('.evaluate-wrap').index()
+      page.data.evaluate.goodList[goodsIndex].content = $(this).val()
+    })
+    // 发布评价
+    $(document).on('click', '.publish', function () {
+      var evaluate = page.data.evaluate
+      // 遍历订单商品列表 提交评论
+      evaluate.goodList.forEach(function (item) {
+        _this.submitEvaluation({
+          orderNo: evaluate.orderNo,
+          content: item.content || '',
+          goodId: item.goodId,
+          star: item.star || 5
+        })
       })
     })
   },
@@ -132,6 +158,23 @@ var page = {
     // 有订单则渲染订单 无订单则渲染提示
     var hasOrder = !!page.data.orderList.length
     $('.order-tab-main').eq(index || 0).html(hasOrder ? orderHtml : tipHtml)
+  },
+
+  // 发布评价
+  submitEvaluation: function (params) {
+    var _this = this
+    _goods.addGoodEvaluation(params,
+      function (res) {
+      _this.closePopup()
+      window.location.reload()
+    })
+  },
+
+  // 关闭评价弹窗
+  closePopup: function () {
+    $('.evaluate-popup').animate({opacity: 0}, 300, 'swing', function () {
+      $('.evaluate-popup').hide().remove()
+    })
   }
 }
 
