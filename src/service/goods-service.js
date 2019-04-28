@@ -54,7 +54,7 @@ var _goods = {
 
   addGoodEvaluation: function (params, success, error) {
     _ace.request({
-      url: _ace.getServerUrl('api/Order/AddGoodEvaluation'),
+      url: _ace.getServerUrl('api/Good/AddGoodEvaluation'),
       method: 'POST',
       data: params,
       success: success,
