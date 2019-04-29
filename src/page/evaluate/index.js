@@ -33,7 +33,9 @@ var page = {
   submitEvaluation: function () {
     _goods.addGoodEvaluation({
       goodId: 0,
-      content: 'string'
+      content: 'string',
+      orderNo: '',
+      star: 5
     }, function (res) {
       console.log(res)
     })
