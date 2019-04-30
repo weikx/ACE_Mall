@@ -53,8 +53,13 @@ var page = {
 		recommendGoodsHtml = _ace.renderHtml(goodsTemplate, {
 			data: page.data.krisRecommend
 		})
-		$('.page-wrap').append(hotGoodsHtml)
-		$('.page-wrap').append(recommendGoodsHtml)
+    // 追加页面内容
+    $('.home-loading').remove()
+    $('.page-wrap.width').append(hotGoodsHtml)
+      .append(recommendGoodsHtml)
+      .append('<div class="page-end"></div>')
+    // 移除加载动画
+    console.log('渲染')
 	},
 
 	// 获取首页商品
