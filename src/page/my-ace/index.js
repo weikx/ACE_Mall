@@ -72,7 +72,7 @@ var page = {
       _this.renderPage(res[0])
     })
   },
-	
+
 	changeName: function () {
 		$('#change-name')
   },
@@ -101,11 +101,11 @@ var page = {
     }
   },
 
-  getInputVal (type) {
+  getInputVal:function (type) {
 	  return $('.input.' + type).val()
   },
 
-  updateMyData () {
+  updateMyData:function () {
 	  var _this = this
     _user.updateMyData({
       email: _this.getInputVal('email'),

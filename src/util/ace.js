@@ -3,7 +3,7 @@ var HTTP_FAIL = 1 // http fail
 var NO_LOGIN = 2 // 未登录
 var Hogan = require('hogan.js')
 var cof = {
-	serverHost: 'http://192.168.0.143:60391/'
+	serverHost: 'http://47.101.45.222:2333/'
 }
 var _ace = {
 	request: function (param) {
@@ -111,23 +111,23 @@ var _ace = {
 			return this.info().receiveName
 		}
 	},
-  
+
   setCookie: function (name, value) {
     const Days = 1,
       exp = new Date()
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
     document.cookie = name + '=' + escape (value) + ';expires=' + exp.toGMTString()
   },
-  
+
   getCookie: function (name) {
-    let arr,
+    var arr,
       reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
     if(arr = document.cookie.match(reg))
       return 'BasicAuth ' + unescape(arr[2])
     else
       return ''
   },
-  
+
   delCookie: function (name) {
     var exp = new Date()
     exp.setTime(exp.getTime() - 1)
