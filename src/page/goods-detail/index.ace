@@ -78,188 +78,51 @@
         {{/infoImage}}
       </ul>
       {{^infoImage}}
-        暂无简介图片
+        <p class="nodata">暂无简介图片</p>
       {{/infoImage}}
     </div>
     <div class="detail-evaluate-wrap hide">
+      <div class="evaluate-main">
+      </div>
+      <div class="load-more">
+        加载更多
+      </div>
     </div>
     <div class="detail-problem-wrap hide">
       <ul class="problem-list">
         <li class="problem-item">
-          你知道吗
+          1、如果对商品有任何疑问，请和后台人员及时联系。
         </li>
         <li class="problem-item">
-          爱你并不容易
+          2、购买商品后，商家会在2日内进行发货，请注意及时查收您的快递。
         </li>
         <li class="problem-item">
-          还需要很多勇气
+          3、本店所售商品均为真品，假一赔十，请放心购买。
         </li>
         <li class="problem-item">
-          是天意吧
+          4、本店商品一经售出，均不退货，请慎重购买
+        </li>
+        <li class="problem-item contact">
+          <span>
+            <i class="ace-icon ace-phone"></i>
+            联系电话：18438613709
+          </span>
+          <span>
+            <i class="ace-icon ace-qq"></i>
+            联系QQ:1945697586
+          </span>
+          <span>
+            <i class="ace-icon ace-wechat"></i>
+            <i>a1945697586</i>
+          </span>
         </li>
         <li class="problem-item">
-          好多话说不出去
         </li>
         <li class="problem-item">
-          就是怕你负担不起
-        </li>
-        <li class="problem-item">
-          你相信吗
-        </li>
-        <li class="problem-item">
-          这一生遇见你
-        </li>
-        <li class="problem-item">
-          是上辈子我欠你的
-        </li>
-        <li class="problem-item">
-          是天意吧
-        </li>
-        <li class="problem-item">
-          让我爱上你
-        </li>
-        <li class="problem-item">
-          才又让你 离我而去
-        </li>
-        <li class="problem-item">
-          也许轮回里 早已注定
-        </li>
-        <li class="problem-item">
-          今生就该我还给你
-        </li>
-        <li class="problem-item">
-          一颗心在风雨里
-        </li>
-        <li class="problem-item">
-          飘来飘去
-        </li>
-        <li class="problem-item">
-          都是为你
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          苦一点也愿意
-        </li>
-        <li class="problem-item">
-          就算是为了分离与我相遇
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          痛一点也愿意
-        </li>
-        <li class="problem-item">
-          就算这辈子注定要和你分离
-        </li>
-        <li class="problem-item">
-          你知道吗
-        </li>
-        <li class="problem-item">
-          爱你并不容易
-        </li>
-        <li class="problem-item">
-          还需要很多勇气
-        </li>
-        <li class="problem-item">
-          是天意吧
-        </li>
-        <li class="problem-item">
-          好多话说不出去
-        </li>
-        <li class="problem-item">
-          就是怕你负担不起
-        </li>
-        <li class="problem-item">
-          你相信吗
-        </li>
-        <li class="problem-item">
-          这一生遇见你
-        </li>
-        <li class="problem-item">
-          是上辈子我欠你的
-        </li>
-        <li class="problem-item">
-          是天意吧
-        </li>
-        <li class="problem-item">
-          让我爱上你
-        </li>
-        <li class="problem-item">
-          才又让你离我而去
-        </li>
-        <li class="problem-item">
-          也许轮回里 早已注定
-        </li>
-        <li class="problem-item">
-          今生就该我还给你
-        </li>
-        <li class="problem-item">
-          一颗心在风雨里
-        </li>
-        <li class="problem-item">
-          飘来飘去
-        </li>
-        <li class="problem-item">
-          都是为你
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          苦一点也愿意
-        </li>
-        <li class="problem-item">
-          就算是为了分离与我相遇
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          痛一点也愿意
-        </li>
-        <li class="problem-item">
-          就算这辈子注定要和你分离
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          苦一点也愿意
-        </li>
-        <li class="problem-item">
-          就算是为了分离与我相遇
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          痛一点也愿意
-        </li>
-        <li class="problem-item">
-          就算这辈子注定要和你分离
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          苦一点也愿意
-        </li>
-        <li class="problem-item">
-          就算是为了分离与我相遇
-        </li>
-        <li class="problem-item">
-          一路上有你
-        </li>
-        <li class="problem-item">
-          痛一点也愿意
-        </li>
-        <li class="problem-item">
-          就算只能在梦里拥抱你
         </li>
       </ul>
+    </div>
+    <div class="detail-recommend-wrap">
     </div>
   </div>
 </div>
