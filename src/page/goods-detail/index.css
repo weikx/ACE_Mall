@@ -169,16 +169,19 @@
 
 .detail-con {
   overflow: hidden;
+  padding: 10px 0;
 }
 
 .detail-con .detail-img-wrap {
   width: 790px;
   height: auto;
   float: left;
+  overflow: hidden;
 }
 
 .detail-con .detail-img-wrap img {
   width: 100%;
+  float: left;
 }
 
 
@@ -186,6 +189,7 @@
 .detail-evaluate-wrap {
   width: 790px;
   height: auto;
+  float: left;
 }
 
 .detail-evaluate-wrap .evaluate-list .evaluate-item {
@@ -232,7 +236,44 @@
   font-size: 12px;
 }
 
+.detail-problem-wrap {
+  float: left;
+  width: 790px;
+}
+
 .problem-list .problem-item {
   font-size: 14px;
   line-height: 24px;
+}
+
+/* 推荐商品 */
+.detail-recommend-wrap {
+  display: inline!important;
+}
+.detail-recommend-wrap .goods-wrap .goods-list {
+  padding-left: 50px;
+}
+
+.ace-wechat {
+  color: #87DE47;
+}
+
+.problem-item {
+  display: flex;
+  color: #555;
+  line-height: 30px;
+}
+
+.problem-item .ace-icon {
+  font-size: 24px;
+}
+
+.problem-item.contact span {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.problem-item.contact span i:first-child {
+  padding-right: 10px;
 }
