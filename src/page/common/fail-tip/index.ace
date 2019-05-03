@@ -1,17 +1,17 @@
 <!-- 在线购物 icon -->
 {{#onlineShopping}}
-<img class="icon-svg" src="/src/image/icon/online_shopping.svg">
+<img class="icon-svg" src="//img.weikx.fun/icon/online_shopping.svg">
 {{/onlineShopping}}
 <!-- checklist icon-->
 {{#checklist}}
-<img class="icon-svg" src="/src/image/icon/checklist.svg">
+<img class="icon-svg" src="//img.weikx.fun/icon/checklist.svg">
 {{/checklist}}
 <!-- bug icon -->
 {{#bug}}
-<img class="icon-svg" src="/src/image/icon/bug_fixed.svg">
+<img class="icon-svg" src="//img.weikx.fun/icon/bug_fixed.svg">
 {{/bug}}
 <!-- shopping icon -->
 {{#shopping}}
-<img class="icon-svg" src="/src/image/icon/shopping.svg">
+<img class="icon-svg" src="//img.weikx.fun/icon/shopping.svg">
 {{/shopping}}
 <p class="nodata">{{msg}}</p>

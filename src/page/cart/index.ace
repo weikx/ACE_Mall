@@ -74,7 +74,7 @@
   {{/totalNumber}}
   {{^totalNumber}}
   <div class="cart-null">
-    <img src="/src/image/icon/checklist.svg" class="icon-svg" alt="">
+    <img src="//img.weikx.fun/icon/checklist.svg" class="icon-svg" alt="">
     <p class="nodata">
       购物车中还没有商品！
       <a class="link" href="./index.html">点这去购买！</a>
