@@ -144,6 +144,7 @@ label, input[type='checkbox'] {
 /* stick footer布局 */
 .stick-footer-content {
   min-height: calc(100% - 125px);
+  margin-top: 85px;
 }
 
 .stick-footer-content-inside {
