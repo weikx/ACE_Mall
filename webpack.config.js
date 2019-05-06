@@ -30,7 +30,7 @@ var config = {
 		'order': ['./src/page/order/index.js'],
 		'pay': ['./src/page/pay/index.js'],
 		'order-detail': ['./src/page/order-detail/index.js'],
-		'evaluate': ['./src/page/evaluate/index.js']
+		'my-evaluate': ['./src/page/my-evaluate/index.js']
 	},
 
 	output: {
@@ -97,7 +97,7 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('order', '我的订单')),
 		new HtmlWebpackPlugin(getHtmlConfig('pay', '支付')),
 		new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
-		new HtmlWebpackPlugin(getHtmlConfig('evaluate', '发表评价'))
+		new HtmlWebpackPlugin(getHtmlConfig('my-evaluate', '我的评价'))
 	],
 
 	devServer: {
