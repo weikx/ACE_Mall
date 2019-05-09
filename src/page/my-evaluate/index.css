@@ -1,0 +1,29 @@
+.evaluate-list {
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
+.evaluate-list .card-body {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 0 10px 10px 10px;
+  border-radius: 2px;
+}
+
+.evaluate-list .card-body, .card-body-left {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.evaluate-list .card-body-left .goods-price {
+  color: #ccc;
+}
+
+.evaluate-list .card-goods-list {
+  width: 480px;
+}
+
+.evaluate-list .card-body-left .star-wrap {
+  float: left;
+}
