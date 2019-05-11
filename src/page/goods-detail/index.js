@@ -3,6 +3,7 @@ require('page/common/footer/index.js')
 require('page/common/nav-simple/index.js')
 require('page/common/nav/index.js')
 require('page/common/fail-tip/index.js')
+require('../common/goods-item/index.js')
 var _ace = require('util/ace.js')
 var navList = require('page/common/nav/index.js')
 var _goods = require('service/goods-service.js')
@@ -10,13 +11,15 @@ var _user = require('service/user-service.js')
 var goodsDetailTemplate = require('./index.ace')
 var failTipTemplate = require('page/common/fail-tip/index.ace')
 var evaluateTemplate = require('./evaluate.ace')
+var goodsTemplate = require('../common/goods-item/index.ace')
 
 navList.init()
 var page = {
 	data: {
 		goodsId: _ace.getUrlPatam('id') || '',
 		goodsDetail: {},
-		evaluate: []
+		evaluate: [],
+    pageIndex: 1
 	},
 
 	init: function () {
@@ -41,6 +44,11 @@ var page = {
 		$('.crumb-this').text(name || '未知商品')
 	},
 
+  setCrumbText: function (type, text) {
+	  $('.crumb-category').text(text || '未知分类')
+      .attr('href', './goods-list.html?type=' + type + '&name=' + text)
+  },
+
 	initSwiper: function () {
 		// 初始化轮播
 		// Doc: https://www.swiper.com.cn/
@@ -53,7 +61,8 @@ var page = {
 			},
 			pagination: {
 				el: '.swiper-pagination',
-			}
+			},
+      getKrisRecommend: {}
 		})
 	},
 
@@ -65,19 +74,21 @@ var page = {
 		}, function (res) {
 			res = res[0]
 			_this.data.goodsDetail = res
-			if (res) {
+      _this.getKrisRecommend()
+      if (res) {
 				res.detailImage = res.detailImage && res.detailImage.split(',')				// 分割图片地址
 				res.infoImage = res.infoImage && res.infoImage.split(',')
+        _this.setCrumbText(res.categoryID, res.categoryName)
 				var goodsDetailHtml = _ace.renderHtml(goodsDetailTemplate, res)
 				$pageWrap.html(goodsDetailHtml)
 				_this.initSwiper()
 			} else {
 				var tipHtml = _ace.renderHtml(failTipTemplate, {
-					msg: '商品出错，换个商品试试',
-					bug: true
+					msg: '商品不存在或已下架，换个商品试试',
+          onlineShopping: true
 				})
 				$pageWrap.html(tipHtml)
-			}
+      }
 		})
 	},
 
@@ -118,31 +129,67 @@ var page = {
 				_this.getEvaluate()
 			}
 		})
+
+    $(document).on('click', '.load-more', function (i) {
+      page.loadMoreEvaluate()
+		})
 	},
 
 	getEvaluate: function () {
 		// 获取评论
-		if (!page.data.evaluate.length) {
+		// if (!page.data.evaluate.length) {
 			_goods.getEvaluate({
-				goodId: page.data.goodsId
+				goodId: page.data.goodsId,
+        pageSize: 10,
+        page: page.data.pageIndex || 1
 			}, function (res) {
-				if (res.length) {
-					page.data.evaluate = res
+			  var length = res.model.length
+				if (length) {
+					page.data.evaluate = res.model
 					var evaluateHtml = _ace.renderHtml(evaluateTemplate, page.data)
-					$('.detail-evaluate-wrap').html(evaluateHtml)
+					$('.evaluate-main').append(evaluateHtml)
+          if (res.total > 10) {
+            $('.load-more').show()
+          } else {
+            $('.load-more').hide()
+          }
 				} else {
-					$('.detail-evaluate-wrap').html('<p>暂无评论</p>')
+					$('.detail-evaluate-wrap').html('<p class="nodata">暂无评论</p>')
 				}
 			})
-		}
+		// }
 	},
+
+  loadMoreEvaluate: function () {
+	  page.data.pageIndex += 1
+	  this.getEvaluate()
+  },
 
 	setCartCount: function () {
 		// 设置购物车数量
 		_user.getShopCart(function (res) {
 			$('.cart-count').text(res.mymodel.length)
 		})
-	}
+	},
+
+  getKrisRecommend: function () {
+    var _this = this
+    _goods.getHomeGoods(function (res) {
+      res.krisRecommend.length = 5
+      _this.data.krisRecommend = res.krisRecommend
+      _this.goodsItemInit()
+    })
+  },
+
+  // 推荐商品列表初始化
+  goodsItemInit: function () {
+    var recommendGoodsHtml = _ace.renderHtml(goodsTemplate, {
+        data: page.data.krisRecommend
+      })
+    // 追加页推荐商品
+    console.log(recommendGoodsHtml)
+    $('.detail-recommend-wrap').append(recommendGoodsHtml)
+  }
 }
 
 $(function () {

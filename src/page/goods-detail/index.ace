@@ -21,7 +21,7 @@
   <!-- 商品信息 -->
   <div class="info-con">
     <h1 class="goods-name">{{goodName}}</h1>
-    <p class="subtitle">wuyifan</p>
+<!--    <p class="subtitle">wuyifan</p>-->
     <div class="info-item">
       <span class="label">价格</span>
       <span class="info-item price">
