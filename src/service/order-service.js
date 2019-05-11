@@ -65,6 +65,16 @@ var _order = {
       success: success,
       error: error
     })
+  },
+
+  deleteOrder: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Order/DeleteOrder'),
+      method: 'DELETE',
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 

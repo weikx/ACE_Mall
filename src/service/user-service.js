@@ -113,6 +113,15 @@ var _user = {
       success: success,
       error: error
     })
+  },
+
+  getMyEvaluation: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/User/GetMyEvaluation'),
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
