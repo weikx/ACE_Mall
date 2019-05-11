@@ -20,7 +20,8 @@ navList.init()
 var page = {
   data: {
     orderList: [],
-    evaluate: {}
+    evaluate: {},
+    orderType: _ace.getUrlPatam('type') || 0
   },
 
   init: function () {
@@ -31,15 +32,18 @@ var page = {
     this.bindEvent()
     this.getOrderNum()
     this.getOrderList()
+    this.switchTab()
   },
 
   bindEvent: function () {
     var _this = this
+    // 切换订单
     $('.order-tab-item').on('click', function () {
       var index = $(this).index()
-      $('.order-tab-main').hide().eq(index).show()
-      $(this).addClass('active').siblings().removeClass('active')
-      _this.getOrderList(index)
+      window.location.href = './order.html?type=' + index
+      // $('.order-tab-main').hide().eq(index).show()
+      // $(this).addClass('active').siblings().removeClass('active')
+      // _this.getOrderList(index)
     })
     // 确认订单
     $(document).on('click', '.confirm-receipt', function () {
@@ -103,10 +107,10 @@ var page = {
     })
   },
 
-  getOrderList: function (orderStatus) {
+  getOrderList: function () {
     var _this = this
     _order.getOrderList({
-      orderStatus: orderStatus || 0
+      orderStatus: _this.data.orderType || 0
     }, function (res) {
       page.data.orderList = res
       res.forEach(function (item) {
@@ -144,7 +148,7 @@ var page = {
             break
         }
       })
-      _this.renderOrder(orderStatus)
+      _this.renderOrder(_this.data.orderType)
     })
   },
 
@@ -157,7 +161,8 @@ var page = {
     })
     // 有订单则渲染订单 无订单则渲染提示
     var hasOrder = !!page.data.orderList.length
-    $('.order-tab-main').eq(index || 0).html(hasOrder ? orderHtml : tipHtml)
+    $('.order-tab-item').eq(index).addClass('active')
+    $('.order-tab-main').html(hasOrder ? orderHtml : tipHtml)
   },
 
   // 发布评价
@@ -175,6 +180,10 @@ var page = {
     $('.evaluate-popup').animate({opacity: 0}, 300, 'swing', function () {
       $('.evaluate-popup').hide().remove()
     })
+  },
+
+  switchTab: function () {
+    console.log(_ace.getUrlPatam('type'))
   }
 }
 

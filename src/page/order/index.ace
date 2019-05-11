@@ -7,7 +7,7 @@
         <div class="order-status">{{orderStateTexe}}</div>
       </div>
       <div class="order-info">
-        <p class="order-caption">{{submitTime}} | {{receiveName}} | 订单号： <a href="./goods-detail.html" class="link">{{orderNo}}</a> | 在线支付</p>
+        <p class="order-caption">{{submitTime}} | {{receiveName}} | 订单号： <a href="./order-detail.html?orderNo={{orderNo}}" class="link">{{orderNo}}</a> | 在线支付</p>
         <div class="order-money">
           <p>应付金额：<span>{{totalMoney}}</span> 元</p>
         </div>
@@ -22,7 +22,7 @@
               <img src="{{goodImage}}" width="100%" height="100%">
             </div>
             <div class="goods-desc">
-              <a class="link goods-name">{{goodName}}</a>
+              <a href="./goods-detail.html?id={{goodId}}&name={{goodName}}" class="link goods-name">{{goodName}}</a>
               <p class="goods-price">{{goodPrice}}元 × {{goodNumber}}</p>
             </div>
           </li>
