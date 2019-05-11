@@ -59,6 +59,7 @@ html, body {
   height: 100%;
   background: #fff;
   font: 12px/1.5 "Tahoma", "Arial", "Microsoft Sans Serif", "Microsoft Yahei";
+  user-select: none;
 }
 
 label, input[type='checkbox'] {
