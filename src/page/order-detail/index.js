@@ -62,6 +62,7 @@ var page = {
         break
       case 1:
         statusText = '待付款'
+        $('.order-header').append('<a class="btn-border cancel-order">取消订单</a>\n')
         break
       case 2:
         statusText = '待发货'
