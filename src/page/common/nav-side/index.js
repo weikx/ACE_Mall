@@ -17,23 +17,13 @@ var navSide = {
 				href: './order.html'
 			},
 			{
+				name: 'my-evaluate',
+				desc: '我的评价',
+				href: './my-evaluate.html'
+			},
+			{
 				name: 'about',
 				desc: '关于ACE_Mall',
-				href: './about.html'
-			},
-			{
-				name: 'about',
-				desc: '关于Kris wu',
-				href: './about.html'
-			},
-			{
-				name: 'about',
-				desc: '关于Galaxy-qing',
-				href: './about.html'
-			},
-			{
-				name: 'about',
-				desc: '关于Mei GeNi',
 				href: './about.html'
 			}
 		]
