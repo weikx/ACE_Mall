@@ -56,8 +56,7 @@ var page = {
 				receiveAddress: formData.receiveAddress,
 				receivePhone: formData.receivePhone
 			}, function (res) {
-				console.log(res)
-				// window.location.href = './result.html?type=register'
+				window.location.href = './result.html?type=register'
 			})
 		} else {
 			fromError.show(validateResult.msg)
