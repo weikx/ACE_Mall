@@ -1,17 +1,30 @@
 <!-- 评论 -->
-<ul class="evaluate-list">
-  {{#evaluate}}
-  <li class="evaluate-item">
-    <div class="evaluate-avatar">
-      <img src="{{image}}" alt="">
-    </div>
-    <p class="evaluate-text">
-      {{evaluation}}
-    </p>
-    <div class="evaluate-user">
-      <span>{{account}}</span>
-      <span>{{addTime}}</span>
-    </div>
-  </li>
-  {{/evaluate}}
-</ul>
+<div class="goods-evaluate">
+  <ul class="evaluate-list">
+    {{#evaluate}}
+    <li class="evaluate-item">
+      <div style="display: flex;align-items: center">
+        <div class="evaluate-avatar">
+          <img src="{{image}}" alt="">
+        </div>
+        <p class="evaluate-text">
+          {{evaluation}}
+        </p>
+        <div class="evaluate-user">
+          <span>{{account}}</span>
+          <span>{{addTime}}</span>
+        </div>
+      </div>
+      <div class="star-wrap">
+        <ul class="star-list">
+          {{#star}}
+          <li class="star-item active">
+            <i class="ace-icon ace-xingxing"></i>
+          </li>
+          {{/star}}
+        </ul>
+      </div>
+    </li>
+    {{/evaluate}}
+  </ul>
+</div>

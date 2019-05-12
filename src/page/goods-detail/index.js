@@ -4,6 +4,8 @@ require('page/common/nav-simple/index.js')
 require('page/common/nav/index.js')
 require('page/common/fail-tip/index.js')
 require('../common/goods-item/index.js')
+require('page/common/jquerypage/js/zxf_page.js')
+require('page/common/jquerypage/css/zxf_page.css')
 var _ace = require('util/ace.js')
 var navList = require('page/common/nav/index.js')
 var _goods = require('service/goods-service.js')
@@ -19,7 +21,9 @@ var page = {
 		goodsId: _ace.getUrlPatam('id') || '',
 		goodsDetail: {},
 		evaluate: [],
-    pageIndex: 1
+		page: 1,
+    pageSize: 5,
+    isFirst: true
 	},
 
 	init: function () {
@@ -135,34 +139,27 @@ var page = {
 		})
 	},
 
-	getEvaluate: function () {
-		// 获取评论
-		// if (!page.data.evaluate.length) {
-			_goods.getEvaluate({
-				goodId: page.data.goodsId,
-        pageSize: 10,
-        page: page.data.pageIndex || 1
-			}, function (res) {
-			  var length = res.model.length
-				if (length) {
-					page.data.evaluate = res.model
-					var evaluateHtml = _ace.renderHtml(evaluateTemplate, page.data)
-					$('.evaluate-main').append(evaluateHtml)
-          if (res.total > 10) {
-            $('.load-more').show()
-          } else {
-            $('.load-more').hide()
-          }
-				} else {
-					$('.detail-evaluate-wrap').html('<p class="nodata">暂无评论</p>')
-				}
-			})
-		// }
-	},
-
-  loadMoreEvaluate: function () {
-	  page.data.pageIndex += 1
-	  this.getEvaluate()
+  getEvaluate: function () {
+    // 获取评论
+    var _this = this
+    _goods.getEvaluate({
+      goodId: page.data.goodsId,
+      page: _this.data.page,
+      pageSize: _this.data.pageSize
+    }, function (res) {
+      if (res.model.length) {
+        page.data.evaluate = res.model
+        res.model.forEach(function (item) {
+          item.star = new Array(item.star)
+        })
+        console.log(res.model)
+        var evaluateHtml = _ace.renderHtml(evaluateTemplate, page.data)
+        $('.evaluate-main').html(evaluateHtml)
+        _this.data.isFirst && _this.initPaging(Math.ceil(res.total / _this.data.pageSize)); _this.data.isFirst = false
+      } else {
+        $('.evaluate-main').html('<p>暂无评论</p>')
+      }
+    })
   },
 
 	setCartCount: function () {
@@ -189,6 +186,19 @@ var page = {
     // 追加页推荐商品
     console.log(recommendGoodsHtml)
     $('.detail-recommend-wrap').append(recommendGoodsHtml)
+	},
+
+	initPaging: function (pageNum) {
+    //翻页
+    var _this = this
+    $(".zxf_pagediv.evaluate-page").createPage({
+      pageNum: pageNum,
+      current: _this.data.page,
+      backfun: function(e) {
+        _this.data.page = e.current || _this.data.page
+        _this.getEvaluate()
+      }
+    });
   }
 }
 

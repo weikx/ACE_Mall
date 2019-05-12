@@ -84,8 +84,8 @@
     <div class="detail-evaluate-wrap hide">
       <div class="evaluate-main">
       </div>
-      <div class="load-more">
-        加载更多
+      <div class="evaluate-page zxf_pagediv">
+          <!-- 分页 -->
       </div>
     </div>
     <div class="detail-problem-wrap hide">

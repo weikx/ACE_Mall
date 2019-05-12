@@ -174,7 +174,7 @@
 
 .detail-con .detail-img-wrap {
   width: 790px;
-  height: auto;
+  min-height: 100px;
   float: left;
   overflow: hidden;
 }
@@ -197,6 +197,7 @@
   display: flex;
   margin-top: 2px;
   align-items: center;
+  justify-content: space-between;
   min-height: 30px;
   margin-bottom: 20px;
   border-left: 1px solid #00c0a5;
@@ -259,7 +260,7 @@
 }
 
 .problem-item {
-  display: flex;
+  /*display: flex;*/
   color: #555;
   line-height: 30px;
 }
@@ -276,4 +277,36 @@
 
 .problem-item.contact span i:first-child {
   padding-right: 10px;
+}
+
+
+/* 星星 */
+.star-wrap {
+
+}
+
+.star-list {
+  overflow: hidden;
+}
+
+.star-item {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+.star-item {
+  color: #ccc;
+}
+
+.star-item:hover {
+  color: orange;
+}
+
+.star-item.active {
+  color: orange;
 }
