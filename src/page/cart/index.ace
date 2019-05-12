@@ -6,10 +6,16 @@
       <li class="list-item-wrap">
         <div class="list-item item-check">
           {{#isAllChecked}}
-          <input name="cart" type="checkbox" class="select-all" checked />
+          <label>
+            <input name="cart" type="checkbox" class="select-all" checked />
+            <span class="check-box all"></span>
+          </label>
           {{/isAllChecked}}
           {{^isAllChecked}}
-          <input name="cart" type="checkbox" class="select-all" />
+          <label>
+            <input name="cart" type="checkbox" class="select-all" />
+            <span class="check-box all"></span>
+          </label>
           {{/isAllChecked}}
           <span>全选</span>
         </div>
@@ -29,10 +35,16 @@
       <li class="list-item-wrap" data-id="{{goodId}}">
         <div class="list-item item-check">
           {{#isChecked}}
-          <input name="cart" class="select-goods" type="checkbox" checked value="" />
+          <label>
+            <input name="cart" class="select-goods" type="checkbox" checked value="" />
+            <span class="check-box"></span>
+          </label>
           {{/isChecked}}
           {{^isChecked}}
-          <input name="cart" class="select-goods" type="checkbox" value="" />
+          <label>
+            <input name="cart" class="select-goods" type="checkbox" value="" />
+            <span class="check-box"></span>            
+          </label>
           {{/isChecked}}
         </div>
         <div class="list-item item-img">

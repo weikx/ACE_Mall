@@ -149,6 +149,39 @@
   color: #b4a078;
 }
 
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .check-box::after {
+  content: '√';
+  display: block;
+  position: absolute;
+  top: -50px;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;;
+}
+
+input[type=checkbox]:checked + .check-box.all::after {
+  top: -27px;
+}
+
+input[type=checkbox]:checked + .check-box {
+  background: #b4a078;
+}
+
+.check-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: rgba(204, 204, 204, 0.8);
+  border-radius: 2px;
+  position: relative;
+}
+
 .cart-bar .all-price {
   color: #b4a078;
   padding-right: 20px;
