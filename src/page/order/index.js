@@ -41,18 +41,16 @@ var page = {
     $('.order-tab-item').on('click', function () {
       var index = $(this).index()
       window.location.href = './order.html?type=' + index
-      // $('.order-tab-main').hide().eq(index).show()
-      // $(this).addClass('active').siblings().removeClass('active')
-      // _this.getOrderList(index)
     })
-    // 确认订单
+    // 确认收货
     $(document).on('click', '.confirm-receipt', function () {
       var orderNo = $(this).data('order-no')
-      _order.confirmReceipt({
-        orderNo: orderNo
-      }, function () {
-        window.location.reload()
-      })
+      _this.confirmReceipt(orderNo)
+    })
+    // 删除订单
+    $(document).on('click', '.delete-order', function () {
+      var orderNo = $(this).data('order-no')
+      _this.deleteOrder(orderNo);
     })
     // 点击评价
     $(document).on('click', '.to-evaluate', function () {
@@ -184,6 +182,22 @@ var page = {
 
   switchTab: function () {
     console.log(_ace.getUrlPatam('type'))
+  },
+
+  confirmReceipt: function (orderNo) {
+    _order.confirmReceipt({
+      orderNo: orderNo
+    }, function () {
+      window.location.reload()
+    })
+  },
+
+  deleteOrder: function (orderNo) {
+    confirm('是否删除该订单') && _order.deleteOrder({
+      orderNo: orderNo
+    }, function (res) {
+      window.location.reload()
+    })
   }
 }
 

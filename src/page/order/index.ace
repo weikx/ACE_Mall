@@ -55,9 +55,14 @@
       {{/waitEvaluate}}
       {{#completed}}
       <div class="card-body-right">
-        <div class="btn-border">删除订单</div>
+        <div class="btn-border delete-order" data-order-no="{{orderNo}}">删除订单</div>
       </div>
       {{/completed}}
+      {{#closed}}
+      <div class="card-body-right">
+        <div class="btn-border delete-order" data-order-no="{{orderNo}}">删除订单</div>
+      </div>
+      {{/closed}}
     </div>
   </li>
   {{/orderList}}
