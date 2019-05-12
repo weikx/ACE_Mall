@@ -163,3 +163,8 @@ label, input[type='checkbox'] {
 .clear {
   clear: both;
 }
+
+/* 商品名可选中 */
+.goods-name {
+  user-select: text;
+}
