@@ -34,10 +34,18 @@ var page = {
 			$(this).addClass('active')
 				.siblings().removeClass('active')
 			var sortType = $(this).data('sort')
+      $('.ace-xiajiantou, .ace-shangjiantou').css('color', '#999')
 			if (!!sortType) {
 				var sortPriceType = page.data.sortPrice %2 == 0 ? 1 : 2
 				_this.getGoodsList(sortPriceType)
 				page.data.sortPrice += 1
+        if (sortPriceType == 1) {
+          $('.ace-shangjiantou').css('color', '#b4a078')
+          $('.ace-xiajiantou').css('color', '#999')
+        } else {
+          $('.ace-xiajiantou').css('color', '#b4a078')
+          $('.ace-shangjiantou').css('color', '#999')
+        }
 			} else {
 				_this.getGoodsList(0)
 			}
