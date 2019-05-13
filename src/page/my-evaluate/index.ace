@@ -1,0 +1,29 @@
+{{#evaluateList}}
+<div class="card-body">
+  <div class="card-body-left">
+    <ul class="card-goods-list">
+      <li class="card-goods-item">
+        <div class="goods-img">
+          <img src="{{goodImage}}" width="100%" height="100%">
+        </div>
+        <div class="goods-desc">
+          <a class="link goods-name">{{goodName}}</a>
+          <p class="goods-price">{{createtime}}</p>
+        </div>
+      </li>
+    </ul>
+    <div class="star-wrap">
+      <ul class="star-list">
+        {{#star}}
+        <li class="star-item active">
+          <i class="ace-icon ace-xingxing"></i>
+        </li>
+        {{/star}}
+      </ul>
+    </div>
+  </div>
+  <div class="card-body-right">
+    {{evaluation}}
+  </div>
+</div>
+{{/evaluateList}}
