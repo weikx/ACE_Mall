@@ -1,6 +1,7 @@
 require('./index.css')
 require('page/common/footer/index.js')
 require('page/common/nav-simple/index.js')
+var md5 = require('util/md5.min')
 var _ace = require('util/ace.js')
 var _user = require('service/user-service.js')
 
@@ -40,7 +41,7 @@ var page = {
 	submit: function () {
 		var formData = {
 			username: $.trim($('#username').val()),
-			password: $.trim($('#password').val())
+			password: md5($.trim($('#password').val()))
 		}
 		// 表单验证结果
 		var validateResult = this.formValidate(formData)
