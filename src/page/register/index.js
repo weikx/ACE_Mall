@@ -38,7 +38,7 @@ var page = {
 		var formData = {
 			username: $.trim($('#username').val()),
 			password: md5($.trim($('#password').val())),
-			confirmPassword: $.trim($('#confirm-password').val()),
+			confirmPassword: md5($.trim($('#confirm-password').val())),
 			email: $.trim($('#email').val()),
 			receiveName: $.trim($('#receive-name').val()),
 			receiveAddress: $.trim($('#receive-address').val()),
