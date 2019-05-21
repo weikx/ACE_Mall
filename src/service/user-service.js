@@ -122,6 +122,16 @@ var _user = {
       success: success,
       error: error
     })
+  },
+
+  updatePassword: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/User/UpdatePassword'),
+      method: 'POST',
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
