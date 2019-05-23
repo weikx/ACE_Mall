@@ -39,9 +39,12 @@ var page = {
       val = $('.' + type).val()
       $('.' + type).removeAttr('disabled').focus()
     })
+    $(document).on('click', '.change-pass', function () {
+      window.location.href = './change-password.html'
+    })
     $(document).on('blur', '.input', function () {
       // input 失焦上传信息
-      _this.setData($(this), val)
+      if (!$(this).hasClass('password')) _this.setData($(this), val)
     })
     $(document).on('keydown', '.input', function (e) {
       if (e.keyCode === 13) {
