@@ -53,7 +53,9 @@ var page = {
         oldPassword: md5(formData.oldPassword),
         password: md5(formData.newPassword)
       }, function (res) {
-        console.log(res)
+        alert('修改成功,请重新登录')
+        _ace.logout()
+        window.location.href = './login.html'
       })
 		} else {
 			fromError.show(validateResult.msg)
