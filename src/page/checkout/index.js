@@ -14,16 +14,16 @@ var page = {
   data: {
     checkout: {}
   },
-  
+
   init: function () {
     this.onLoad()
   },
-  
+
   onLoad: function () {
     this.bindEvent()
     this.getCartShow()
   },
-  
+
   bindEvent: function () {
     var _this = this
     $(document).on('click', '.btn.payment', function () {
@@ -32,15 +32,16 @@ var page = {
       _this.submitOrder(note, totalPrice)
     })
   },
-  
+
   submitOrder: function (note, payMoney) {
     var _this = this
     _order.submitOrder({
       note: note || '',
       payMoney: payMoney
     }, function (res) {
-      var orderNo = res.orderNo.OrderNo
-      _this.toPay(orderNo)
+      document.write(res)
+      // var orderNo = res.orderNo.OrderNo
+      // _this.toPay(orderNo)
     })
   },
 
