@@ -60,6 +60,15 @@ var _goods = {
       success: success,
       error: error
     })
+  },
+
+  searchGoods: function (params, success, error) {
+    _ace.request({
+      url: _ace.getServerUrl('api/Good/SearchGood'),
+      data: params,
+      success: success,
+      error: error
+    })
   }
 }
 
