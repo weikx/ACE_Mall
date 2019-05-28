@@ -12,7 +12,7 @@ var page = {
   data: {
     star: 5
   },
-  
+
   init: function () {
     this.onLoad()
   },
@@ -20,7 +20,7 @@ var page = {
   onLoad: function () {
     this.bindEvent()
   },
-  
+
   bindEvent: function () {
     $('.star-list .star-item').mouseover(function(){
       page.data.star = $(this).index + 1
@@ -37,7 +37,6 @@ var page = {
       orderNo: '',
       star: 5
     }, function (res) {
-      console.log(res)
     })
   }
 }

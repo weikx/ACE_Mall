@@ -181,7 +181,6 @@ var page = {
   },
 
   switchTab: function () {
-    console.log(_ace.getUrlPatam('type'))
   },
 
   confirmReceipt: function (orderNo) {

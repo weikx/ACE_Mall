@@ -59,7 +59,6 @@ var page = {
       .append(recommendGoodsHtml)
       .append('<div class="page-end"></div>')
     // 移除加载动画
-    console.log('渲染')
 	},
 
 	// 获取首页商品

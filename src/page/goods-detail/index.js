@@ -152,7 +152,6 @@ var page = {
         res.model.forEach(function (item) {
           item.star = new Array(item.star)
         })
-        console.log(res.model)
         var evaluateHtml = _ace.renderHtml(evaluateTemplate, page.data)
         $('.evaluate-main').html(evaluateHtml)
         _this.data.isFirst && _this.initPaging(Math.ceil(res.total / _this.data.pageSize)); _this.data.isFirst = false
@@ -184,7 +183,6 @@ var page = {
         data: page.data.krisRecommend
       })
     // 追加页推荐商品
-    console.log(recommendGoodsHtml)
     $('.detail-recommend-wrap').append(recommendGoodsHtml)
 	},
 
