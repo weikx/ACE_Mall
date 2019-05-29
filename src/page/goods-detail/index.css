@@ -272,7 +272,6 @@
 .problem-item.contact span {
   display: flex;
   align-items: center;
-  padding: 0 10px;
 }
 
 .problem-item.contact span i:first-child {
