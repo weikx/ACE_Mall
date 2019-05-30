@@ -31,7 +31,7 @@
       </div>
       {{#waitPay}}
       <div class="card-body-right">
-        <a href="./pay.html?orderNo={{orderNo}}" class="pay-now">立即支付</a>
+        <a href="javascript:void(0)" class="pay-now">立即支付</a>
         <a href="./order-detail.html?orderNo={{orderNo}}" class="btn-border">订单详情</a>
       </div>
       {{/waitPay}}

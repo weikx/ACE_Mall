@@ -93,6 +93,17 @@ var page = {
         })
       })
     })
+    // 去支付
+    $(document).on('click', '.pay-now', function () {
+      var index = $(this).index(),
+        money = _this.data.orderList[index].totalMoney
+      _this.setPayMoney(money)
+      window.open('./pay.html')
+    })
+  },
+
+  setPayMoney: function (money) {
+    window.sessionStorage.setItem('m', money)
   },
 
   getOrderNum: function () {

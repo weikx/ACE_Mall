@@ -15,24 +15,33 @@ var page = {
   },
 
   onLoad: function () {
-    this.bindEvent()
+    this.pay()
   },
 
-  bindEvent: function () {
-    var _this = this
-    $('.pay.btn').on('click', function () {
-      _this.payOrder()
-    })
-  },
-
-  payOrder: function () {
-    // 支付
-    var orderNo = _ace.getUrlPatam('orderNo')
-    _order.payOrder({
-      orderNo: orderNo
+  pay: function () {
+    var _this = this,
+      note = _ace.getUrlPatam('note') || '',
+      payMoney = _this.getPayMoney()
+    if (!payMoney) {
+      $('.pay-title').text('请确认付款信息后重试')
+      return
+    }
+    _order.submitOrder({
+      note: note,
+      payMoney: payMoney
     }, function (res) {
-      window.location.href = './order.html'
+      document.write(res)
     })
+  },
+
+  getPayMoney: function () {
+    var money = window.sessionStorage.getItem('m')
+    this.removeMoney()
+    return money
+  },
+
+  removeMoney: function () {
+    window.sessionStorage.removeItem('m')
   }
 }
 

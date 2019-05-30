@@ -31,24 +31,23 @@ var page = {
           totalPrice = page.data.checkout.totalPrice
       _this.submitOrder(note, totalPrice)
     })
+
+    // 监听页面进入
+    document.addEventListener('visibilitychange', function() {
+        if (document.visibilityState == 'visible') {
+          window.location.reload()
+        }
+      });
   },
 
   submitOrder: function (note, payMoney) {
-    var _this = this
-    _order.submitOrder({
-      note: note || '',
-      payMoney: payMoney
-    }, function (res) {
-      document.write(res)
-      // var orderNo = res.orderNo.OrderNo
-      // _this.toPay(orderNo)
-    })
+    this.setPayMoney(payMoney)
+    // TODO: 后期需要后台修改为不需要传递 money
+    window.open('./pay.html?note=' + note)
   },
 
-  payOrder: function (orderNo) {
-    _order.payOrder({
-      orderNo: orderNo
-    })
+  setPayMoney: function (money) {
+    window.sessionStorage.setItem('m', money)
   },
 
   toPay: function (orderNo) {
@@ -72,10 +71,10 @@ var page = {
   renderErrorTip: function () {
     // 无商品错误提示
     var tipHtml = _ace.renderHtml(failTipTemplate, {
-      msg: '请勾选需要结算的商品',
+      msg: '请勾选需要结算的商品 ',
       checklist: true
     })
-    $('.no-goods').html(tipHtml)
+    $('.no-goods').html(tipHtml).children().append('<a href="./order.html" class="link">去订单列表看看？</a>')
   }
 }
 
