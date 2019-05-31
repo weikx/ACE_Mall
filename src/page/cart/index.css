@@ -177,7 +177,7 @@ input[type=checkbox]:checked + .check-box {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: rgba(204, 204, 204, 0.8);
+  background: #F0F0F2;
   border-radius: 2px;
   position: relative;
 }
