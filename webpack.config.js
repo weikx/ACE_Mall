@@ -31,8 +31,9 @@ var config = {
 		'pay': ['./src/page/pay/index.js'],
 		'order-detail': ['./src/page/order-detail/index.js'],
 		'my-evaluate': ['./src/page/my-evaluate/index.js'],
-		'change-password': ['./src/page/change-password/index.js']
-	},
+		'change-password': ['./src/page/change-password/index.js'],
+    'about': ['./src/page/about/index.js']
+  },
 
 	output: {
 		path: './dist',
@@ -99,7 +100,8 @@ var config = {
 		new HtmlWebpackPlugin(getHtmlConfig('pay', '支付')),
 		new HtmlWebpackPlugin(getHtmlConfig('order-detail', '订单详情')),
 		new HtmlWebpackPlugin(getHtmlConfig('my-evaluate', '我的评价')),
-		new HtmlWebpackPlugin(getHtmlConfig('change-password', '修改密码'))
+		new HtmlWebpackPlugin(getHtmlConfig('change-password', '修改密码')),
+		new HtmlWebpackPlugin(getHtmlConfig('about', '关于ACE'))
 	],
 
 	devServer: {
