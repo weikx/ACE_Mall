@@ -28,6 +28,9 @@ var page = {
 		$('.js-login').click(function () {
 			_this.login()
 		})
+    $('.js-register').click(function () {
+      window.location.href = './register.html'
+    })
 	},
 
 	setUserData: function () {
