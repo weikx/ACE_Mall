@@ -2,6 +2,7 @@
 
 ### [预览 ACE_Mall](http://meigeni.cn "ACE_Mall")
 
+![截图](src/image/public/ace.jpg)
 
 ### 目录结构
 
@@ -49,9 +50,6 @@
 > * JS
 > * jQuery
 > * webpack
-    ```
-       webpack 是一个模块打包器。webpack 的主要目标是将 JavaScript 文件打包在一起，打包后的文件用于在浏览器中使用，但它也能够胜任转换(transform)、打包(bundle)或包裹(package)任何资源(resource or asset)。
-    ```
 > * Hogan.js
     ```
        Hogan.js is a 3.4k JS templating engine developed at Twitter. Use it as a part of your asset packager to compile templates ahead of time or include it in your browser to handle dynamic templates.
