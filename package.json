@@ -33,6 +33,6 @@
     "html-loader": "^0.5.5",
     "url-loader": "^1.1.2",
     "webpack": "1.15.0",
-    "webpack-dev-server": "^1.16.5"
+    "webpack-dev-server": "^3.1.11"
   }
 }
