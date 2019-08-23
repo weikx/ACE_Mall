@@ -1,5 +1,4 @@
-.page-wrap {
-}
+.page-wrap {}
 
 .user-con {
   overflow: hidden;
@@ -25,6 +24,7 @@
 }
 
 /* 错误提示框 */
+
 .user-con .err-box {
   display: none;
   margin-top: 10px;
@@ -33,8 +33,7 @@
   color: #b4a078;
 }
 
-.user-con .user-box {
-}
+.user-con .user-box {}
 
 .user-box label {
   width: 30px;

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
+
 <body>
-<%= require('./layout/nav-simple.html') %>
-<div class="page-wrap width stick-footer-content">
-  <div class="stick-footer-content-inside">
-    <div class="user-con">
+  <%= require('./layout/nav-simple.html') %>
+  <div class="page-wrap width stick-footer-content">
+    <div class="stick-footer-content-inside">
+      <div class="user-con">
         <div class="user-title">
           用户注册
         </div>
@@ -66,8 +68,9 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-</div>
-<%= require('./layout/footer.html') %>
+  <%= require('./layout/footer.html') %>
 </body>
+
 </html>

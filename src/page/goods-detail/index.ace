@@ -12,22 +12,22 @@
       <div class="swiper-pagination"></div>
     </div>
     <span class="swiper-button-next">
-        <i class="ace-icon ace-xiayige"></i>
-      </span>
+      <i class="ace-icon ace-xiayige"></i>
+    </span>
     <span class="swiper-button-prev">
-        <i class="ace-icon ace-shangyige"></i>
-      </span>
+      <i class="ace-icon ace-shangyige"></i>
+    </span>
   </div>
   <!-- 商品信息 -->
   <div class="info-con">
     <h1 class="goods-name">{{goodName}}</h1>
-<!--    <p class="subtitle">wuyifan</p>-->
+    <!--    <p class="subtitle">wuyifan</p>-->
     <div class="info-item">
       <span class="label">价格</span>
       <span class="info-item price">
-          <i class="price-icon">¥</i>
-          <span>{{presentPrice}}</span>
-        </span>
+        <i class="price-icon">¥</i>
+        <span>{{presentPrice}}</span>
+      </span>
     </div>
     <div class="info-item">
       <span class="label">销量</span>
@@ -72,20 +72,20 @@
     <div class="detail-img-wrap">
       <ul>
         {{#infoImage}}
-          <li>
-            <img src="{{.}}">
-          </li>
+        <li>
+          <img src="{{.}}">
+        </li>
         {{/infoImage}}
       </ul>
       {{^infoImage}}
-        <p class="nodata">暂无简介图片</p>
+      <p class="nodata">暂无简介图片</p>
       {{/infoImage}}
     </div>
     <div class="detail-evaluate-wrap hide">
       <div class="evaluate-main">
       </div>
       <div class="evaluate-page zxf_pagediv">
-          <!-- 分页 -->
+        <!-- 分页 -->
       </div>
     </div>
     <div class="detail-problem-wrap hide">

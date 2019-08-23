@@ -22,7 +22,7 @@ var page = {
   },
 
   bindEvent: function () {
-    $('.star-list .star-item').mouseover(function(){
+    $('.star-list .star-item').mouseover(function () {
       page.data.star = $(this).index + 1
       $(this).addClass('active')
         .prevAll().addClass('active')

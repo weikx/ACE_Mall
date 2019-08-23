@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
   <!-- swiper 轮播插件 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
 </head>
+
 <body>
-<%= require('./layout/nav-simple.html') %>
-<%= require('./layout/nav.html') %>
-<div class="page-wrap width stick-footer-content">
-  <div class="stick-footer-content-inside">
-    <!-- 面包屑导航 -->
-    <div class="crumb">
-      <div class="crumb-con">
-        <a href="./index.html" class="link crumb-home">首页</a>
-        <span class="link-text">></span>
-        <a href="./goods-list.html?type=all" class="link crumb-category">ACE产品</a>
-        <span class="link-text">></span>
-        <span class="link-text crumb-this"></span>
+  <%= require('./layout/nav-simple.html') %>
+  <%= require('./layout/nav.html') %>
+  <div class="page-wrap width stick-footer-content">
+    <div class="stick-footer-content-inside">
+      <!-- 面包屑导航 -->
+      <div class="crumb">
+        <div class="crumb-con">
+          <a href="./index.html" class="link crumb-home">首页</a>
+          <span class="link-text">></span>
+          <a href="./goods-list.html?type=all" class="link crumb-category">ACE产品</a>
+          <span class="link-text">></span>
+          <span class="link-text crumb-this"></span>
+        </div>
+      </div>
+      <div class="goods-wrap">
       </div>
     </div>
-    <div class="goods-wrap">
-    </div>
   </div>
-</div>
-<%= require('./layout/footer.html') %>
-<!-- swiper 轮播插件 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <%= require('./layout/footer.html') %>
+  <!-- swiper 轮播插件 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
 </body>
+
 </html>

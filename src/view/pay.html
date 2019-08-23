@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
-<body>
-<%= require('./layout/nav-simple.html') %>
-<!--<%= require('./layout/nav.html') %>-->
-<div class="nav-postion">
-  <div class="nav-wrap">
-    <div class="nav width">
-      <div class="logo">
-        <a href="./index.html">
-          <img src="https://s2.ax1x.com/2019/04/06/Af9VLq.png" alt="ACE_Mall" width="100%">
-        </a>
-      </div>
-      <ul class="nav-list">
-        <h1 class="nav-title">等待支付</h1>
-      </ul>
-      <div class="search">
-        <input type="text">
-        <button class="search-btn">
-          搜索
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div class="page-wrap width stick-footer-content">
-  <div class="stick-footer-content-inside">
-    <div class="pay-wrap">
-      <p class="pay-title">等待支付</p>
+<body>
+  <%= require('./layout/nav-simple.html') %>
+  <!--<%= require('./layout/nav.html') %>-->
+  <div class="nav-postion">
+    <div class="nav-wrap">
+      <div class="nav width">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="https://s2.ax1x.com/2019/04/06/Af9VLq.png" alt="ACE_Mall" width="100%">
+          </a>
+        </div>
+        <ul class="nav-list">
+          <h1 class="nav-title">等待支付</h1>
+        </ul>
+        <div class="search">
+          <input type="text">
+          <button class="search-btn">
+            搜索
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<%= require('./layout/footer.html') %>
+
+  <div class="page-wrap width stick-footer-content">
+    <div class="stick-footer-content-inside">
+      <div class="pay-wrap">
+        <p class="pay-title">等待支付</p>
+      </div>
+    </div>
+  </div>
+  <%= require('./layout/footer.html') %>
 </body>
+
 </html>

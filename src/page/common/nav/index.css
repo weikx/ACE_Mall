@@ -4,7 +4,9 @@
   height: 85px;
   background: #fff;
 }
+
 /* 加定位是为了设置 z-index，从而更好的显示阴影 */
+
 .nav-wrap {
   position: absolute;
   z-index: 99;
@@ -48,7 +50,6 @@
   cursor: pointer;
   background: #fff;
 }
-
 
 .nav {
   height: 100%;

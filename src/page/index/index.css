@@ -1,5 +1,4 @@
-.page-wrap {
-}
+.page-wrap {}
 
 .text {
   height: 500px;
@@ -10,16 +9,18 @@
 }
 
 /* 轮播 */
+
 .swiper-container {
   width: 100%;
   height: 430px;
 }
 
 /* 分割线 */
+
 .dividing-line {
   margin: 30px auto 20px auto;
   height: 18px;
-  width:1090px;
+  width: 1090px;
   text-align: center;
   background-image: url("https://s2.ax1x.com/2019/03/22/A8m7jI.png");
   background-size: 20px;
@@ -39,6 +40,7 @@
 }
 
 /* loading img*/
+
 .home-loading {
   width: 20px;
   height: 20px;

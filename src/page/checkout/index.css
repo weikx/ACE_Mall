@@ -7,6 +7,7 @@
   line-height: 40px;
   font-size: 16px;
 }
+
 /*  商品列表 */
 
 .checkout-goods .goods-list {
@@ -58,6 +59,7 @@
 }
 
 /* 配送方式 */
+
 .checkout-shipment {
   line-height: 90px;
   border-bottom: 1px solid #e0e0e0;
@@ -84,6 +86,7 @@
 }
 
 /* 右下角合计等 */
+
 .checkout-money-box {
   margin-top: 30px;
   min-width: 165px;
@@ -115,6 +118,7 @@
 }
 
 /* 结算按钮 */
+
 .checkout-btn-wrap {
   float: right;
 }

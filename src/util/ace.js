@@ -4,6 +4,7 @@ var NO_LOGIN = 2 // 未登录
 var Hogan = require('hogan.js')
 var cof = {
 	serverHost: 'http://47.101.45.222:2333/'
+	// serverHost: 'http://192.168.0.144:60391/'
 }
 var _ace = {
 	request: function (param) {
@@ -41,7 +42,7 @@ var _ace = {
 
 	getUrlPatam: function (name) {
 		// 获取地址栏参数
-		var reg = new RegExp('(^|&)'+ name + '=([^&]*)(&|$)')
+		var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)')
 		var result = window.location.search.substr(1).match(reg)
 		return result ? decodeURIComponent(result[2]) : null
 	},
@@ -69,13 +70,13 @@ var _ace = {
 		switch (type) {
 			case 'require':
 				return !!value
-			break
+				break
 			case 'phone':
 				return /^1\d{10}$/.test(value)
-			break
+				break
 			case 'email':
 				return /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/.test(value)
-			break
+				break
 		}
 	},
 
@@ -94,7 +95,7 @@ var _ace = {
 
 	logout: function () {
 		localStorage.clear()
-    _ace.delCookie('Ticket')
+		_ace.delCookie('Ticket')
 	},
 
 	getUserInfo: {
@@ -112,33 +113,33 @@ var _ace = {
 		}
 	},
 
-  setCookie: function (name, value) {
-    const Days = 1,
-      exp = new Date()
-    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
-    document.cookie = name + '=' + escape (value) + ';expires=' + exp.toGMTString()
-  },
+	setCookie: function (name, value) {
+		const Days = 1,
+			exp = new Date()
+		exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
+		document.cookie = name + '=' + escape(value) + ';expires=' + exp.toGMTString()
+	},
 
-  getCookie: function (name) {
-    var arr,
-      reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
-    if(arr = document.cookie.match(reg))
-      return 'BasicAuth ' + unescape(arr[2])
-    else
-      return ''
-  },
+	getCookie: function (name) {
+		var arr,
+			reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
+		if (arr = document.cookie.match(reg))
+			return 'BasicAuth ' + unescape(arr[2])
+		else
+			return ''
+	},
 
-  delCookie: function (name) {
-    var exp = new Date()
-    exp.setTime(exp.getTime() - 1)
-    var cval = _ace.getCookie(name)
-    if(cval != null)
-      document.cookie = name + '=' + cval + ';expires=' + exp.toGMTString()
-  },
+	delCookie: function (name) {
+		var exp = new Date()
+		exp.setTime(exp.getTime() - 1)
+		var cval = _ace.getCookie(name)
+		if (cval != null)
+			document.cookie = name + '=' + cval + ';expires=' + exp.toGMTString()
+	},
 
-  showTip: function () {
-    var tipHtml = '<div></div>'
-  }
+	showTip: function () {
+		var tipHtml = '<div></div>'
+	}
 }
 
 module.exports = _ace

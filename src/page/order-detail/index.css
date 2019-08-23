@@ -18,7 +18,7 @@
   font-size: 12px;
   text-align: center;
   float: right;
-  border: 1px solid  #b0b0b0;
+  border: 1px solid #b0b0b0;
   cursor: pointer;
   text-decoration: none;
 }
@@ -49,6 +49,7 @@
 }
 
 /* 订单进度 */
+
 .order-progress {
   height: 70px;
 }
@@ -91,6 +92,7 @@
 }
 
 /* 商品 */
+
 .goods-wrap {
   display: flex;
   border-bottom: 1px solid #e0e0e0;
@@ -125,8 +127,8 @@
   padding-top: 20px;
 }
 
-
 /* 右下角合计等 */
+
 .checkout-money-box {
   margin-top: 30px;
   min-width: 165px;

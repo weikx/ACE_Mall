@@ -2,9 +2,7 @@
   justify-content: center;
 }
 
-.star-wrap {
-
-}
+.star-wrap {}
 
 .star-list {
   overflow: hidden;
@@ -36,7 +34,7 @@
 .input {
   height: 100px;
   width: 500px;
-  resize:none;
+  resize: none;
   outline: none;
   padding: 10px;
 }

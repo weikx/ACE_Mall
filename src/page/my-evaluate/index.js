@@ -63,7 +63,7 @@ var page = {
     $(".zxf_pagediv.evaluate-page").createPage({
       pageNum: pageNum,
       current: _this.data.page,
-      backfun: function(e) {
+      backfun: function (e) {
         _this.data.page = e.current || _this.data.page
         _this.getMyEvaluation()
       }

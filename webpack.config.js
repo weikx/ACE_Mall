@@ -7,8 +7,8 @@ var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev'
 function getHtmlConfig (name, title) {
 	return {
 		title: title,
-		template: './src/view/'+ name +'.html',
-		filename: 'view/'+ name +'.html',
+		template: './src/view/' + name + '.html',
+		filename: 'view/' + name + '.html',
 		inject: true,
 		hash: true,
 		chunks: ['common', name]
@@ -32,8 +32,8 @@ var config = {
 		'order-detail': ['./src/page/order-detail/index.js'],
 		'my-evaluate': ['./src/page/my-evaluate/index.js'],
 		'change-password': ['./src/page/change-password/index.js'],
-    'about': ['./src/page/about/index.js']
-  },
+		'about': ['./src/page/about/index.js']
+	},
 
 	output: {
 		path: './dist',

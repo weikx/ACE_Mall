@@ -4,13 +4,14 @@
     <div class="account-left">
       <div class="avatar">
         <div class="change-avater">
-          <input type="file" class="img-input" id="file" accept="image/gif, image/jpeg, image/png, image/jpg" >
+          <input type="file" class="img-input" id="file" accept="image/gif, image/jpeg, image/png, image/jpg">
         </div>
         {{#image}}
         <img width="100%" height="100%" id="avater-img" src="{{image}}" alt="">
         {{/image}}
         {{^image}}
-        <img width="100%" height="100%" id="avater-img" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3328833007,2511671815&fm=58&bpow=626&bpoh=882" alt="">
+        <img width="100%" height="100%" id="avater-img"
+          src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3328833007,2511671815&fm=58&bpow=626&bpoh=882" alt="">
         {{/image}}
       </div>
       <div class="user-info">

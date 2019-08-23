@@ -28,16 +28,16 @@ var page = {
     var _this = this
     $(document).on('click', '.btn.payment', function () {
       var note = $('.note').val(),
-          totalPrice = page.data.checkout.totalPrice
+        totalPrice = page.data.checkout.totalPrice
       _this.submitOrder(note, totalPrice)
     })
 
     // 监听页面进入
-    document.addEventListener('visibilitychange', function() {
-        if (document.visibilityState == 'visible') {
-          window.location.reload()
-        }
-      });
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'visible') {
+        window.location.reload()
+      }
+    });
   },
 
   submitOrder: function (note, payMoney) {

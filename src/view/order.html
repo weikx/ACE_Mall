@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <%= require('./layout/head-common.html') %>
   <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
+
 <body>
-<%= require('./layout/nav-simple.html') %>
-<%= require('./layout/nav.html') %>
-<div class="page-wrap width stick-footer-content">
-  <div class="stick-footer-content-inside">
-    <%= require('./layout/nav-side.html') %>
-    <div class="order-wrap">
-      <!-- 订单选项卡header -->
-      <div class="order-tab-wrap">
-        <ul class="order-tab-list">
-          <li class="order-tab-item">
-            全部(<span class="order-num all">0</span>)
-          </li>
-          <li class="order-tab-item">
-            待付款(<span class="order-num wait-pay">0</span>)
-          </li>
-          <li class="order-tab-item">
-            待发货(<span class="order-num wait-delivery">0</span>)
-          </li>
-          <li class="order-tab-item">
-            待收货(<span class="order-num wait-receive">0</span>)
-          </li>
-          <li class="order-tab-item">
-            待评价(<span class="order-num wait-evaluate">0</span>)
-          </li>
-          <li class="order-tab-item">
-            已完成(<span class="order-num completed">0</span>)
-          </li>
-          <li class="order-tab-item">
-            已关闭(<span class="order-num closed">0</span>)
-          </li>
-        </ul>
+  <%= require('./layout/nav-simple.html') %>
+  <%= require('./layout/nav.html') %>
+  <div class="page-wrap width stick-footer-content">
+    <div class="stick-footer-content-inside">
+      <%= require('./layout/nav-side.html') %>
+      <div class="order-wrap">
+        <!-- 订单选项卡header -->
+        <div class="order-tab-wrap">
+          <ul class="order-tab-list">
+            <li class="order-tab-item">
+              全部(<span class="order-num all">0</span>)
+            </li>
+            <li class="order-tab-item">
+              待付款(<span class="order-num wait-pay">0</span>)
+            </li>
+            <li class="order-tab-item">
+              待发货(<span class="order-num wait-delivery">0</span>)
+            </li>
+            <li class="order-tab-item">
+              待收货(<span class="order-num wait-receive">0</span>)
+            </li>
+            <li class="order-tab-item">
+              待评价(<span class="order-num wait-evaluate">0</span>)
+            </li>
+            <li class="order-tab-item">
+              已完成(<span class="order-num completed">0</span>)
+            </li>
+            <li class="order-tab-item">
+              已关闭(<span class="order-num closed">0</span>)
+            </li>
+          </ul>
+        </div>
+        <!-- 选项卡主体内容 -->
+        <div class="order-tab-main">
+          <!-- 内容由JS渲染 -->
+        </div>
       </div>
-      <!-- 选项卡主体内容 -->
-      <div class="order-tab-main">
-        <!-- 内容由JS渲染 -->
-      </div>
+      <div class="clear"></div>
     </div>
-    <div class="clear"></div>
   </div>
-</div>
-<%= require('./layout/footer.html') %>
+  <%= require('./layout/footer.html') %>
 </body>
+
 </html>

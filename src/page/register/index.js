@@ -66,8 +66,8 @@ var page = {
 	// 表单字段验证
 	formValidate: function (formData) {
 		var result = {
-			status  : false,
-			msg     : ''
+			status: false,
+			msg: ''
 		}
 		if (!_ace.validate(formData.username, 'require')) {
 			result.msg = '请输入用户名'

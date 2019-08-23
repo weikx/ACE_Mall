@@ -60,7 +60,7 @@ var page = {
       var evaluataHtml = _ace.renderHtml(evaluateTemplate, waitEvaluateGoods)
       $('.stick-footer-content-inside').append(evaluataHtml)
       $('.evaluate-popup').show()
-      $('.evaluate-popup').animate({opacity: 100}, 300)
+      $('.evaluate-popup').animate({ opacity: 100 }, 300)
     })
     // 点击关闭弹窗
     $(document).on('click', '.evaluate-close', function () {
@@ -179,14 +179,14 @@ var page = {
     var _this = this
     _goods.addGoodEvaluation(params,
       function (res) {
-      _this.closePopup()
-      window.location.reload()
-    })
+        _this.closePopup()
+        window.location.reload()
+      })
   },
 
   // 关闭评价弹窗
   closePopup: function () {
-    $('.evaluate-popup').animate({opacity: 0}, 300, 'swing', function () {
+    $('.evaluate-popup').animate({ opacity: 0 }, 300, 'swing', function () {
       $('.evaluate-popup').hide().remove()
     })
   },

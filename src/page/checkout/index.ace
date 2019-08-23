@@ -31,9 +31,9 @@
     <p class="shipment-text">
       包邮
     </p>
-      <p class="shipment-user">wikx</p>
-      <p class="shipment-user">1888888</p>
-      <p class="shipment-user">上海伊拉克</p>
+    <p class="shipment-user">wikx</p>
+    <p class="shipment-user">1888888</p>
+    <p class="shipment-user">上海伊拉克</p>
   </div>
   <!-- 右下角商品合计-->
   <div class="checkout-money-box">

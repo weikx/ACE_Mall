@@ -1,7 +1,7 @@
 .footer {
   height: 250px;
   margin-top: -250px;
-  background-image: linear-gradient(90deg,#222325,#3b3c3f,#222325);
+  background-image: linear-gradient(90deg, #222325, #3b3c3f, #222325);
 }
 
 .footer .ensure {
@@ -21,6 +21,7 @@
 }
 
 /* 网站信息 */
+
 .site-info {
   height: 36px;
   line-height: 36px;

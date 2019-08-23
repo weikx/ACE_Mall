@@ -87,52 +87,52 @@ var _user = {
 		})
 	},
 
-  getMyData: function (success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/User/GetMyData'),
-      success: success,
-      error: error
-    })
-  },
+	getMyData: function (success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/GetMyData'),
+			success: success,
+			error: error
+		})
+	},
 
-  updateMyData: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/User/UpdateMyData'),
-      method: 'POST',
-      data: params,
-      success: success,
-      error: error
-    })
-  },
+	updateMyData: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/UpdateMyData'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
+	},
 
-  uploadImg: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/User/UpdateMyPhoto'),
-      method: 'POST',
-      data: params,
-      success: success,
-      error: error
-    })
-  },
+	uploadImg: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/UpdateMyPhoto'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
+	},
 
-  getMyEvaluation: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/User/GetMyEvaluation'),
-      data: params,
-      success: success,
-      error: error
-    })
-  },
+	getMyEvaluation: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/GetMyEvaluation'),
+			data: params,
+			success: success,
+			error: error
+		})
+	},
 
-  updatePassword: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/User/UpdatePassword'),
-      method: 'POST',
-      data: params,
-      success: success,
-      error: error
-    })
-  }
+	updatePassword: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/User/UpdatePassword'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
+	}
 }
 
 module.exports = _user

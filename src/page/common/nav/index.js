@@ -36,7 +36,7 @@ var navList = {
 		})
 		// 渲染 list
 		var navHtml = _ace.renderHtml(templateIndex, {
-			navList : this.option.navList
+			navList: this.option.navList
 		})
 		// 把html放入容器
 		$('.nav-wrap .nav-list').html(navHtml)
@@ -59,19 +59,19 @@ var navList = {
 		$document.scroll(function () {
 			_this.fixedNav($document.scrollTop())
 		})
-    $(document).on('click', '.search-btn', function () {
-      var value = $('#search-input').val()
-      if (!value) {
-        _ace.errorTips('你想搜索啥')
-        return
-      }
-      window.location.href = './goods-list.html?type=search&name=' + value
-    })
-    $(document).on('keydown', '#search-input', function (e) {
-      if (e.keyCode === 13) {
-        window.location.href = './goods-list.html?type=search&name=' + $('#search-input').val()
-      }
-    })
+		$(document).on('click', '.search-btn', function () {
+			var value = $('#search-input').val()
+			if (!value) {
+				_ace.errorTips('你想搜索啥')
+				return
+			}
+			window.location.href = './goods-list.html?type=search&name=' + value
+		})
+		$(document).on('keydown', '#search-input', function (e) {
+			if (e.keyCode === 13) {
+				window.location.href = './goods-list.html?type=search&name=' + $('#search-input').val()
+			}
+		})
 	},
 
 	fixedNav: function (top) {

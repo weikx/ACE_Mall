@@ -52,24 +52,24 @@ var _goods = {
 		})
 	},
 
-  addGoodEvaluation: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/Good/AddGoodEvaluation'),
-      method: 'POST',
-      data: params,
-      success: success,
-      error: error
-    })
-  },
+	addGoodEvaluation: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/Good/AddGoodEvaluation'),
+			method: 'POST',
+			data: params,
+			success: success,
+			error: error
+		})
+	},
 
-  searchGoods: function (params, success, error) {
-    _ace.request({
-      url: _ace.getServerUrl('api/Good/SearchGood'),
-      data: params,
-      success: success,
-      error: error
-    })
-  }
+	searchGoods: function (params, success, error) {
+		_ace.request({
+			url: _ace.getServerUrl('api/Good/SearchGood'),
+			data: params,
+			success: success,
+			error: error
+		})
+	}
 }
 
 module.exports = _goods

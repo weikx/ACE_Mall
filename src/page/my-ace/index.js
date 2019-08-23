@@ -9,29 +9,28 @@ var _user = require('service/user-service.js')
 var pageTemplate = require('./index.ace')
 
 navSide.init({
-	name: 'my-ace'
+  name: 'my-ace'
 })
 navList.init()
 
 var page = {
-	data: {
-		userData: {}
-	},
-
-	init: function () {
-		this.onLoad()
+  data: {
+    userData: {}
   },
 
-	onLoad: function () {
-		this.bindEvent()
-		this.getMyData()
+  init: function () {
+    this.onLoad()
+  },
+
+  onLoad: function () {
+    this.bindEvent()
+    this.getMyData()
     this.sayHello()
-
   },
 
-	bindEvent: function () {
-		var val = '',
-				_this = this
+  bindEvent: function () {
+    var val = '',
+      _this = this
 
     $(document).on('click', '.link.change', function () {
       // 点击修改按钮 使 input 可输入
@@ -64,11 +63,11 @@ var page = {
     })
   },
 
-	getMyData: function () {
-		// 获取个人信息
+  getMyData: function () {
+    // 获取个人信息
     var _this = this
-		_user.getMyData(function (res) {
-		  if (res) {
+    _user.getMyData(function (res) {
+      if (res) {
         res[0].sayHello = _this.sayHello()
       }
       page.data.userData = res[0]
@@ -76,16 +75,16 @@ var page = {
     })
   },
 
-	changeName: function () {
-		$('#change-name')
+  changeName: function () {
+    $('#change-name')
   },
 
-	setData: function ($this, val) {
+  setData: function ($this, val) {
     var inputClass = $this.eq(0).attr('class').split(' ')[1],
-				type = inputClass,
-        inputNode = $('.' + inputClass),
-				thisValue = inputNode.val(),
-        _this = this
+      type = inputClass,
+      inputNode = $('.' + inputClass),
+      thisValue = inputNode.val(),
+      _this = this
     inputNode.attr('disabled', true)
     if (!thisValue) {
       _ace.errorTips('请输入正确内容')
@@ -104,12 +103,12 @@ var page = {
     }
   },
 
-  getInputVal:function (type) {
-	  return $('.input.' + type).val()
+  getInputVal: function (type) {
+    return $('.input.' + type).val()
   },
 
-  updateMyData:function () {
-	  var _this = this
+  updateMyData: function () {
+    var _this = this
     _user.updateMyData({
       email: _this.getInputVal('email'),
       image: $('#avater-img').attr('src'),
@@ -145,11 +144,11 @@ var page = {
   },
 
   getUrlBase64: function ($file, callback) {
-	  // 图片转 Base64
+    // 图片转 Base64
     var src = window.URL.createObjectURL($file.files[0]),
-        canvas = document.createElement('canvas'),
-        ctx = canvas.getContext('2d'),
-        img = new Image
+      canvas = document.createElement('canvas'),
+      ctx = canvas.getContext('2d'),
+      img = new Image
     img.crossOrigin = 'Anonymous'
     img.src = src
     img.onload = function () {
@@ -164,5 +163,5 @@ var page = {
 }
 
 $(function () {
-	page.init()
+  page.init()
 })

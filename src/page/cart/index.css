@@ -1,9 +1,7 @@
-.cart-goods-list {
+.cart-goods-list {}
 
-}
+.cart-goods-list .list-head {}
 
-.cart-goods-list .list-head {
-}
 .cart-goods-list .list-head .list-item {
   border: none;
 }
@@ -58,11 +56,10 @@
   width: 300px;
   flex: 0 0 300px;
   text-align: left;
-  text-overflow : ellipsis;
+  text-overflow: ellipsis;
   overflow: hidden;
-  white-space:nowrap;
+  white-space: nowrap;
 }
-
 
 .list-item-wrap .item-price {
   width: 160px;
@@ -126,11 +123,12 @@
   transition: all .3s;
 }
 
-.goods-count-btn.minus{
+.goods-count-btn.minus {
   margin-left: -1px;
 }
 
 /* 下方结算 */
+
 .cart-bar {
   margin: 20px 0;
   height: 50px;
@@ -153,7 +151,7 @@ input[type=checkbox] {
   display: none;
 }
 
-input[type=checkbox]:checked + .check-box::after {
+input[type=checkbox]:checked+.check-box::after {
   content: '√';
   display: block;
   position: absolute;
@@ -162,14 +160,15 @@ input[type=checkbox]:checked + .check-box::after {
   color: #fff;
   text-align: center;
   margin: 0 auto;
-  width: 100%;;
+  width: 100%;
+  ;
 }
 
-input[type=checkbox]:checked + .check-box.all::after {
+input[type=checkbox]:checked+.check-box.all::after {
   top: -27px;
 }
 
-input[type=checkbox]:checked + .check-box {
+input[type=checkbox]:checked+.check-box {
   background: #b4a078;
 }
 
@@ -192,6 +191,7 @@ input[type=checkbox]:checked + .check-box {
 }
 
 /* 删除 icon */
+
 .ace-cha {
   font-size: 14px;
   color: #ccc;
@@ -207,6 +207,7 @@ input[type=checkbox]:checked + .check-box {
 }
 
 /* 无商品 icon */
+
 .cart-null .icon-svg {
   display: block;
   width: 100px;
@@ -221,5 +222,4 @@ input[type=checkbox]:checked + .check-box {
   color: #ccc;
 }
 
-.cart-null .btn-gobuy {
-}
+.cart-null .btn-gobuy {}

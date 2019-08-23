@@ -13,10 +13,10 @@ var page = {
 	},
 
 	onLoad: function () {
-	  if (_ace.getCookie('Ticket')) {
-      this.setUserData()
-      this.setCartCount()
-    }
+		if (_ace.getCookie('Ticket')) {
+			this.setUserData()
+			this.setCartCount()
+		}
 		this.bindEvent()
 	},
 
@@ -28,9 +28,9 @@ var page = {
 		$('.js-login').click(function () {
 			_this.login()
 		})
-    $('.js-register').click(function () {
-      window.location.href = './register.html'
-    })
+		$('.js-register').click(function () {
+			window.location.href = './register.html'
+		})
 	},
 
 	setUserData: function () {

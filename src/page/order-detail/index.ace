@@ -21,7 +21,7 @@
     </div>
     {{#courierNo}}
     <div class="order-delivery">
-      <span data-clipboard-text="{{courierNo}}">物流公司：{{courierName}}  运单号：{{courierNo}}</span>
+      <span data-clipboard-text="{{courierNo}}">物流公司：{{courierName}} 运单号：{{courierNo}}</span>
     </div>
     {{/courierNo}}
     <div class="goods-wrap">

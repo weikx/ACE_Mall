@@ -1,17 +1,19 @@
-div.zxf_pagediv{
+div.zxf_pagediv {
 	text-align: center;
 	color: #999999;
 	padding: 20px 20px 40px 0;
 }
-div.zxf_pagediv a{
-	text-decoration: none;
 
+div.zxf_pagediv a {
+	text-decoration: none;
 }
-div.zxf_pagediv span,div.zxf_pagediv a{
+
+div.zxf_pagediv span, div.zxf_pagediv a {
 	display: inline-block;
 	box-sizing: border-box;
 }
-.current{
+
+.current {
 	color: #ffffff;
 	background: #b4a078;
 	width: 40px;
@@ -19,7 +21,8 @@ div.zxf_pagediv span,div.zxf_pagediv a{
 	line-height: 40px;
 	border-radius: 3px;
 }
-.zxfPagenum{
+
+.zxfPagenum {
 	color: #666;
 	background: #fff;
 	width: 40px;
@@ -28,11 +31,12 @@ div.zxf_pagediv span,div.zxf_pagediv a{
 	margin: 0 5px;
 	border-radius: 3px;
 }
-.nextpage{
 
+.nextpage {
 	margin: 0 5px;
 }
-.nextbtn,.prebtn,span.disabled{
+
+.nextbtn, .prebtn, span.disabled {
 	color: #666;
 	background: #fff;
 	width: 88px;
@@ -40,7 +44,8 @@ div.zxf_pagediv span,div.zxf_pagediv a{
 	line-height: 42px;
 	border-radius: 3px;
 }
-.zxfinput{
+
+.zxfinput {
 	width: 50px;
 	height: 42px;
 	text-align: center;
@@ -50,20 +55,22 @@ div.zxf_pagediv span,div.zxf_pagediv a{
 	border-radius: 3px;
 	color: #666;
 }
-.zxfokbtn{
+
+.zxfokbtn {
 	width: 48px;
 	height: 32px;
 	line-height: 32px;
 	border: 1px solid #E6E6E6;
 	margin-left: 10px;
-	cursor:pointer;
+	cursor: pointer;
 	border-radius: 3px;
 	background: #fff;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
 }
-input[type="number"]{
-  -moz-appearance: textfield;
+
+input[type="number"] {
+	-moz-appearance: textfield;
 }

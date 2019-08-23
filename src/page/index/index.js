@@ -39,7 +39,7 @@ var page = {
 		})
 		$('.swiper-wrapper').html(swiperHtml)
 
-		var mySwiper = new Swiper ('.swiper-container', {
+		var mySwiper = new Swiper('.swiper-container', {
 			autoplay: true,
 			loop: true
 		})
@@ -50,15 +50,15 @@ var page = {
 		var hotGoodsHtml = _ace.renderHtml(goodsTemplate, {
 			data: page.data.hotGoods
 		}),
-		recommendGoodsHtml = _ace.renderHtml(goodsTemplate, {
-			data: page.data.krisRecommend
-		})
-    // 追加页面内容
-    $('.home-loading').remove()
-    $('.page-wrap.width').append(hotGoodsHtml)
-      .append(recommendGoodsHtml)
-      .append('<div class="page-end"></div>')
-    // 移除加载动画
+			recommendGoodsHtml = _ace.renderHtml(goodsTemplate, {
+				data: page.data.krisRecommend
+			})
+		// 追加页面内容
+		$('.home-loading').remove()
+		$('.page-wrap.width').append(hotGoodsHtml)
+			.append(recommendGoodsHtml)
+			.append('<div class="page-end"></div>')
+		// 移除加载动画
 	},
 
 	// 获取首页商品

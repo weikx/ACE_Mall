@@ -45,7 +45,7 @@ var navSide = {
 		})
 		// 渲染 list
 		var navHtml = _ace.renderHtml(templateIndex, {
-			navList : this.option.navList
+			navList: this.option.navList
 		})
 		// 把html放入容器
 		$('.nav-side').html(navHtml)

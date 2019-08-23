@@ -2,13 +2,14 @@
   height: 40px;
   position: relative;
 }
+
 /* 加定位是为了设置 z-index，从而更好的显示阴影 */
 
 .nav-simple {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid #ddd;
-  background-image: linear-gradient(90deg,#222325,#3b3c3f,#222325);
+  background-image: linear-gradient(90deg, #222325, #3b3c3f, #222325);
   width: 100%;
   position: absolute;
   z-index: 999;

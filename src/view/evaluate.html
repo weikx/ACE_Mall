@@ -1,84 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%= require('./layout/head-common.html') %>
     <title><%= htmlWebpackPlugin.options.title %> - ACE_Mall</title>
 </head>
+
 <body>
-<%= require('./layout/nav-simple.html') %>
-<%= require('./layout/nav.html') %>
-<div class="page-wrap width stick-footer-content">
-    <div class="stick-footer-content-inside">
-        <div class="list-head">
-            <ul>
-                <li class="list-item-wrap">
-                    <div class="list-item item-img"></div>
-                    <div class="list-item item-name">商品名称</div>
-                    <div class="list-item item-price">单价</div>
-                    <div class="list-item item-num">购买时间</div>
-                    <div class="list-item item-total">小计</div>
-                    <div class="list-item item-action">操作</div>
+    <%= require('./layout/nav-simple.html') %>
+    <%= require('./layout/nav.html') %>
+    <div class="page-wrap width stick-footer-content">
+        <div class="stick-footer-content-inside">
+            <div class="list-head">
+                <ul>
+                    <li class="list-item-wrap">
+                        <div class="list-item item-img"></div>
+                        <div class="list-item item-name">商品名称</div>
+                        <div class="list-item item-price">单价</div>
+                        <div class="list-item item-num">购买时间</div>
+                        <div class="list-item item-total">小计</div>
+                        <div class="list-item item-action">操作</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-body">
+                <!-- 商品信息 -->
+                <ul>
+                    <li class="list-item-wrap" data-id="{{goodId}}">
+                        <div class="list-item item-img">
+                            <a href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
+                                <img src="https://i1.mifile.cn/a1/pms_1550646283.24414368!220x220.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="list-item item-name">
+                            <a class="link" href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
+                                {{goodName}}
+                            </a>
+                        </div>
+                        <div class="list-item item-price">{{goodPrice}}元</div>
+                        <div class="list-item item-num">
+                            2019-10-10
+                        </div>
+                        <div class="list-item item-total">{{subTotal}}元</div>
+                        <div class="list-item item-action">
+                            <i class="ace-icon ace-cha"></i>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="evaluate-ul">
+                <li class="evaluate-li">
+                    <label>评分*</label>
+                    <div class="star-wrap">
+                        <ul class="star-list">
+                            <li class="star-item active">
+                                <i class="ace-icon ace-xingxing"></i>
+                            </li>
+                            <li class="star-item active">
+                                <i class="ace-icon ace-xingxing"></i>
+                            </li>
+                            <li class="star-item active">
+                                <i class="ace-icon ace-xingxing"></i>
+                            </li>
+                            <li class="star-item active">
+                                <i class="ace-icon ace-xingxing"></i>
+                            </li>
+                            <li class="star-item active">
+                                <i class="ace-icon ace-xingxing"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="evaluate-li">
+                    <label>评价*</label>
+                    <div class="star-wrap">
+                        <textarea type="text" class="input"></textarea>
+                    </div>
                 </li>
             </ul>
+            <!--        <a href="" class="btn publish">发表评价</a>-->
         </div>
-        <div class="list-body">
-            <!-- 商品信息 -->
-            <ul>
-                <li class="list-item-wrap" data-id="{{goodId}}">
-                    <div class="list-item item-img">
-                        <a href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
-                            <img src="https://i1.mifile.cn/a1/pms_1550646283.24414368!220x220.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="list-item item-name">
-                        <a class="link" href="./goods-detail.html?id={{goodId}}&name={{goodName}}">
-                            {{goodName}}
-                        </a>
-                    </div>
-                    <div class="list-item item-price">{{goodPrice}}元</div>
-                    <div class="list-item item-num">
-                        2019-10-10
-                    </div>
-                    <div class="list-item item-total">{{subTotal}}元</div>
-                    <div class="list-item item-action">
-                        <i class="ace-icon ace-cha"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <ul class="evaluate-ul">
-            <li class="evaluate-li">
-                <label>评分*</label>
-                <div class="star-wrap">
-                    <ul class="star-list">
-                        <li class="star-item active">
-                            <i class="ace-icon ace-xingxing"></i>
-                        </li>
-                        <li class="star-item active">
-                            <i class="ace-icon ace-xingxing"></i>
-                        </li>
-                        <li class="star-item active">
-                            <i class="ace-icon ace-xingxing"></i>
-                        </li>
-                        <li class="star-item active">
-                            <i class="ace-icon ace-xingxing"></i>
-                        </li>
-                        <li class="star-item active">
-                            <i class="ace-icon ace-xingxing"></i>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-            <li class="evaluate-li">
-                <label>评价*</label>
-                <div class="star-wrap">
-                    <textarea type="text" class="input"></textarea>
-                </div>
-            </li>
-        </ul>
-<!--        <a href="" class="btn publish">发表评价</a>-->
     </div>
-</div>
-<%= require('./layout/footer.html') %>
+    <%= require('./layout/footer.html') %>
 </body>
+
 </html>

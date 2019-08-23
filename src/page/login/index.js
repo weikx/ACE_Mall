@@ -18,10 +18,10 @@ var fromError = {
 
 var page = {
 	init: function () {
-	  if (_ace.getCookie('Ticket')) {
-	    _ace.goHome()
-      return
-    }
+		if (_ace.getCookie('Ticket')) {
+			_ace.goHome()
+			return
+		}
 		this.bindEvent()
 	},
 
@@ -54,7 +54,7 @@ var page = {
 			}, function (res) {
 				res = res[0]
 				_ace.setUserInfo(res)
-        _ace.setCookie('Ticket', res.Ticket)
+				_ace.setCookie('Ticket', res.Ticket)
 				window.location.href = _ace.getUrlPatam('redirect') || './index.html'
 			})
 		} else {
@@ -64,8 +64,8 @@ var page = {
 	// 表单字段验证
 	formValidate: function (formData) {
 		var result = {
-			status  : false,
-			msg     : ''
+			status: false,
+			msg: ''
 		}
 		if (!_ace.validate(formData.username, 'require')) {
 			result.msg = '请输入用户名'

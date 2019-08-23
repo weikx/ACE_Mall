@@ -7,7 +7,8 @@
         <div class="order-status">{{orderStateTexe}}</div>
       </div>
       <div class="order-info">
-        <p class="order-caption">{{submitTime}} | {{receiveName}} | 订单号： <a href="./order-detail.html?orderNo={{orderNo}}" class="link">{{orderNo}}</a> | 在线支付</p>
+        <p class="order-caption">{{submitTime}} | {{receiveName}} | 订单号： <a
+            href="./order-detail.html?orderNo={{orderNo}}" class="link">{{orderNo}}</a> | 在线支付</p>
         <div class="order-money">
           <p>应付金额：<span>{{totalMoney}}</span> 元</p>
         </div>
@@ -38,7 +39,7 @@
       {{#waitDelivery}}
       <div class="card-body-right">
         <a href="./order-detail.html?orderNo={{orderNo}}" class="btn-border">订单详情</a>
-<!--        <div class="btn-border">申请退款</div>-->
+        <!--        <div class="btn-border">申请退款</div>-->
       </div>
       {{/waitDelivery}}
       {{#waitReceive}}

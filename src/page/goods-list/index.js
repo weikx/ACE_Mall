@@ -34,19 +34,19 @@ var page = {
 			$(this).addClass('active')
 				.siblings().removeClass('active')
 			var sortType = $(this).data('sort')
-      $('.ace-xiajiantou, .ace-shangjiantou').css('color', '#999')
+			$('.ace-xiajiantou, .ace-shangjiantou').css('color', '#999')
 			if (!!sortType) {
-				var sortPriceType = page.data.sortPrice %2 == 0 ? 1 : 2
+				var sortPriceType = page.data.sortPrice % 2 == 0 ? 1 : 2
 				_this.getGoodsList(sortPriceType)
 				page.data.sortPrice += 1
-        if (sortPriceType == 1) {
-          // 根据排序类型修改排序按钮样式
-          $('.ace-shangjiantou').css('color', '#b4a078')
-          $('.ace-xiajiantou').css('color', '#999')
-        } else {
-          $('.ace-xiajiantou').css('color', '#b4a078')
-          $('.ace-shangjiantou').css('color', '#999')
-        }
+				if (sortPriceType == 1) {
+					// 根据排序类型修改排序按钮样式
+					$('.ace-shangjiantou').css('color', '#b4a078')
+					$('.ace-xiajiantou').css('color', '#999')
+				} else {
+					$('.ace-xiajiantou').css('color', '#b4a078')
+					$('.ace-shangjiantou').css('color', '#999')
+				}
 			} else {
 				_this.getGoodsList(0)
 			}
@@ -62,12 +62,12 @@ var page = {
 		navList.init({
 			categoryId: type
 		})
-    if (type === 'search') {
-      // 搜索删除排序
-      $('.sort-item').unbind().eq(1).remove()
-      this.searchGoods()
-      return
-    }
+		if (type === 'search') {
+			// 搜索删除排序
+			$('.sort-item').unbind().eq(1).remove()
+			this.searchGoods()
+			return
+		}
 		$('.crumb-this').text(name || '未知商品')
 		this.getGoodsList()
 	},
@@ -75,15 +75,15 @@ var page = {
 	goodsItemInit: function () {
 		// 渲染商品数据
 		var hotGoodsHtml = _ace.renderHtml(goodsTemplate, {
-				data: page.data
-			})
+			data: page.data
+		})
 		if (page.data.goodsList.length) {
 			$('.goods-wrap').html(hotGoodsHtml)
 		} else {
 			// 渲染错误提示
 			var tipHtml = _ace.renderHtml(failTipTemplate, {
 				msg: page.data.categoryId === 'search' ? '暂无此商品，看看其他商品吧' : '此分类无商品，换个分类看看吧',
-        onlineShopping: true
+				onlineShopping: true
 			})
 			$('.goods-wrap').html(tipHtml)
 		}
@@ -107,24 +107,24 @@ var page = {
 		})
 	},
 
-  searchGoods: function () {
-	  var _this = this,
-      value = _ace.getUrlPatam('name') || '',
-      input = $('#search-input')
-    input.val(value)
-	  _goods.searchGoods({
-      goodName: value || '暂无'
-    }, function (res) {
-      page.data.goodsList = res.goodsList
-      _this.goodsItemInit()
-    }, function (err) {
-      var tipHtml = _ace.renderHtml(failTipTemplate, {
-        msg: '出了一点问题，换个分类看看吧',
-        bug: true
-      })
-      $('.goods-wrap').append(tipHtml)
-    })
-  }
+	searchGoods: function () {
+		var _this = this,
+			value = _ace.getUrlPatam('name') || '',
+			input = $('#search-input')
+		input.val(value)
+		_goods.searchGoods({
+			goodName: value || '暂无'
+		}, function (res) {
+			page.data.goodsList = res.goodsList
+			_this.goodsItemInit()
+		}, function (err) {
+			var tipHtml = _ace.renderHtml(failTipTemplate, {
+				msg: '出了一点问题，换个分类看看吧',
+				bug: true
+			})
+			$('.goods-wrap').append(tipHtml)
+		})
+	}
 }
 
 $(function () {

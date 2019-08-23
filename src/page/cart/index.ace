@@ -43,7 +43,7 @@
           {{^isChecked}}
           <label>
             <input name="cart" class="select-goods" type="checkbox" value="" />
-            <span class="check-box"></span>            
+            <span class="check-box"></span>
           </label>
           {{/isChecked}}
         </div>
@@ -74,7 +74,13 @@
   <!-- 下方金额合计 提交 等 -->
   <div class="cart-bar">
     <div class="bar-item">
-      <p>共 <span class="cart-total-num">{{totalNumber}}</span> 件商品，已选择 <span class="cart-select-num">{{checkNumber}}</span> 件</p>
+      <p>
+        共
+        <span class="cart-total-num">{{totalNumber}}</span>
+        件商品，已选择
+        <span class="cart-select-num">{{checkNumber}}</span>
+        件
+      </p>
     </div>
     <div class="bar-item">
       <p class="all-price">
